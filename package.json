@@ -1,0 +1,12 @@
+{
+	"name": "music-archive",
+	"version": "0.0.1",
+	"description": "Music Archive web application",
+	"repository": "https://github.com/cgreenhalgh/music-archive",
+	"devDependencies": {
+	},
+	"scripts": {
+	},
+	"dependencies": {
+	}
+}
