@@ -1,0 +1,302 @@
+{
+  "@context": [
+    {
+      "@base": "/annalist/c/annalist_performance_archive/d/"
+    },
+    "/annalist/c/annalist_performance_archive/d/coll_context.jsonld"
+  ],
+  "@id": "/annalist/c/annalist_performance_archive/l/Default_list_all/",
+  "annal:entity_list": [
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/_user/admin/",
+      "@type": [
+        "annal:User"
+      ],
+      "annal:id": "admin",
+      "annal:type": "annal:User",
+      "annal:type_id": "_user",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/_user/admin/",
+      "annal:user_permission": [
+        "VIEW",
+        "CREATE",
+        "UPDATE",
+        "DELETE",
+        "CONFIG",
+        "ADMIN"
+      ],
+      "annal:user_uri": "mailto:admin@localhost",
+      "rdfs:comment": "User admin: permissions for Admin User in collection annalist_performance_archive",
+      "rdfs:label": "Admin User"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Event/Climb_Concert_20170608/",
+      "@type": [
+        "prov:Activity",
+        "crm:E5_Event",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_Concert_20170608",
+      "annal:missing_field": "",
+      "annal:type": "prov:Activity",
+      "annal:type_id": "Event",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Event/Climb_Concert_20170608/",
+      "crm:P126_employed_r": [],
+      "crm:P7_took_place_at": "Place/00000013",
+      "entity:seeAlso_r": [],
+      "prov:qualifiedAssociation": [],
+      "prov:used_r": [],
+      "rdfs:comment": "NottFAR concert 8th June 2017",
+      "rdfs:label": "NottFAR concert 8th June 2017"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_basecamp/",
+      "@type": [
+        "coll:Part_of_Work",
+        "frbroo:F20_Performance_Work",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_basecamp",
+      "annal:member": [],
+      "annal:member__2": [],
+      "annal:type": "coll:Part_of_Work",
+      "annal:type_id": "Part_of_Work",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_basecamp/",
+      "coll:part_id": "basecamp",
+      "coll:part_rank": "1",
+      "entity:seeAlso_r": [],
+      "rdfs:comment": "Basecamp fragment of Climb!",
+      "rdfs:label": "Basecamp (Fragment of Climb!)"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_Performance_2/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_Performance_2",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_Performance_2/",
+      "coll:system_id": "13a7fa70-ae91-4541-9526-fd3b332b585d",
+      "coll:uploaded_image_r": [],
+      "crm:P7_took_place_at": "",
+      "entity:seeAlso_r": [
+        {
+          "rdfs:seeAlso": "urn:guid:13a7fa70-ae91-4541-9526-fd3b332b585d"
+        },
+        {
+          "rdfs:seeAlso": "http://musicbrainz.org/...climbperf2..."
+        }
+      ],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Performed_work/Climb"
+        }
+      ],
+      "prov:qualifiedAssociation": [
+        {
+          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
+          "prov:hadRole": ""
+        }
+      ],
+      "prov:startedAtTime": "2017-06-08T17:30:00Z",
+      "prov:used_r": [],
+      "rdfs:comment": "Second performance of Climb!",
+      "rdfs:label": "Second performance of Climb!"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_1/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_performance_1",
+      "annal:missing_field": "",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_1/",
+      "coll:system_id": "be418821-436d-41c2-880c-058dffb57d91",
+      "coll:uploaded_image_r": [],
+      "crm:P126_employed_r": [],
+      "crm:P7_took_place_at": "Place/Djanogly_Recital_Hall",
+      "entity:seeAlso_r": [],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Performed_work/Climb"
+        }
+      ],
+      "prov:qualifiedAssociation": [],
+      "prov:startedAtTime": "",
+      "prov:used_r": [],
+      "rdfs:comment": "Premiere performance of Climb!",
+      "rdfs:label": "Premiere performance of Climb!"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_test/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_performance_test",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_test/",
+      "coll:system_id": "9333e7a2-16a9-4352-a45a-f6f42d848cde",
+      "coll:uploaded_image_r": [],
+      "crm:P7_took_place_at": "",
+      "entity:seeAlso_r": [],
+      "event:sub_event": [
+        {
+          "event:sub_event": "Performance/Perform_Climb_basecamp_test"
+        }
+      ],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Performed_work/Climb"
+        }
+      ],
+      "prov:qualifiedAssociation": [],
+      "prov:startedAtTime": "",
+      "prov:used_r": [],
+      "rdfs:comment": "Test performance of Climb!",
+      "rdfs:label": "Test performance of Climb!"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_basecamp_test/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Perform_Climb_basecamp_test",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_basecamp_test/",
+      "coll:system_id": "123",
+      "coll:uploaded_image_r": [],
+      "crm:P7_took_place_at": "",
+      "entity:seeAlso_r": [],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Part_of_Work/Climb_basecamp"
+        }
+      ],
+      "prov:qualifiedAssociation": [],
+      "prov:startedAtTime": "2017-06-08T17:34:00Z",
+      "prov:used_r": [],
+      "rdfs:comment": "Example performance of Climb basecamp",
+      "rdfs:label": "Example performance of Climb basecamp"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
+      "@type": [
+        "frbroo:F20_Performance_Work",
+        "prov:Entity",
+        "crm:E77_Persistent_Item",
+        "crm:E70_Thing",
+        "crm:E71_Man-Made_Thing",
+        "crm:E29_Design_or_Procedure",
+        "crm:E73_Information_Object",
+        "crm:E28_Conceptual_Object",
+        "frbroo:frbroo:F1_Work",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb",
+      "annal:member": [
+        {
+          "prov:wasAttributedTo": "Person/Maria_Kallionpaa"
+        }
+      ],
+      "annal:member__2": [
+        {
+          "crm:P12i_was_present_at": "Event/Climb_Concert_20170608"
+        }
+      ],
+      "annal:type": "frbroo:F20_Performance_Work",
+      "annal:type_id": "Performed_work",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
+      "entity:seeAlso_r": [],
+      "frbroo:R10_has_member": [
+        {
+          "frbroo:R10_has_member": "Part_of_Work/Climb_basecamp"
+        }
+      ],
+      "rdfs:comment": "The Climb! composition",
+      "rdfs:label": "Climb!"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Person/Maria_Kallionpaa/",
+      "@type": [
+        "crm:E21_Person",
+        "prov:Entity",
+        "prov:Agent",
+        "crm:E39_Actor",
+        "crm:E77_Persistent_Item",
+        "annal:EntityData"
+      ],
+      "annal:id": "Maria_Kallionpaa",
+      "annal:type": "crm:E21_Person",
+      "annal:type_id": "Person",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Person/Maria_Kallionpaa/",
+      "entity:seeAlso_r": [],
+      "foaf:name": "Maria Kallionp\u00e4\u00e4",
+      "rdfs:comment": "Maria Kallionp\u00e4\u00e4",
+      "rdfs:label": "Maria Kallionp\u00e4\u00e4"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Place/Djanogly_Recital_Hall/",
+      "@type": [
+        "crm:E53_Place",
+        "annal:EntityData"
+      ],
+      "annal:id": "Djanogly_Recital_Hall",
+      "annal:type": "crm:E53_Place",
+      "annal:type_id": "Place",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Place/Djanogly_Recital_Hall/",
+      "crm:P89_falls_within": "",
+      "crm:P89i_contains_repeat": [],
+      "entity:seeAlso_r": [],
+      "rdfs:comment": "Djanogly Recital Hall, Nottingham",
+      "rdfs:label": "Djanogly Recital Hall, Nottingham"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Recording/00000007/",
+      "@type": [
+        "frbroo:F26_Recording",
+        "prov:Entity",
+        "crm:E70_Thing",
+        "crm:E71_Man-Made_Thing",
+        "crm:E28_Conceptual_Object",
+        "frbroo:F2_Expression",
+        "mo:MusicalExpression",
+        "annal:EntityData"
+      ],
+      "annal:id": "00000007",
+      "annal:type": "frbroo:F26_Recording",
+      "annal:type_id": "Recording",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Recording/00000007/",
+      "coll:linked_audio_clips": [],
+      "coll:linked_images": [],
+      "entity:seeAlso_r": [],
+      "mo:records": "Performance/00000005",
+      "prov:hadMember_repeat": [],
+      "rdfs:comment": "Recording of Premiere of Climb!",
+      "rdfs:label": "Recording of Premiere of Climb!"
+    }
+  ]
+}
