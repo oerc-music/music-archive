@@ -8,11 +8,11 @@ import { RecordsService } from './records.service';
   templateUrl: './works.component.html'
 })
 export class WorksComponent implements OnInit {
-  records: object[];
+  works: object[];
 
   constructor(private recordsService: RecordsService) { }
 
   ngOnInit(): void {
-    this.recordsService.getRecords().then(records => this.records = records);
+    this.recordsService.getWorks().then(works => this.works = works);
   }
 }
