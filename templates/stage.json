@@ -1,0 +1,19 @@
+{
+	"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_{{id}}/",
+	"@type": [
+		"coll:Part_of_Work",
+		"frbroo:F20_Performance_Work",
+		"annal:EntityData"
+	],
+	"annal:id": "Climb_{{id}}",
+	"annal:member": [],
+	"annal:member__2": [],
+	"annal:type": "coll:Part_of_Work",
+	"annal:type_id": "Part_of_Work",
+	"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_{{id}}/",
+	"coll:part_id": "{{id}}",
+	"coll:part_rank": "{{rank}}",
+	"entity:seeAlso_r": [],
+	"rdfs:comment": "{{title}} fragment of Climb!",
+	"rdfs:label": "{{title}} (Fragment of Climb!)"
+}
