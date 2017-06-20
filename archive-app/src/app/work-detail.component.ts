@@ -3,15 +3,16 @@ import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 
+import { Entity } from './entity';
 import { RecordsService }  from './records.service';
+
 @Component({
   selector: 'work-detail',
-  template: `<h3 *ngIf="work">Work</h3>
-    `
+  templateUrl: './work-detail.component.html'
 })
 export class WorkDetailComponent implements OnInit {
-  work: object;
-  records: object[];
+  work: Entity;
+  performances: Entity[] = [];
 
   constructor(
     private recordsService: RecordsService,
@@ -22,7 +23,10 @@ export class WorkDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.recordsService.getWork(params['id']))
-      .subscribe(work => this.work = work);
+      .subscribe(work => { this.work = work; 
+        this.recordsService.getPerformancesOfWork(work)
+        .then(performances => this.performances = performances
+          .sort((a,b) => a.compareTo(b, 'prov:startedAtTime')))});
   }
 
   goBack(): void {

@@ -1,4 +1,4 @@
   <h3>Works</h3>
   <ul>
-    <li *ngFor="let work of works">{{work['annal:id']}}</li>
+    <li *ngFor="let work of works"><a [routerLink]="['/work', work.id]">{{work.label}} ({{work.id}})</a></li>
   </ul>

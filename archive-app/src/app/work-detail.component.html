@@ -1,0 +1,6 @@
+<div *ngIf="work"><h3>{{work.label}} ({{work.id}})</h3>
+	<h4>Performances</h4>
+	<ul>
+		<li *ngFor="let perf of performances"><a  [routerLink]="['/performance', perf.id]">{{perf.label}} ({{perf.id}})</a> at {{perf.getValue('prov:startedAtTime')}}</li>
+	</ul>
+</div>
