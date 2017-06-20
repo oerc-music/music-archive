@@ -6,6 +6,7 @@ import { HttpModule }    from '@angular/http';
 import { AppComponent } from './app.component';
 import { WorksComponent } from './works.component';
 import { WorkDetailComponent } from './work-detail.component';
+import { PerformanceDetailComponent } from './performance-detail.component';
 import { RecordsService } from './records.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     WorksComponent,
-    WorkDetailComponent
+    WorkDetailComponent,
+    PerformanceDetailComponent
   ],
   imports: [
     BrowserModule,
