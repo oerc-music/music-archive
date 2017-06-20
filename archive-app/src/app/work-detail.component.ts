@@ -13,6 +13,7 @@ import { RecordsService }  from './records.service';
 export class WorkDetailComponent implements OnInit {
   work: Entity;
   performances: Entity[] = [];
+  parts: Entity[] = [];
 
   constructor(
     private recordsService: RecordsService,
@@ -26,7 +27,11 @@ export class WorkDetailComponent implements OnInit {
       .subscribe(work => { this.work = work; 
         this.recordsService.getPerformancesOfWork(work)
         .then(performances => this.performances = performances
-          .sort((a,b) => a.compareTo(b, 'prov:startedAtTime')))});
+          .sort((a,b) => a.compareTo(b, 'prov:startedAtTime')));
+        this.recordsService.getMembers(work)
+        .then(members => this.parts = members
+          .sort((a,b) => a.compareTo(b, 'coll:part_rank')));
+      });
   }
 
   goBack(): void {

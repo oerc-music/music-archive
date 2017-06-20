@@ -1,6 +1,8 @@
-<div *ngIf="performance"><h3>{{performance.label}} ({{performance.id}}) at {{performance.getValue('prov:startedAtTime')}}</h3>
+<div *ngIf="performance"><h3>{{performance.label}}</h3>
+	<p>At {{performance.getValue('prov:startedAtTime')}}</p>
 	<h4>Sub-events</h4>
 	<ul>
-		<li *ngFor="let sub of subevents">{{sub.label}} ({{sub.id}}) at {{sub.getValue('prov:startedAtTime')}}</li>
+		<li *ngFor="let sub of subevents">{{sub.getValue('prov:startedAtTime')}}: {{sub.label}}</li>
 	</ul>
 </div>
+<button (click)="goBack()">Back</button>

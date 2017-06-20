@@ -10,17 +10,21 @@ export class RecordsService {
   private recordsUrl = 'assets/data/urls.json';
   private records:Entity[] = [];
   private rawRecords:object[] = [];
+  private recordsPromise: Promise<Entity[]> = null;
 
   constructor(private http: Http) { }
 
   getRecords(): Promise<Entity[]> {
-    return this.http.get(this.recordsUrl)
+    if (this.recordsPromise!==null)
+      return this.recordsPromise;
+    this.recordsPromise = this.http.get(this.recordsUrl)
              .toPromise()
              // get all names files then concat
              .then(response => Promise.all(
                     response.json().map(url => this.http.get(url)
                        .toPromise().then(response => this.rawRecords = this.rawRecords.concat(response.json()['annal:entity_list'])))).then(res=> this.fixRecords()))
              .catch(this.handleError);
+    return this.recordsPromise;
   }
   private fixRecords(): Entity[] {
     //console.log('fixRecords '+this.records.length);
@@ -56,8 +60,8 @@ export class RecordsService {
 	getPerformance(id:string): Promise<Entity> {
 		return this.getRecords().then(records => records.find(record => record.type_id=='Performance' && record.id==id));
 	}
-	getSubEvents(entity:Entity): Promise<Entity[]> {
-		let eventids = entity.getValues('event:sub_event');
+	getValuesAsEntities(entity:Entity, fieldname:string): Promise<Entity[]> {
+		let eventids = entity.getValues(fieldname);
 		var subevents = [];
 		return Promise.all(eventids.map(eventid => 
 		{
@@ -70,6 +74,12 @@ export class RecordsService {
 				}
 			})
 		})).then(() => subevents); 
+	}
+	getSubEvents(entity:Entity): Promise<Entity[]> {
+		return this.getValuesAsEntities(entity, 'event:sub_event');
+	}
+	getMembers(entity:Entity): Promise<Entity[]> {
+		return this.getValuesAsEntities(entity, 'frbroo:R10_has_member');
 	}
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
