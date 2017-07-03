@@ -49,6 +49,34 @@
       "rdfs:label": "NottFAR concert 8th June 2017"
     },
     {
+      "@id": "/annalist/c/annalist_performance_archive/d/Linked_audio/example_recording_audio_clip/",
+      "@type": [
+        "coll:Linked_audio",
+        "annal:EntityData"
+      ],
+      "annal:id": "example_recording_audio_clip",
+      "annal:type": "coll:Linked_audio",
+      "annal:type_id": "Linked_audio",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/example_recording_audio_clip/",
+      "coll:audio_clip": "http://some.url/some.file.mp3",
+      "rdfs:comment": "Example recording audio clip",
+      "rdfs:label": "Example recording audio clip"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Linked_audio/example_recording_audio_clip/",
+      "@type": [
+        "coll:Linked_audio",
+        "annal:EntityData"
+      ],
+      "annal:id": "example_recording_audio_clip",
+      "annal:type": "coll:Linked_audio",
+      "annal:type_id": "Linked_audio",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/example_recording_audio_clip/",
+      "coll:audio_clip": "http://some.url/some.file.mp3",
+      "rdfs:comment": "Example recording audio clip",
+      "rdfs:label": "Example recording audio clip"
+    },
+    {
       "@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_basecamp/",
       "@type": [
         "coll:Part_of_Work",
@@ -275,7 +303,7 @@
       "rdfs:label": "Djanogly Recital Hall, Nottingham"
     },
     {
-      "@id": "/annalist/c/annalist_performance_archive/d/Recording/00000007/",
+      "@id": "/annalist/c/annalist_performance_archive/d/Recording/Example_recording_of_climb/",
       "@type": [
         "frbroo:F26_Recording",
         "prov:Entity",
@@ -286,15 +314,20 @@
         "mo:MusicalExpression",
         "annal:EntityData"
       ],
-      "annal:id": "00000007",
+      "annal:id": "Example_recording_of_climb",
       "annal:type": "frbroo:F26_Recording",
       "annal:type_id": "Recording",
-      "annal:url": "/annalist/c/annalist_performance_archive/d/Recording/00000007/",
-      "coll:linked_audio_clips": [],
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Recording/Example_recording_of_climb/",
+      "coll:linked_audio_clips": [
+        {
+          "coll:linked_audio_m": "Linked_audio/example_recording_audio_clip"
+        }
+      ],
       "coll:linked_images": [],
       "entity:seeAlso_r": [],
-      "mo:records": "Performance/00000005",
+      "mo:records": "Performance/Climb_performance_1",
       "prov:hadMember_repeat": [],
+      "prov:startedAtTime": "2017-06-08T16:05:00.000Z",
       "rdfs:comment": "Recording of Premiere of Climb!",
       "rdfs:label": "Recording of Premiere of Climb!"
     }
