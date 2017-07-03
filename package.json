@@ -6,6 +6,7 @@
   "devDependencies": {},
   "scripts": {},
   "dependencies": {
+    "js-yaml": "^3.8.4",
     "midi-file": "git+https://github.com/cgreenhalgh/midi-file.git"
   }
 }
