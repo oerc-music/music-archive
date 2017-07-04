@@ -1,4 +1,4 @@
-<div *ngIf="performance"><h3>{{performance.label}}</h3>
+<div class="container" *ngIf="performance"><h3>{{performance.label}}</h3>
 	<p>At {{performance.getValue('prov:startedAtTime')}}</p>
 	<h4>Sub-events</h4>
 	<ul>
@@ -8,5 +8,5 @@
 	<ul>
 		<li *ngFor="let rec of recordings">{{rec.label}} <a *ngFor="let url of rec.getValues('urls')" href="{{url}}">{{url}} </a></li>
 	</ul>
+	<button (click)="goBack()">Back</button>
 </div>
-<button (click)="goBack()">Back</button>

@@ -87,7 +87,7 @@ export class RecordsService {
 			(record => 'Recording'==record.type_id &&
 			record.getValues('mo:records').indexOf(performance.type_id+'/'+performance.id)>=0));
 	}
-	getUrlsOfRecording(recording:Entity): Promise<String[]> {
+	getUrlsOfRecording(recording:Entity): Promise<string[]> {
 		return this.getValuesAsEntities(recording, 'coll:linked_audio_clips', 'coll:linked_audio_m').
 			then(audio_clips => 
 			{var urls=audio_clips.map(audio_clip => audio_clip.getValue('coll:audio_clip')); /*console.log('urls',urls); */ return urls;});

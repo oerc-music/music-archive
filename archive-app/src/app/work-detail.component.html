@@ -1,4 +1,4 @@
-<div *ngIf="work"><h3>{{work.label}}</h3>
+<div class="container" *ngIf="work"><h3>{{work.label}}</h3>
 	<h4>Performances</h4>
 	<ul>
 		<li *ngFor="let perf of performances">{{perf.getValue('prov:startedAtTime')}}: <a  [routerLink]="['/performance', perf.id]">{{perf.label}}</a></li>
@@ -7,5 +7,5 @@
 	<ul>
 		<li *ngFor="let part of parts">{{part.label}}</li>
 	</ul>
+	<button (click)="goBack()">Back</button>
 </div>
-<button (click)="goBack()">Back</button>

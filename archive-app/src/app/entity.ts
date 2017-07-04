@@ -42,6 +42,12 @@ export class Entity {
 			return '';
 		return vs[0];
 	}
+	getTime(fieldname:string, subfieldname?:string): number {
+		let v = this.getValue(fieldname, subfieldname);
+		if (''==v || !v)
+			return 0;
+		return new Date(v).getTime();
+	}
 	compareTo(b: Entity, field:string) {
 		let v1 = this.getValues(field);
 		let v2 = b.getValues(field);

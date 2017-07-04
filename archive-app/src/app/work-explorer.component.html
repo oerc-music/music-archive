@@ -1,0 +1,27 @@
+<div class="container" *ngIf="work"><h3>{{work.label}}</h3>
+	<h4>Performances</h4>
+	<div class="row">
+		<div class="col-4 performance" *ngFor="let perf of performances" [ngClass]="{'highlighted': perf.highlighted}"
+			(click)="clickPerformance(perf)">
+			<input type="checkbox" [(ngModel)]="perf.selected" (click)="clickPerformanceCheckbox(perf)">
+			<span *ngIf="perf.active">A</span>
+			<span *ngIf="!perf.active && perf.available">a</span>
+			<span *ngIf="!perf.available">&nbsp;</span>
+			{{perf.label}} (@ {{perf.startTime}})
+		</div>
+	</div>
+	<h4>Parts (fragments)</h4>
+	<div class="row">
+		<div class="col-4 part" *ngFor="let part of parts" [ngClass]="{'highlighted': part.highlighted}"
+			(click)="clickPart(part)">
+			<input type="checkbox" [(ngModel)]="part.selected" (click)="clickPartCheckbox(part)">
+			<span *ngIf="part.active">A</span>
+			<span *ngIf="!part.active && part.available">a</span>
+			<span *ngIf="!part.available">&nbsp;</span>
+			{{part.label}}
+		</div>
+	</div>
+	<ul>
+		<li *ngFor="let pp of partPerformances">{{pp.performance.id}} / {{pp.part.id}}</li>
+	</ul>
+</div>

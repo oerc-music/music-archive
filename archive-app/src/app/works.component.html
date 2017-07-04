@@ -1,4 +1,7 @@
-  <h3>Works</h3>
-  <ul>
-    <li *ngFor="let work of works"><a [routerLink]="['/work', work.id]">{{work.label}}</a></li>
-  </ul>
+<div class="container">
+<h1>Works</h1>
+<div class="row">
+	<div *ngFor="let work of works" class="col-md-4">
+		<a [routerLink]="['/work', work.id]">{{work.label}}</a> / <a [routerLink]="['/explore', work.id]">Explore</a>
+	</div>
+</div>
