@@ -1,13 +1,13 @@
 - id: mix
-  url: http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_mix2.wav
+  url: http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_mix2.mp3
   performanceid: 9333e7a2-16a9-4352-a45a-f6f42d848cde
   firstNoteOffset: 2.0
 - id: mix
-  url: http://music-mrl.nott.ac.uk/1/recordings/Performance1_mix2.wav
+  url: http://music-mrl.nott.ac.uk/1/recordings/Performance1_mix2.mp3
   performanceid: be418821-436d-41c2-880c-058dffb57d91
   firstNoteOffset: 8.0
 - id: mix
-  url: http://music-mrl.nott.ac.uk/1/recordings/Performance2_mix2.wav
+  url: http://music-mrl.nott.ac.uk/1/recordings/Performance2_mix2.mp3
   performanceid: 13a7fa70-ae91-4541-9526-fd3b332b585d
   firstNoteOffset: 4.5
 

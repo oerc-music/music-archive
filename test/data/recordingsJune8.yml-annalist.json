@@ -46,7 +46,7 @@
 			"annal:type": "coll:Linked_audio",
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_performance_test_mix/",
-			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_mix2.wav",
+			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_mix2.mp3",
 			"rdfs:comment": "Audio of mix from Test performance of Climb!",
 			"rdfs:label": "Audio of mix from Test performance of Climb!"
 		},
@@ -89,7 +89,7 @@
 			"annal:type": "coll:Linked_audio",
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_performance_1_mix/",
-			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance1_mix2.wav",
+			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance1_mix2.mp3",
 			"rdfs:comment": "Audio of mix from Premiere performance of Climb!",
 			"rdfs:label": "Audio of mix from Premiere performance of Climb!"
 		},
@@ -132,7 +132,7 @@
 			"annal:type": "coll:Linked_audio",
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_Performance_2_mix/",
-			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance2_mix2.wav",
+			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance2_mix2.mp3",
 			"rdfs:comment": "Audio of mix from Second performance of Climb!",
 			"rdfs:label": "Audio of mix from Second performance of Climb!"
 		}
