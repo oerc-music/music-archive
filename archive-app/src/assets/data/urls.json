@@ -1,5 +1,6 @@
 [
 	"assets/data/records.json",
 	"assets/data/climb-stages-20170608.json",
-	"assets/data/climb-performances-20170608.json"
+	"assets/data/climb-performances-20170608.json",
+	"assets/data/climb-recordings-20170608.json" 
 ]

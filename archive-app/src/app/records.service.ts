@@ -60,8 +60,8 @@ export class RecordsService {
 	getPerformance(id:string): Promise<Entity> {
 		return this.getRecords().then(records => records.find(record => record.type_id=='Performance' && record.id==id));
 	}
-	getValuesAsEntities(entity:Entity, fieldname:string): Promise<Entity[]> {
-		let eventids = entity.getValues(fieldname);
+	getValuesAsEntities(entity:Entity, fieldname:string, subfieldname?:string): Promise<Entity[]> {
+		let eventids = entity.getValues(fieldname, subfieldname);
 		var subevents = [];
 		return Promise.all(eventids.map(eventid => 
 		{
@@ -80,6 +80,17 @@ export class RecordsService {
 	}
 	getMembers(entity:Entity): Promise<Entity[]> {
 		return this.getValuesAsEntities(entity, 'frbroo:R10_has_member');
+	}
+	getRecordingsOfPerformance(performance:Entity): Promise<Entity[]> {
+		return this.getRecords().
+			then(records => records.filter
+			(record => 'Recording'==record.type_id &&
+			record.getValues('mo:records').indexOf(performance.type_id+'/'+performance.id)>=0));
+	}
+	getUrlsOfRecording(recording:Entity): Promise<String[]> {
+		return this.getValuesAsEntities(recording, 'coll:linked_audio_clips', 'coll:linked_audio_m').
+			then(audio_clips => 
+			{var urls=audio_clips.map(audio_clip => audio_clip.getValue('coll:audio_clip')); /*console.log('urls',urls); */ return urls;});
 	}
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

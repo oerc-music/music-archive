@@ -8,6 +8,7 @@ See docs
 
 ```
 npm install --no-bin-links
+npm install -g @angular/cli
 ```
  
 e.g.
@@ -20,4 +21,10 @@ node lib/processlogs.js test/data/example_entity_list.json \
 MIDI files of notes
 ```
 node lib/log2midi.js test/data/20170608T112725862Z-default.log
+```
+
+Music archive app (dev)
+```
+cd archive-app
+ng serve --host=0.0.0.0
 ```

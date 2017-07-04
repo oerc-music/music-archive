@@ -4,5 +4,9 @@
 	<ul>
 		<li *ngFor="let sub of subevents">{{sub.getValue('prov:startedAtTime')}}: {{sub.label}}</li>
 	</ul>
+	<h4>Recordings</h4>
+	<ul>
+		<li *ngFor="let rec of recordings">{{rec.label}} <a *ngFor="let url of rec.getValues('urls')" href="{{url}}">{{url}} </a></li>
+	</ul>
 </div>
 <button (click)="goBack()">Back</button>

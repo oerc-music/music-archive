@@ -36,7 +36,7 @@ export class Entity {
 		//console.log(res);
 		return res;
 	}
-	getValue(fieldname:string, subfieldname:string): string {
+	getValue(fieldname:string, subfieldname?:string): string {
 		let vs = this.getValues(fieldname, subfieldname);
 		if (vs.length==0)
 			return '';

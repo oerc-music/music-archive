@@ -13,6 +13,7 @@ import { RecordsService }  from './records.service';
 export class PerformanceDetailComponent implements OnInit {
   performance: Entity;
   subevents: Entity[] = [];
+  recordings: Entity[] = [];
 
   constructor(
     private recordsService: RecordsService,
@@ -26,7 +27,12 @@ export class PerformanceDetailComponent implements OnInit {
       .subscribe(performance => { this.performance = performance; 
         this.recordsService.getSubEvents(performance)
         .then(subevents => { /*console.log(subevents);*/ this.subevents = subevents
-          .sort((a,b) => a.compareTo(b, 'prov:startedAtTime'))})});
+          .sort((a,b) => a.compareTo(b, 'prov:startedAtTime'))});
+        this.recordsService.getRecordingsOfPerformance(performance)
+        .then(recordings => { 
+          Promise.all( recordings.map(rec => this.recordsService.getUrlsOfRecording(rec).then(urls => rec.fields['urls'] = urls)) )
+          .then(() => this.recordings = recordings)
+        })});
   }
 
   goBack(): void {
