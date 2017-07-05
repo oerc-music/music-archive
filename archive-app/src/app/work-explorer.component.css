@@ -19,3 +19,7 @@ a {
 i {
 	vertical-align: middle;
 }
+span.time {
+	font-family: monospace;
+	font-size: 150%;
+}

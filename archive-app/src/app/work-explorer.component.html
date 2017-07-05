@@ -36,7 +36,7 @@
 		<div class="col-12">
 			{{currentlyPlaying.performance.label}}, {{currentlyPlaying.part.label}}
 		</div>
-		<div class="col-4">
+		<div class="col-12">
 			<a (click)="previous()"><i class="material-icons">skip_previous</i></a>
 			<a (click)="back()"><i class="material-icons">fast_rewind</i></a>
 			<i *ngIf="!(!!currentlyPlaying && !currentlyPlaying.clip.recording.shouldplay)" class="material-icons">play_circle_filled</i>
@@ -46,9 +46,7 @@
 			<a (click)="pause()"><i class="material-icons">pause_circle_outline</i></a>
 			<a (click)="forward()"><i class="material-icons">fast_forward</i></a>
 			<a (click)="next()"><i class="material-icons">skip_next</i></a>
-		</div>
-		<div class="col-4">
-			<input type="text" readonly value="{{currentlyPlaying.currentTimeText}}">
+			<span class="time">{{currentlyPlaying.currentTimeText}}</span>
 		</div>
 	</div>
 	<!-- <ul>

@@ -361,13 +361,18 @@ export class WorkExplorerComponent implements OnInit {
 				if (this.currentlyPlaying.clip.duration && offset > this.currentlyPlaying.clip.duration) {
 					// pause
 					this.pause();
-					event.srcElement.currentTime = this.currentlyPlaying.startTime+this.currentlyPlaying.clip.duration-rec.startTime;
+					event.srcElement.currentTime = this.currentlyPlaying.startTime-rec.startTime;
+				} else if (offset < 0) {
+					// before clip?!
+					event.srcElement.currentTime = rec.lastTime-offset;
 				}
 			}
 		}
 	}
 	audioEnded(event,rec) {
 		console.log('ended '+rec.id);
+		this.pause();
+		event.srcElement.currentTime = 0;
 	}
 	audioCanplay(event,rec) {
 		console.log('canplay '+rec.id);
@@ -428,7 +433,13 @@ export class WorkExplorerComponent implements OnInit {
 		if (!!this.currentlyPlaying) {
 			let audio = this.getAudio(this.currentlyPlaying.clip.recording);
 			if (!!audio) {
-				audio.currentTime = audio.currentTime+10;
+				let currentTime = audio.currentTime;
+				if (audio.duration!=0 && currentTime+10>audio.duration) {
+					this.pause();
+					audio.currentTime = audio.duration;
+				}
+				else
+					audio.currentTime = currentTime+10;
 			}
 		}
 	}
