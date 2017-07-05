@@ -23,7 +23,7 @@ ng serve --host=0.0.0.0
 ```
 build
 ```
-bg build -bh /1/archive/
+ng build -bh /1/archive/
 cd dist
 tar zcf ../archive.tgz *
 ```
