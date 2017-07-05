@@ -46,7 +46,7 @@ export class Entity {
 		let v = this.getValue(fieldname, subfieldname);
 		if (''==v || !v)
 			return 0;
-		return new Date(v).getTime();
+		return new Date(v).getTime()*0.001;
 	}
 	compareTo(b: Entity, field:string) {
 		let v1 = this.getValues(field);
@@ -59,6 +59,18 @@ export class Entity {
 		if (v2.length==0)
 			return -1;
 		return v1[0].localeCompare(v2[0]);
+	}
+	compareToNumber(b: Entity, field:string) {
+		let v1 = this.getValues(field);
+		let v2 = b.getValues(field);
+		if (v1.length==0) {
+			if (v2.length==0)
+				return 0;
+			return 1;
+		}
+		if (v2.length==0)
+			return -1;
+		return Number(v1[0])-Number(v2[0]);
 	}
 
 }

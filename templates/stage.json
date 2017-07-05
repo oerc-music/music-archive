@@ -15,5 +15,5 @@
 	"coll:part_rank": "{{rank}}",
 	"entity:seeAlso_r": [],
 	"rdfs:comment": "{{title}} fragment of Climb!",
-	"rdfs:label": "{{title}} (Fragment of Climb!)"
+	"rdfs:label": "{{title}}"
 }

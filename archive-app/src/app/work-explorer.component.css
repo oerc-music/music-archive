@@ -6,5 +6,16 @@
 	border: 1px solid rgba(128,128,128,0.2);
 }
 .highlighted {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);*/
+	background-color: rgba(0,0,0,0.1);
+}
+.pointer {
+	cursor: pointer;
+}
+a {
+	cursor: pointer;
+	user-select: none;
+}
+i {
+	vertical-align: middle;
 }

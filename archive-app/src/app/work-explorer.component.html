@@ -1,27 +1,66 @@
-<div class="container" *ngIf="work"><h3>{{work.label}}</h3>
-	<h4>Performances</h4>
+<div class="container" *ngIf="work"><h1>{{work.label}}</h1>
+<!-- <i class="material-icons">face</i> -->
+	<p>Select <i class="material-icons">check_box_outline_blank</i> a Performance or a Part, then play <i class="material-icons">play_circle_outline</i> the different parts or versions available.</p>
+	<h2>Performances</h2>
 	<div class="row">
 		<div class="col-4 performance" *ngFor="let perf of performances" [ngClass]="{'highlighted': perf.highlighted}"
 			(click)="clickPerformance(perf)">
-			<input type="checkbox" [(ngModel)]="perf.selected" (click)="clickPerformanceCheckbox(perf)">
-			<span *ngIf="perf.active">A</span>
-			<span *ngIf="!perf.active && perf.available">a</span>
-			<span *ngIf="!perf.available">&nbsp;</span>
-			{{perf.label}} (@ {{perf.startTime}})
+			<a (click)="clickPerformanceCheckbox($event,perf)" class="pointer">
+				<i class="material-icons">{{perf.selected ? 'check_box' : 'check_box_outline_blank'}}</i>
+			</a>
+			<a (click)="clickPerformancePlay($event,perf)" class="pointer">
+				<span *ngIf="perf.active && perf.available"><i class="material-icons">play_circle_filled</i></span>
+				<span *ngIf="!perf.active && perf.available"><i class="material-icons">play_circle_outline</i></span>
+				<span *ngIf="!perf.available"><i class="material-icons">&nbsp;</i></span>
+			</a>
+			{{perf.label}}<!-- (@ {{perf.startTime}}) -->
 		</div>
 	</div>
-	<h4>Parts (fragments)</h4>
+	<h2>Parts (fragments)</h2>
 	<div class="row">
 		<div class="col-4 part" *ngFor="let part of parts" [ngClass]="{'highlighted': part.highlighted}"
 			(click)="clickPart(part)">
-			<input type="checkbox" [(ngModel)]="part.selected" (click)="clickPartCheckbox(part)">
-			<span *ngIf="part.active">A</span>
-			<span *ngIf="!part.active && part.available">a</span>
-			<span *ngIf="!part.available">&nbsp;</span>
+			<a (click)="clickPartCheckbox($event,part)" class="pointer">
+				<i class="material-icons">{{part.selected ? 'check_box' : 'check_box_outline_blank'}}</i>
+			</a>
+			<a (click)="clickPartPlay($event,part)" class="pointer">
+				<span *ngIf="part.active && part.available"><i class="material-icons">play_circle_filled</i></span>
+				<span *ngIf="!part.active && part.available"><i class="material-icons">play_circle_outline</i></span>
+				<span *ngIf="!part.available"><i class="material-icons">&nbsp;</i></span>
+			</a>
 			{{part.label}}
 		</div>
 	</div>
-	<ul>
+	<h2>Playing</h2>
+	<div class="row" *ngIf="!!currentlyPlaying">
+		<div class="col-12">
+			{{currentlyPlaying.performance.label}}, {{currentlyPlaying.part.label}}
+		</div>
+		<div class="col-4">
+			<a (click)="previous()"><i class="material-icons">skip_previous</i></a>
+			<a (click)="back()"><i class="material-icons">fast_rewind</i></a>
+			<i *ngIf="!(!!currentlyPlaying && !currentlyPlaying.clip.recording.shouldplay)" class="material-icons">play_circle_filled</i>
+			<a (click)="play()" *ngIf="!!currentlyPlaying && !currentlyPlaying.clip.recording.shouldplay">
+				<i class="material-icons">play_circle_outline</i>
+			</a>
+			<a (click)="pause()"><i class="material-icons">pause_circle_outline</i></a>
+			<a (click)="forward()"><i class="material-icons">fast_forward</i></a>
+			<a (click)="next()"><i class="material-icons">skip_next</i></a>
+		</div>
+		<div class="col-4">
+			<input type="text" readonly value="{{currentlyPlaying.currentTimeText}}">
+		</div>
+	</div>
+	<!-- <ul>
 		<li *ngFor="let pp of partPerformances">{{pp.performance.id}} / {{pp.part.id}}</li>
-	</ul>
+	</ul> -->
+	<div class="row" id="recordings">
+		<div class="col-4" *ngFor="let rec of recordings"><!-- audio controls -->
+			<audio id="{{rec.id}}" (canplay)="audioCanplay($event,rec)" (seeked)="audioSeeked($event,rec)"
+			(timeupdate)="audioTimeupdate($event,rec)" (ended)="audioEnded($event,rec)">
+				<source src="{{rec.urls[0]}}" type="audio/mpeg">
+				Your browser does not support audio
+			</audio>
+		</div>
+	</div>
 </div>

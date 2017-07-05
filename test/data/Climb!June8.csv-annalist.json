@@ -24,7 +24,7 @@
 			"coll:part_rank": "1",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Basecamp fragment of Climb!",
-			"rdfs:label": "Basecamp (Fragment of Climb!)"
+			"rdfs:label": "Basecamp"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1a/",
@@ -43,7 +43,7 @@
 			"coll:part_rank": "2",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "The Angry Deer fragment of Climb!",
-			"rdfs:label": "The Angry Deer (Fragment of Climb!)"
+			"rdfs:label": "The Angry Deer"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1a/",
@@ -62,7 +62,7 @@
 			"coll:part_rank": "3",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Path 1 (a) fragment of Climb!",
-			"rdfs:label": "Path 1 (a) (Fragment of Climb!)"
+			"rdfs:label": "Path 1 (a)"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2a/",
@@ -81,7 +81,7 @@
 			"coll:part_rank": "4",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": " A Flooded Path fragment of Climb!",
-			"rdfs:label": " A Flooded Path (Fragment of Climb!)"
+			"rdfs:label": " A Flooded Path"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1b/",
@@ -100,7 +100,7 @@
 			"coll:part_rank": "5",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Path 1 (b) fragment of Climb!",
-			"rdfs:label": "Path 1 (b) (Fragment of Climb!)"
+			"rdfs:label": "Path 1 (b)"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3a/",
@@ -119,7 +119,7 @@
 			"coll:part_rank": "6",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar Finds a Shimmering Stone fragment of Climb!",
-			"rdfs:label": "Avatar Finds a Shimmering Stone (Fragment of Climb!)"
+			"rdfs:label": "Avatar Finds a Shimmering Stone"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1c/",
@@ -138,7 +138,7 @@
 			"coll:part_rank": "7",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Path 1 (c) fragment of Climb!",
-			"rdfs:label": "Path 1 (c) (Fragment of Climb!)"
+			"rdfs:label": "Path 1 (c)"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4a/",
@@ -157,7 +157,7 @@
 			"coll:part_rank": "8",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "A Sleeping Bear fragment of Climb!",
-			"rdfs:label": "A Sleeping Bear (Fragment of Climb!)"
+			"rdfs:label": "A Sleeping Bear"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5a/",
@@ -176,7 +176,7 @@
 			"coll:part_rank": "9",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Rolling Stones fragment of Climb!",
-			"rdfs:label": "Rolling Stones (Fragment of Climb!)"
+			"rdfs:label": "Rolling Stones"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1b/",
@@ -195,7 +195,7 @@
 			"coll:part_rank": "10",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "The Stones fragment of Climb!",
-			"rdfs:label": "The Stones (Fragment of Climb!)"
+			"rdfs:label": "The Stones"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2a/",
@@ -214,7 +214,7 @@
 			"coll:part_rank": "11",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Path 2 (a) fragment of Climb!",
-			"rdfs:label": "Path 2 (a) (Fragment of Climb!)"
+			"rdfs:label": "Path 2 (a)"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2b/",
@@ -233,7 +233,7 @@
 			"coll:part_rank": "12",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "A Tree Trunk on the Path fragment of Climb!",
-			"rdfs:label": "A Tree Trunk on the Path (Fragment of Climb!)"
+			"rdfs:label": "A Tree Trunk on the Path"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2b/",
@@ -252,7 +252,7 @@
 			"coll:part_rank": "13",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Path 2 (b) fragment of Climb!",
-			"rdfs:label": "Path 2 (b) (Fragment of Climb!)"
+			"rdfs:label": "Path 2 (b)"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3b/",
@@ -271,7 +271,7 @@
 			"coll:part_rank": "14",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "A Scary Whispering Forest fragment of Climb!",
-			"rdfs:label": "A Scary Whispering Forest (Fragment of Climb!)"
+			"rdfs:label": "A Scary Whispering Forest"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2c/",
@@ -290,7 +290,7 @@
 			"coll:part_rank": "15",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Path2 (c) fragment of Climb!",
-			"rdfs:label": "Path2 (c) (Fragment of Climb!)"
+			"rdfs:label": "Path2 (c)"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4b/",
@@ -309,7 +309,7 @@
 			"coll:part_rank": "16",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "A Hallucination fragment of Climb!",
-			"rdfs:label": "A Hallucination (Fragment of Climb!)"
+			"rdfs:label": "A Hallucination"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5b/",
@@ -328,7 +328,7 @@
 			"coll:part_rank": "17",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Birds Attack fragment of Climb!",
-			"rdfs:label": "Birds Attack (Fragment of Climb!)"
+			"rdfs:label": "Birds Attack"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_summit/",
@@ -347,7 +347,7 @@
 			"coll:part_rank": "18",
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Summit fragment of Climb!",
-			"rdfs:label": "Summit (Fragment of Climb!)"
+			"rdfs:label": "Summit"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",

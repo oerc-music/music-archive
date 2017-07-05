@@ -31,7 +31,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:10:50.929Z",
+			"prov:startedAtTime": "2017-06-08T15:11:06.602Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Basecamp in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb Basecamp in Test performance of Climb!"
@@ -225,7 +225,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:10:50.929Z",
+			"prov:startedAtTime": "2017-06-08T15:11:06.602Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Test performance of Climb!",
 			"rdfs:label": "Test performance of Climb!"
@@ -254,7 +254,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T16:11:59.255Z",
+			"prov:startedAtTime": "2017-06-08T16:14:08.344Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Basecamp in Premiere performance of Climb!",
 			"rdfs:label": "Performance of Climb Basecamp in Premiere performance of Climb!"
@@ -546,7 +546,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T16:11:59.255Z",
+			"prov:startedAtTime": "2017-06-08T16:14:08.344Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Premiere performance of Climb!",
 			"rdfs:label": "Premiere performance of Climb!",
@@ -607,7 +607,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T16:47:32.998Z",
+			"prov:startedAtTime": "2017-06-08T16:48:43.182Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Basecamp in Second performance of Climb!",
 			"rdfs:label": "Performance of Climb Basecamp in Second performance of Climb!"
@@ -938,7 +938,7 @@
 					"prov:hadRole": ""
 				}
 			],
-			"prov:startedAtTime": "2017-06-08T16:47:32.998Z",
+			"prov:startedAtTime": "2017-06-08T16:48:43.182Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Second performance of Climb!",
 			"rdfs:label": "Second performance of Climb!",
