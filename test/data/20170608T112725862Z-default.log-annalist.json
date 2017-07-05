@@ -31,7 +31,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:11:06.602Z",
+			"prov:startedAtTime": "2017-06-08T14:13:33.302Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Basecamp in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb Basecamp in Test performance of Climb!"
@@ -60,7 +60,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:11:56.734Z",
+			"prov:startedAtTime": "2017-06-08T14:14:25.658Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb The Stones in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb The Stones in Test performance of Climb!"
@@ -89,7 +89,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:12:30.862Z",
+			"prov:startedAtTime": "2017-06-08T14:15:00.566Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Path 2 (a) in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb Path 2 (a) in Test performance of Climb!"
@@ -118,10 +118,213 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:13:23.869Z",
+			"prov:startedAtTime": "2017-06-08T14:16:08.666Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb A Tree Trunk on the Path in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb A Tree Trunk on the Path in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_1a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_1a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_1a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_1a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:18:31.498Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb The Angry Deer in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb The Angry Deer in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p1a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:19:02.159Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 1 (a) in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb Path 1 (a) in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_2a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_2a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_2a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_2a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:20:41.827Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb  A Flooded Path in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb  A Flooded Path in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p1b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:22:04.479Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 1 (b) in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb Path 1 (b) in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_3a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_3a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_3a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_3a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:23:18.689Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Avatar Finds a Shimmering Stone in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb Avatar Finds a Shimmering Stone in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1c/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1c",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1c/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p1c"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:24:54.551Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 1 (c) in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb Path 1 (c) in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_4a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:25:38.209Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb A Sleeping Bear in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb A Sleeping Bear in Test performance of Climb!"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_5a/",
@@ -147,10 +350,39 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:15:31.518Z",
+			"prov:startedAtTime": "2017-06-08T14:27:27.204Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Rolling Stones in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb Rolling Stones in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_4b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:29:22.161Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb A Hallucination in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb A Hallucination in Test performance of Climb!"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_5b/",
@@ -176,10 +408,68 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:15:35.607Z",
+			"prov:startedAtTime": "2017-06-08T14:30:57.265Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Performance of Climb Birds Attack in Test performance of Climb!",
 			"rdfs:label": "Performance of Climb Birds Attack in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_summit/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_summit",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_summit/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_summit"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:32:12.282Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Summit in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb Summit in Test performance of Climb!"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p1a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2017-06-08T14:36:07.877Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 1 (a) in Test performance of Climb!",
+			"rdfs:label": "Performance of Climb Path 1 (a) in Test performance of Climb!"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_test/",
@@ -213,10 +503,40 @@
 					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_2b"
 				},
 				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_1a"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_2a"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_3a"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1c"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4a"
+				},
+				{
 					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_5a"
 				},
 				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_4b"
+				},
+				{
 					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_5b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_summit"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a"
 				}
 			],
 			"frbroo:R25F_performed_r": [
@@ -225,7 +545,7 @@
 				}
 			],
 			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T15:11:06.602Z",
+			"prov:startedAtTime": "2017-06-08T14:13:33.302Z",
 			"prov:used_r": [],
 			"rdfs:comment": "Test performance of Climb!",
 			"rdfs:label": "Test performance of Climb!"
