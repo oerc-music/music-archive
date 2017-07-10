@@ -2,8 +2,11 @@
 <div class="col-12">
 	<svg class="parts-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" width="400px" height="400px">
 		<!-- cludge to cut off top/bottom -->
-		<g [attr.transform]="work.id=='Climb' ? 'matrix(0.4 0 0 0.4 0 -75)' : 'scale(0.4)'">
-			<image [attr.xlink:href]="work.getValue('coll:map_url')" x="0" y="0" width="1000px" height="1500px" preserveAspectRatio="none"></image>
+		<g [attr.transform]="work.id=='Climb' ? 'matrix(0.4 0 0 0.4 0 -50)' : 'scale(0.4)'">
+			<!-- and again for image/coordinate offset - don't know why at all on this one! -->
+			<g [attr.transform]="work.id=='Climb' ? 'matrix(1.0 0 0 1.0 0 -60)' : 'scale(1)'">
+				<image [attr.xlink:href]="work.getValue('coll:map_url')" x="0" y="0" width="1000px" height="1500px" preserveAspectRatio="none"></image>
+			</g>
 			<line *ngFor="let line of lines"
 				[attr.x1]="line.from.getNumberValue('coll:map_x')*1000"
 				[attr.y1]="line.from.getNumberValue('coll:map_y')*1500" 

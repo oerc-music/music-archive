@@ -5,7 +5,7 @@
 }
 .part-g circle {
 	stroke: black;
-	stroke-width: 2px;
+	stroke-width: 4px;
 	opacity: 1;
 	cursor: pointer;
 	user-select: none;
@@ -15,15 +15,15 @@
 	fill: rgb(80,80,80);
 }
 .part-g.selected circle {
-	fill: rgb(255, 165, 0);
+	fill: #C3C2F4;
 }
 
 .part-g.available circle {
-	fill: rgb(120, 80, 0);
+	fill: rgb(255, 165, 0);
 }
 
 .part-g.active circle {
-	fill: rgb(255, 165, 0);
+	fill: #C3C2F4;
 }
 
 .part-g text {
@@ -35,5 +35,5 @@
 }
 .part-line {
 	stroke: rgb(100,100,100);
-	stroke-width: 8px;
+	stroke-width: 4px;
 }
