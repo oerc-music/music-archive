@@ -112,14 +112,8 @@
       "coll:system_id": "13a7fa70-ae91-4541-9526-fd3b332b585d",
       "coll:uploaded_image_r": [],
       "crm:P7_took_place_at": "",
-      "entity:seeAlso_r": [
-        {
-          "rdfs:seeAlso": "urn:guid:13a7fa70-ae91-4541-9526-fd3b332b585d"
-        },
-        {
-          "rdfs:seeAlso": "http://musicbrainz.org/...climbperf2..."
-        }
-      ],
+      "entity:seeAlso_r": [],
+      "event:sub_event": [],
       "frbroo:R25F_performed_r": [
         {
           "frbroo:R25F_performed": "Performed_work/Climb"
@@ -133,8 +127,113 @@
       ],
       "prov:startedAtTime": "2017-06-08T17:30:00Z",
       "prov:used_r": [],
-      "rdfs:comment": "Second performance of Climb!",
+      "rdfs:comment": "The second performance of Climb!, during the world premiere, 8th June 2017.",
       "rdfs:label": "Second performance of Climb!"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_1/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_am_performance_1",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_1/",
+      "coll:system_id": "f01a5d26-6569-4879-9aef-58334110c307",
+      "coll:uploaded_image_r": [],
+      "crm:P7_took_place_at": "",
+      "entity:seeAlso_r": [],
+      "event:sub_event": [],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Performed_work/Climb"
+        }
+      ],
+      "prov:qualifiedAssociation": [
+        {
+          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
+          "prov:hadRole": ""
+        }
+      ],
+      "prov:startedAtTime": "2017-08-23T16:00:00Z",
+      "prov:used_r": [],
+      "rdfs:comment": "First performance of Climb! at AudioMostly, date/time to be confirmed.",
+      "rdfs:label": "First performance of Climb! at AudioMostly"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_2/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_am_performance_2",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_2/",
+      "coll:system_id": "438d52bd-935e-4ff1-a5f1-cd60226a5950",
+      "coll:uploaded_image_r": [],
+      "crm:P7_took_place_at": "",
+      "entity:seeAlso_r": [],
+      "event:sub_event": [],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Performed_work/Climb"
+        }
+      ],
+      "prov:qualifiedAssociation": [
+        {
+          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
+          "prov:hadRole": ""
+        }
+      ],
+      "prov:startedAtTime": "2017-08-23T16:30:00Z",
+      "prov:used_r": [],
+      "rdfs:comment": "Second performance of Climb! at AudioMostly 2017, date/time to be confirmed",
+      "rdfs:label": "Second performance of Climb! at AudioMostly"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_rehearsal/",
+      "@type": [
+        "frbroo:F31_Performance",
+        "prov:Activity",
+        "crm:E5_Event",
+        "crm:E7_Activity",
+        "mo:Performance",
+        "annal:EntityData"
+      ],
+      "annal:id": "Climb_am_rehearsal",
+      "annal:type": "frbroo:F31_Performance",
+      "annal:type_id": "Performance",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_rehearsal/",
+      "coll:system_id": "e888ea0f-8c81-48a8-8462-bc98dd04f495",
+      "coll:uploaded_image_r": [],
+      "crm:P7_took_place_at": "",
+      "entity:seeAlso_r": [],
+      "event:sub_event": [],
+      "frbroo:R25F_performed_r": [
+        {
+          "frbroo:R25F_performed": "Performed_work/Climb"
+        }
+      ],
+      "prov:qualifiedAssociation": [
+        {
+          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
+          "prov:hadRole": ""
+        }
+      ],
+      "prov:startedAtTime": "2017-08-23T15:00:00Z",
+      "prov:used_r": [],
+      "rdfs:comment": "Dress rehearsal of Climb! for AudioMostly 2017, QMUL. Date/time to be confirmed.",
+      "rdfs:label": "Climb rehearsal at AudioMostly"
     },
     {
       "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_1/",
@@ -156,15 +255,16 @@
       "crm:P126_employed_r": [],
       "crm:P7_took_place_at": "Place/Djanogly_Recital_Hall",
       "entity:seeAlso_r": [],
+      "event:sub_event": [],
       "frbroo:R25F_performed_r": [
         {
           "frbroo:R25F_performed": "Performed_work/Climb"
         }
       ],
       "prov:qualifiedAssociation": [],
-      "prov:startedAtTime": "",
+      "prov:startedAtTime": "2017-06-08T16:05:00Z",
       "prov:used_r": [],
-      "rdfs:comment": "Premiere performance of Climb!",
+      "rdfs:comment": "The world premiere performance of Climb!",
       "rdfs:label": "Premiere performance of Climb!"
     },
     {
@@ -196,10 +296,10 @@
         }
       ],
       "prov:qualifiedAssociation": [],
-      "prov:startedAtTime": "",
+      "prov:startedAtTime": "2017-06-08T14:12:00Z",
       "prov:used_r": [],
-      "rdfs:comment": "Test performance of Climb!",
-      "rdfs:label": "Test performance of Climb!"
+      "rdfs:comment": "The dress rehearsal of Climb! just before the Premiere performance, 8th June 2017.",
+      "rdfs:label": "Dress rehearsal of Climb!"
     },
     {
       "@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_basecamp_test/",
@@ -258,13 +358,17 @@
       "annal:type": "frbroo:F20_Performance_Work",
       "annal:type_id": "Performed_work",
       "annal:url": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
-      "entity:seeAlso_r": [],
+      "entity:seeAlso_r": [
+        {
+          "rdfs:seeAlso": "https://musicbrainz.org/work/aa3fc450-f768-470f-91aa-045b6db0d6f3"
+        }
+      ],
       "frbroo:R10_has_member": [
         {
           "frbroo:R10_has_member": "Part_of_Work/Climb_basecamp"
         }
       ],
-      "rdfs:comment": "The Climb! composition",
+      "rdfs:comment": "Climb! is a musical composition that combines the ideas of a classical virtuoso piece and a computer game. Written for a Disklavier grand piano, the work engages the pianist in an unusual musical dialogue where there is no fixed musical form: the performer\u2019s/gamer\u2019s actions define how the story continues. As the performer plays key passages, so both the music and the instrument respond, jumping to new points in the score, transforming the sound, or independently playing along with them \u2013 physically in the case of the Disklavier. An interactive system like this resembles \u201can invisible chamber music partner\u201d leading some musicians to claim that electroacoustic works can never be treated as solo compositions, but should instead be seen as \u201cconcertos in a modern guise\u201d. Like a computer game or the World Wide Web, Climb! is non-linear, with a branching structure that allows the performer to choose different routes through the work. It consists of three macro-compositions called paths with some further side paths between them. Various micro-compositions are then dispersed along each path. Depending on how the performer plays, they may continue to progress along their current path or be diverted onto another one. \r\n",
       "rdfs:label": "Climb!"
     },
     {
@@ -281,9 +385,16 @@
       "annal:type": "crm:E21_Person",
       "annal:type_id": "Person",
       "annal:url": "/annalist/c/annalist_performance_archive/d/Person/Maria_Kallionpaa/",
-      "entity:seeAlso_r": [],
+      "entity:seeAlso_r": [
+        {
+          "rdfs:seeAlso": "https://musicbrainz.org/artist/e64ba083-58f6-49e5-9bd7-92883d6fb10f"
+        },
+        {
+          "rdfs:seeAlso": "https://soundcloud.com/m-kallionpaa"
+        }
+      ],
       "foaf:name": "Maria Kallionp\u00e4\u00e4",
-      "rdfs:comment": "Maria Kallionp\u00e4\u00e4",
+      "rdfs:comment": "Dr. Maria Kallionp\u00e4\u00e4\u00a0(1981) is an internationally active composer and pianist. She earned her PhD in composition at the university of Oxford in 2015. Kallionp\u00e4\u00e4 won the first prize of the OUPHIL composition competition in 2013. She has graduated from the Royal Academy of Music (2009) and Universit\u00e4t f\u00fcr Musik und Darstellende Kunst Wien (2010) and has also studied composition and piano at Sibelius Academy and Universit\u00e4t Mozarteum Salzburg.\u00a0Her works have been performed at Musikverein Wien, Philharmonie Luxembourg, and Sibiu Philharmonia. In 2011 Kallionp\u00e4\u00e4 was a commissioned composer of the Turku European Culture Capital and a finalist of the Tenso European Chamber Choir Composition Competition.  Kallionp\u00e4\u00e4 has performed at numerous music festivals including Rainy Days Festival at Philharmonie Luxembourg, Musica Nova (Helsinki), Spitalfields Festival (London), and Neue Musik von Thuringen. In 2016 her music was performed at the Florida International Toy Piano Festival.\r\n\u00a0\r\nKallionp\u00e4\u00e4 currently works as a postdoctoral fellow at the university of Aalborg and as a composer in residence of the Mixed Reality Laboratory of the Nottingham University. Her artistic research project focuses on designing a music engine that uses gamification as a composition technique. Kallionp\u00e4\u00e4 is a winner of the Fabbrica Young Artist Development Program of Opera di Roma, for which she is currently composing a new opera that will be premiered in 2017. Moreover, in collaboration with her colleague Markku Klami, Kallionp\u00e4\u00e4 is also working on the first full-length puppet opera produced in the Nordic Countries, which will premiere in 2018. Kallionp\u00e4\u00e4 was a laureate of Acad\u00e9mie de France \u00e0 Rome in\u00a02016.\u00a0",
       "rdfs:label": "Maria Kallionp\u00e4\u00e4"
     },
     {
@@ -298,7 +409,11 @@
       "annal:url": "/annalist/c/annalist_performance_archive/d/Place/Djanogly_Recital_Hall/",
       "crm:P89_falls_within": "",
       "crm:P89i_contains_repeat": [],
-      "entity:seeAlso_r": [],
+      "entity:seeAlso_r": [
+        {
+          "rdfs:seeAlso": "https://musicbrainz.org/place/64a44f4f-9c29-4d42-a5be-18b8a9cebd23"
+        }
+      ],
       "rdfs:comment": "Djanogly Recital Hall, Nottingham",
       "rdfs:label": "Djanogly Recital Hall, Nottingham"
     },

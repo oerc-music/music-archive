@@ -377,7 +377,11 @@
 			"annal:type": "frbroo:F20_Performance_Work",
 			"annal:type_id": "Performed_work",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
-			"entity:seeAlso_r": [],
+			"entity:seeAlso_r": [
+				{
+					"rdfs:seeAlso": "https://musicbrainz.org/work/aa3fc450-f768-470f-91aa-045b6db0d6f3"
+				}
+			],
 			"frbroo:R10_has_member": [
 				{
 					"frbroo:R10_has_member": "Part_of_Work/Climb_basecamp"
@@ -434,7 +438,7 @@
 					"frbroo:R10_has_member": "Part_of_Work/Climb_summit"
 				}
 			],
-			"rdfs:comment": "The Climb! composition",
+			"rdfs:comment": "Climb! is a musical composition that combines the ideas of a classical virtuoso piece and a computer game. Written for a Disklavier grand piano, the work engages the pianist in an unusual musical dialogue where there is no fixed musical form: the performer’s/gamer’s actions define how the story continues. As the performer plays key passages, so both the music and the instrument respond, jumping to new points in the score, transforming the sound, or independently playing along with them – physically in the case of the Disklavier. An interactive system like this resembles “an invisible chamber music partner” leading some musicians to claim that electroacoustic works can never be treated as solo compositions, but should instead be seen as “concertos in a modern guise”. Like a computer game or the World Wide Web, Climb! is non-linear, with a branching structure that allows the performer to choose different routes through the work. It consists of three macro-compositions called paths with some further side paths between them. Various micro-compositions are then dispersed along each path. Depending on how the performer plays, they may continue to progress along their current path or be diverted onto another one. \r\n",
 			"rdfs:label": "Climb!"
 		}
 	]

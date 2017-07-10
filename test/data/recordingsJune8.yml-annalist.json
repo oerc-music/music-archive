@@ -33,8 +33,8 @@
 			"mo:records": "Performance/Climb_performance_test",
 			"prov:hadMember_repeat": [],
 			"prov:startedAtTime": "2017-06-08T14:13:31.216Z",
-			"rdfs:comment": "Recording of mix from Test performance of Climb!",
-			"rdfs:label": "Recording of mix from Test performance of Climb!"
+			"rdfs:comment": "Recording of mix from Dress rehearsal of Climb!",
+			"rdfs:label": "Recording of mix from Dress rehearsal of Climb!"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_performance_test_mix/",
@@ -47,8 +47,8 @@
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_performance_test_mix/",
 			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_mix2.mp3",
-			"rdfs:comment": "Audio of mix from Test performance of Climb!",
-			"rdfs:label": "Audio of mix from Test performance of Climb!"
+			"rdfs:comment": "Audio of mix from Dress rehearsal of Climb!",
+			"rdfs:label": "Audio of mix from Dress rehearsal of Climb!"
 		},
 		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Recording/Climb_performance_1_mix/",

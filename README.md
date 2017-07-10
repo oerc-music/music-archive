@@ -36,6 +36,11 @@ e.g.
 node lib/processlogs.js test/data/example_entity_list.json \
   test/data/20170608T112725862Z-default.log 'test/data/Climb!June8.csv' \
   test/data/recordingsJune8.yml
+  
+cp test/data/recordingsJune8.yml-annalist.json archive-app/src/assets/data/climb-recordings-20170608.json
+cp test/data/Climb\!June8.csv-annalist.json archive-app/src/assets/data/climb-stages-20170608.json
+cp test/data/20170608T112725862Z-default.log-annalist.json archive-app/src/assets/data/climb-performances-20170608.json
+cp test/data/example_entity_list.json archive-app/src/assets/data/records.json
 ```
 Note, app files are in archive-app/src/assets/data/. See especially
 urls.json (list of files to read).
