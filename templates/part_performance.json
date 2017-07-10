@@ -25,5 +25,5 @@
 	"prov:startedAtTime": "{{datetime}}",
 	"prov:used_r": [],
 	"rdfs:comment": "Performance of Climb {{stagetitle}} in {{performancetitle}}",
-	"rdfs:label": "Performance of Climb {{stagetitle}} in {{performancetitle}}"
+	"rdfs:label": "{{stagetitle}}"
 }

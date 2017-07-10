@@ -1,11 +1,28 @@
-<div class="container" *ngIf="work"><h3>{{work.label}}</h3>
-	<h4>Performances</h4>
+<div class="container" *ngIf="work"><h1>{{work.label}}</h1>
+<!-- 	<p>By <a >{{}}</a></p> -->
+	<p>{{work.description}}</p>
+<!-- 
+	<h2>Performances</h2>
 	<ul>
 		<li *ngFor="let perf of performances">{{perf.getValue('prov:startedAtTime')}}: <a  [routerLink]="['/performance', perf.id]">{{perf.label}}</a></li>
 	</ul>
-	<h4>Parts (fragments)</h4>
+-->
+	<p>See also:</p>
 	<ul>
-		<li *ngFor="let part of parts">{{part.label}}</li>
+		<li *ngFor="let url of work.getValues('entity:seeAlso_r','rdfs:seeAlso')"><a href="{{url}}" target="_seealso">{{url}}</a></li>
 	</ul>
-	<button (click)="goBack()">Back</button>
+	<div *ngFor="let composer of composers">
+		<h2>By {{composer.label}}</h2>
+		<p>{{composer.description}}</p>
+		<p>See also:</p>
+		<ul>
+			<li *ngFor="let url of composer.getValues('entity:seeAlso_r','rdfs:seeAlso')"><a href="{{url}}" target="_seealso">{{url}}</a></li>
+		</ul>
+	</div>
+ 	<h2 *ngIf="parts.length>0">Parts (stages)</h2>
+ 	<p>{{work.label}} is comprised of the following musical parts or stages:</p>
+	<ul>
+		<li *ngFor="let part of parts">{{part.label}}: {{part.description}}</li>
+	</ul>
+ 	<p><button (click)="goBack()">Back</button></p>
 </div>

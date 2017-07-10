@@ -4,6 +4,7 @@ export class Entity {
 	id: string;
 	type_id: string;
 	label: string;
+	description: string;
 	fields: object;
 
 	constructor(fields: object) {
@@ -11,6 +12,7 @@ export class Entity {
 		this.id = fields['annal:id'];
 		this.type_id = fields['annal:type_id'];
 		this.label = fields['rdfs:label'];
+		this.description = fields['rdfs:comment'];
 	}
 	getValues(fieldname: string, subfieldname?: string) : string[] {
 		var res = [];

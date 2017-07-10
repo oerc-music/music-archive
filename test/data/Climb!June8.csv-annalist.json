@@ -23,7 +23,7 @@
 			"coll:part_id": "basecamp",
 			"coll:part_rank": "1",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Basecamp fragment of Climb!",
+			"rdfs:comment": "Avatar prepares for their climb at Basecamp.",
 			"rdfs:label": "Basecamp"
 		},
 		{
@@ -42,7 +42,7 @@
 			"coll:part_id": "1a",
 			"coll:part_rank": "2",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "The Angry Deer fragment of Climb!",
+			"rdfs:comment": "Avatar chooses to climb the first path. An angry deer confronts Avatar.",
 			"rdfs:label": "The Angry Deer"
 		},
 		{
@@ -61,7 +61,7 @@
 			"coll:part_id": "p1a",
 			"coll:part_rank": "3",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Path 1 (a) fragment of Climb!",
+			"rdfs:comment": "Avatar escapes the deer and heads along the first path.",
 			"rdfs:label": "Path 1 (a)"
 		},
 		{
@@ -80,7 +80,7 @@
 			"coll:part_id": "2a",
 			"coll:part_rank": "4",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": " A Flooded Path fragment of Climb!",
+			"rdfs:comment": "The path is flooded. Avatar must wade through the water.",
 			"rdfs:label": " A Flooded Path"
 		},
 		{
@@ -99,7 +99,7 @@
 			"coll:part_id": "p1b",
 			"coll:part_rank": "5",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Path 1 (b) fragment of Climb!",
+			"rdfs:comment": "Avatar emerges from the water and continues up the path.",
 			"rdfs:label": "Path 1 (b)"
 		},
 		{
@@ -118,7 +118,7 @@
 			"coll:part_id": "3a",
 			"coll:part_rank": "6",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Avatar Finds a Shimmering Stone fragment of Climb!",
+			"rdfs:comment": "Avatar discovers a beautiful stone that shimmers in the light.",
 			"rdfs:label": "Avatar Finds a Shimmering Stone"
 		},
 		{
@@ -137,7 +137,7 @@
 			"coll:part_id": "p1c",
 			"coll:part_rank": "7",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Path 1 (c) fragment of Climb!",
+			"rdfs:comment": "Avatar drops the stone and continues along the path.",
 			"rdfs:label": "Path 1 (c)"
 		},
 		{
@@ -156,7 +156,7 @@
 			"coll:part_id": "4a",
 			"coll:part_rank": "8",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "A Sleeping Bear fragment of Climb!",
+			"rdfs:comment": "Avatar encounters a sleeping bear and tries to walk past without waking it.",
 			"rdfs:label": "A Sleeping Bear"
 		},
 		{
@@ -175,7 +175,7 @@
 			"coll:part_id": "5a",
 			"coll:part_rank": "9",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Rolling Stones fragment of Climb!",
+			"rdfs:comment": "Avatar is nearly past the bear when they hear rocks rolling down the mountain.",
 			"rdfs:label": "Rolling Stones"
 		},
 		{
@@ -194,7 +194,7 @@
 			"coll:part_id": "1b",
 			"coll:part_rank": "10",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "The Stones fragment of Climb!",
+			"rdfs:comment": "Avatar chooses to climb the second path. Take care! Stones are falling down the path.",
 			"rdfs:label": "The Stones"
 		},
 		{
@@ -213,7 +213,7 @@
 			"coll:part_id": "p2a",
 			"coll:part_rank": "11",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Path 2 (a) fragment of Climb!",
+			"rdfs:comment": "Avatar dances through the stones to continue along the second path.",
 			"rdfs:label": "Path 2 (a)"
 		},
 		{
@@ -232,7 +232,7 @@
 			"coll:part_id": "2b",
 			"coll:part_rank": "12",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "A Tree Trunk on the Path fragment of Climb!",
+			"rdfs:comment": "Avatar discovers a tree lying across the path.",
 			"rdfs:label": "A Tree Trunk on the Path"
 		},
 		{
@@ -251,7 +251,7 @@
 			"coll:part_id": "p2b",
 			"coll:part_rank": "13",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Path 2 (b) fragment of Climb!",
+			"rdfs:comment": "Avatar clambers over the tree and heads up the path.",
 			"rdfs:label": "Path 2 (b)"
 		},
 		{
@@ -270,7 +270,7 @@
 			"coll:part_id": "3b",
 			"coll:part_rank": "14",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "A Scary Whispering Forest fragment of Climb!",
+			"rdfs:comment": "The path winds into a ghostly forest.",
 			"rdfs:label": "A Scary Whispering Forest"
 		},
 		{
@@ -289,7 +289,7 @@
 			"coll:part_id": "p2c",
 			"coll:part_rank": "15",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Path2 (c) fragment of Climb!",
+			"rdfs:comment": "Avatar emerges into the uplands and continues along the second path.",
 			"rdfs:label": "Path2 (c)"
 		},
 		{
@@ -308,7 +308,7 @@
 			"coll:part_id": "4b",
 			"coll:part_rank": "16",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "A Hallucination fragment of Climb!",
+			"rdfs:comment": "Avatar has a hallucination where they meet their former lover.",
 			"rdfs:label": "A Hallucination"
 		},
 		{
@@ -327,7 +327,7 @@
 			"coll:part_id": "5b",
 			"coll:part_rank": "17",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Birds Attack fragment of Climb!",
+			"rdfs:comment": "Birds attack Avatar! The hallucination is broken.",
 			"rdfs:label": "Birds Attack"
 		},
 		{
@@ -346,7 +346,7 @@
 			"coll:part_id": "summit",
 			"coll:part_rank": "18",
 			"entity:seeAlso_r": [],
-			"rdfs:comment": "Summit fragment of Climb!",
+			"rdfs:comment": "Avatar dodges the rocks to emerge at the summit.",
 			"rdfs:label": "Summit"
 		},
 		{

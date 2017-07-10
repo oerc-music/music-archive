@@ -14,6 +14,7 @@ export class WorkDetailComponent implements OnInit {
   work: Entity;
   performances: Entity[] = [];
   parts: Entity[] = [];
+  composers: Entity[] = [];
 
   constructor(
     private recordsService: RecordsService,
@@ -31,6 +32,9 @@ export class WorkDetailComponent implements OnInit {
         this.recordsService.getMembers(work)
         .then(members => this.parts = members
           .sort((a,b) => a.compareTo(b, 'coll:part_rank')));
+        this.recordsService.getComposersOfWork(work)
+        .then(composers => this.composers = composers
+          .sort((a,b) => a.compareTo(b, 'rdfs:label')));
       });
   }
 

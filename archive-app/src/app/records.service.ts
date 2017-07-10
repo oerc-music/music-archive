@@ -92,6 +92,9 @@ export class RecordsService {
 			then(audio_clips => 
 			{var urls=audio_clips.map(audio_clip => audio_clip.getValue('coll:audio_clip')); /*console.log('urls',urls); */ return urls;});
 	}
+	getComposersOfWork(work:Entity): Promise<Entity[]> {
+		return this.getValuesAsEntities(work, 'annal:member', 'prov:wasAttributedTo');
+	}
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);

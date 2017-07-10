@@ -95,6 +95,8 @@ export class WorkExplorerComponent implements OnInit {
   recordings: Recording[] = [];
 	partPerformances: PartPerformance[] = [];
 	currentlyPlaying: PartPerformance = null;
+	selectedPart: Part = null;
+	selectedPerformance: Performance = null;
 	
   constructor(
 	private elRef:ElementRef,
@@ -208,8 +210,10 @@ export class WorkExplorerComponent implements OnInit {
 			let p = this.parts[pi];
 			p.selected = false;
 		}
+		this.selectedPart = null;
 		if (!perf.selected)
 			perf.selected = true;
+		this.selectedPerformance = perf;
 		// available stages in this performance
 		for (var pi in this.parts) {
 			var part = this.parts[pi];
@@ -256,8 +260,10 @@ export class WorkExplorerComponent implements OnInit {
 			let p = this.performances[pi];
 			p.selected = false;
 		}
+		this.selectedPerformance = null;
 		if (!part.selected)
 			part.selected = true;
+		this.selectedPart = part;
 		for (var pi in this.performances) {
 			var performance = this.performances[pi];
 			performance.available = !!this.partPerformances.find(pp => pp.performance === performance && pp.part === part);
