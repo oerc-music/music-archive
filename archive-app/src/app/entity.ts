@@ -24,15 +24,45 @@ export class Entity {
 				for (let item of val) {
 					if (typeof(item)=='string')
 						res.push(item);
-					else if (typeof(item)=='object' && item[subfieldname]!==undefined)
+					else if (typeof(item)=='number')
+						res.push(String(item))
+					else if (typeof(item)=='object' && item[subfieldname]!==undefined && typeof(item[subfieldname])=='string')
 						res.push(item[subfieldname]);
+					else if (typeof(item)=='object' && item[subfieldname]!==undefined && typeof(item[subfieldname])=='number')
+						res.push(Number(item[subfieldname]));
 					else
 						console.log('getValues for non-string array value '+JSON.stringify(item)+':'+typeof(item));
 				}
 			} else if (typeof(val)=='string') {
 				res.push(val);
+			} else if (typeof(val)=='number') {
+				res.push(String(val));
 			} else {
 				console.log('getValues for non-string value '+val+':'+typeof(val));
+			}
+		}
+		//console.log(res);
+		return res;
+	}
+	getNumberValues(fieldname: string, subfieldname?: string) : number[] {
+		var res = [];
+		//console.log('getValues('+fieldname+', subfieldname) on '+this.type_id+'/'+this.id);
+		subfieldname = subfieldname ? subfieldname : fieldname;
+		if (undefined!==this.fields[fieldname]) {
+			let val = this.fields[fieldname];
+			if (Array.isArray(val)) {
+				for (let item of val) {
+					if (typeof(item)=='number')
+						res.push(item);
+					else if (typeof(item)=='object' && item[subfieldname]!==undefined && typeof(item[subfieldname])=='number')
+						res.push(item[subfieldname]);
+					else
+						console.log('getNumberValues for non-number array value '+JSON.stringify(item)+':'+typeof(item));
+				}
+			} else if (typeof(val)=='number') {
+				res.push(val);
+			} else {
+				console.log('getNumberValues for non-number value '+val+':'+typeof(val));
 			}
 		}
 		//console.log(res);
@@ -42,6 +72,12 @@ export class Entity {
 		let vs = this.getValues(fieldname, subfieldname);
 		if (vs.length==0)
 			return '';
+		return vs[0];
+	}
+	getNumberValue(fieldname:string, subfieldname?:string): number {
+		let vs = this.getNumberValues(fieldname, subfieldname);
+		if (vs.length==0)
+			return 0;
 		return vs[0];
 	}
 	getTime(fieldname:string, subfieldname?:string): number {

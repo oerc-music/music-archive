@@ -97,6 +97,7 @@ export class WorkExplorerComponent implements OnInit {
 	currentlyPlaying: PartPerformance = null;
 	selectedPart: Part = null;
 	selectedPerformance: Performance = null;
+	showMap: boolean = false;
 	
   constructor(
 	private elRef:ElementRef,
@@ -248,6 +249,14 @@ export class WorkExplorerComponent implements OnInit {
 			performance.highlighted = !!this.partPerformances.find(pp => pp.performance === performance && pp.part === part);
 		}
 	}
+	clickMapPart(part) {
+		console.log('clickMapPart('+part.id+')');
+		if (part.available) {
+			this.clickPartPlay(null, part);
+		} else {
+			this.clickPartCheckbox(null, part);
+		}
+	}
 	clickPartCheckbox(event,part) {
 		console.log('select part'+part.id);
 		for (var pi in this.parts) {
@@ -276,8 +285,10 @@ export class WorkExplorerComponent implements OnInit {
 		}
 	}
 	clickPartPlay(event,part) {
-		event.preventDefault();
-		event.stopPropagation();
+		if (event) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
 		let perf = this.performances.find(p => p.selected);
 		if (perf!==undefined) {
 			this.playInternal(perf, part);

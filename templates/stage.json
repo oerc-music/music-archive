@@ -13,6 +13,11 @@
 	"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_{{id}}/",
 	"coll:part_id": "{{id}}",
 	"coll:part_rank": "{{rank}}",
+	"coll:map_x": "{{map_x}}",
+	"coll:map_y": "{{map_y}}",
+	"coll:map_path": "{{path}}",
+	"coll:map_cue": "{{cue}}",
+	"coll:map_narratives": "{{narratives}}",
 	"entity:seeAlso_r": [],
 	"rdfs:comment": "{{description}}",
 	"rdfs:label": "{{title}}"

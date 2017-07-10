@@ -1,0 +1,39 @@
+/* parts-map css */
+
+.parts-map {
+	
+}
+.part-g circle {
+	stroke: black;
+	stroke-width: 2px;
+	opacity: 1;
+	cursor: pointer;
+	user-select: none;
+}
+
+.part-g.default circle {
+	fill: rgb(80,80,80);
+}
+.part-g.selected circle {
+	fill: rgb(255, 165, 0);
+}
+
+.part-g.available circle {
+	fill: rgb(120, 80, 0);
+}
+
+.part-g.active circle {
+	fill: rgb(255, 165, 0);
+}
+
+.part-g text {
+	fill: rgb(192,192,192);
+	font-family: Verdana;
+	font-size: 20px;
+	/*cursor: pointer;*/
+	user-select: none;
+}
+.part-line {
+	stroke: rgb(100,100,100);
+	stroke-width: 8px;
+}

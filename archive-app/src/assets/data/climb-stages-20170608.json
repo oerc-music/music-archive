@@ -22,6 +22,16 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_basecamp/",
 			"coll:part_id": "basecamp",
 			"coll:part_rank": "1",
+			"coll:map_x": 0.53125,
+			"coll:map_y": 0.626041667,
+			"coll:map_path": 0,
+			"coll:map_cue": [
+				"1a",
+				"1b"
+			],
+			"coll:map_narratives": {
+				"": "Avatar prepares for their climb at Basecamp."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar prepares for their climb at Basecamp.",
 			"rdfs:label": "Basecamp"
@@ -41,6 +51,18 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1a/",
 			"coll:part_id": "1a",
 			"coll:part_rank": "2",
+			"coll:map_x": 0.4453125,
+			"coll:map_y": 0.610416667,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"p1a",
+				"2b"
+			],
+			"coll:map_narratives": {
+				"basecamp": "Avatar chooses to climb the first path. An angry deer confronts Avatar.",
+				"2b": "Avatar can't cross the tree, so must climb down to the first path where they encounter an angry deer.",
+				"1b": "Avatar narrowly dodges the stones by diving onto the first path to be confronted by an angry deer."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar chooses to climb the first path. An angry deer confronts Avatar.",
 			"rdfs:label": "The Angry Deer"
@@ -60,6 +82,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1a/",
 			"coll:part_id": "p1a",
 			"coll:part_rank": "3",
+			"coll:map_x": 0.3375,
+			"coll:map_y": 0.579166667,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"2a"
+			],
+			"coll:map_narratives": {
+				"1a": "Avatar escapes the deer and heads along the first path."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar escapes the deer and heads along the first path.",
 			"rdfs:label": "Path 1 (a)"
@@ -79,6 +110,16 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2a/",
 			"coll:part_id": "2a",
 			"coll:part_rank": "4",
+			"coll:map_x": 0.2359375,
+			"coll:map_y": 0.547916667,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"p1b",
+				"1b"
+			],
+			"coll:map_narratives": {
+				"p1a": "The path is flooded. Avatar must wade through the water."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "The path is flooded. Avatar must wade through the water.",
 			"rdfs:label": " A Flooded Path"
@@ -98,6 +139,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1b/",
 			"coll:part_id": "p1b",
 			"coll:part_rank": "5",
+			"coll:map_x": 0.3140625,
+			"coll:map_y": 0.49375,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"3a"
+			],
+			"coll:map_narratives": {
+				"2a": "Avatar emerges from the water and continues up the path."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar emerges from the water and continues up the path.",
 			"rdfs:label": "Path 1 (b)"
@@ -117,6 +167,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3a/",
 			"coll:part_id": "3a",
 			"coll:part_rank": "6",
+			"coll:map_x": 0.359375,
+			"coll:map_y": 0.4375,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"p1c"
+			],
+			"coll:map_narratives": {
+				"p1b": "Avatar discovers a beautiful stone that shimmers in the light."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar discovers a beautiful stone that shimmers in the light.",
 			"rdfs:label": "Avatar Finds a Shimmering Stone"
@@ -136,6 +195,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1c/",
 			"coll:part_id": "p1c",
 			"coll:part_rank": "7",
+			"coll:map_x": 0.359375,
+			"coll:map_y": 0.352083333,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"4a"
+			],
+			"coll:map_narratives": {
+				"3a": "Avatar drops the stone and continues along the path."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar drops the stone and continues along the path.",
 			"rdfs:label": "Path 1 (c)"
@@ -155,6 +223,16 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4a/",
 			"coll:part_id": "4a",
 			"coll:part_rank": "8",
+			"coll:map_x": 0.4453125,
+			"coll:map_y": 0.40625,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"5a",
+				"3b"
+			],
+			"coll:map_narratives": {
+				"p1c": "Avatar encounters a sleeping bear and tries to walk past without waking it."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar encounters a sleeping bear and tries to walk past without waking it.",
 			"rdfs:label": "A Sleeping Bear"
@@ -174,6 +252,17 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5a/",
 			"coll:part_id": "5a",
 			"coll:part_rank": "9",
+			"coll:map_x": 0.509375,
+			"coll:map_y": 0.320833333,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"summit",
+				"4b"
+			],
+			"coll:map_narratives": {
+				"4a": "Avatar is nearly past the bear when they hear rocks rolling down the mountain.",
+				"5b": "Avatar takes the first path to escape the birds, but now hears rocks falling down the mountain."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar is nearly past the bear when they hear rocks rolling down the mountain.",
 			"rdfs:label": "Rolling Stones"
@@ -193,6 +282,17 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1b/",
 			"coll:part_id": "1b",
 			"coll:part_rank": "10",
+			"coll:map_x": 0.6796875,
+			"coll:map_y": 0.594791667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"p2a",
+				"1a"
+			],
+			"coll:map_narratives": {
+				"basecamp": "Avatar chooses to climb the second path. Take care! Stones are falling down the path.",
+				"2a": "Avatar can�t cross this tree. They jump to the first path only to see stones falling towards them. "
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar chooses to climb the second path. Take care! Stones are falling down the path.",
 			"rdfs:label": "The Stones"
@@ -212,6 +312,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2a/",
 			"coll:part_id": "p2a",
 			"coll:part_rank": "11",
+			"coll:map_x": 0.6,
+			"coll:map_y": 0.563541667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"2b"
+			],
+			"coll:map_narratives": {
+				"1b": "Avatar dances through the stones to continue along the second path."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar dances through the stones to continue along the second path.",
 			"rdfs:label": "Path 2 (a)"
@@ -231,6 +340,17 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2b/",
 			"coll:part_id": "2b",
 			"coll:part_rank": "12",
+			"coll:map_x": 0.490625,
+			"coll:map_y": 0.547916667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"p2b",
+				"1a"
+			],
+			"coll:map_narratives": {
+				"p2a": "Avatar discovers a tree lying across the path.",
+				"1a": "Avatar escapes the deer by veering onto the second path, but discovers a tree lying across it."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar discovers a tree lying across the path.",
 			"rdfs:label": "A Tree Trunk on the Path"
@@ -250,6 +370,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2b/",
 			"coll:part_id": "p2b",
 			"coll:part_rank": "13",
+			"coll:map_x": 0.4234375,
+			"coll:map_y": 0.509375,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"3b"
+			],
+			"coll:map_narratives": {
+				"2b": "Avatar clambers over the tree and heads up the path."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar clambers over the tree and heads up the path.",
 			"rdfs:label": "Path 2 (b)"
@@ -269,6 +398,16 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3b/",
 			"coll:part_id": "3b",
 			"coll:part_rank": "14",
+			"coll:map_x": 0.509375,
+			"coll:map_y": 0.478125,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"p2c"
+			],
+			"coll:map_narratives": {
+				"p2b": "The path winds into a ghostly forest.",
+				"4a": "Oh no! Avatar wakes the bear. They run to the second path to be swallowed by a ghostly forest."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "The path winds into a ghostly forest.",
 			"rdfs:label": "A Scary Whispering Forest"
@@ -288,6 +427,15 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2c/",
 			"coll:part_id": "p2c",
 			"coll:part_rank": "15",
+			"coll:map_x": 0.6015625,
+			"coll:map_y": 0.4625,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"4b"
+			],
+			"coll:map_narratives": {
+				"3b": "Avatar emerges into the uplands and continues along the second path."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar emerges into the uplands and continues along the second path.",
 			"rdfs:label": "Path2 (c)"
@@ -307,6 +455,16 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4b/",
 			"coll:part_id": "4b",
 			"coll:part_rank": "16",
+			"coll:map_x": 0.578125,
+			"coll:map_y": 0.390625,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"5b"
+			],
+			"coll:map_narratives": {
+				"p2c": "Avatar has a hallucination where they meet their former lover.",
+				"5a": "Avatar is hit by a stone! They tumble over to the second path and hallucinate about meeting their former lover."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar has a hallucination where they meet their former lover.",
 			"rdfs:label": "A Hallucination"
@@ -326,6 +484,16 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5b/",
 			"coll:part_id": "5b",
 			"coll:part_rank": "17",
+			"coll:map_x": 0.6,
+			"coll:map_y": 0.320833333,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"summit",
+				"5a"
+			],
+			"coll:map_narratives": {
+				"4b": "Birds attack Avatar! The hallucination is broken."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Birds attack Avatar! The hallucination is broken.",
 			"rdfs:label": "Birds Attack"
@@ -345,6 +513,14 @@
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_summit/",
 			"coll:part_id": "summit",
 			"coll:part_rank": "18",
+			"coll:map_x": 0.5546875,
+			"coll:map_y": 0.214583333,
+			"coll:map_path": 0,
+			"coll:map_cue": [],
+			"coll:map_narratives": {
+				"5a": "Avatar dodges the rocks to emerge at the summit.",
+				"5b": "Avatar runs from the birds to emerge at the summit."
+			},
 			"entity:seeAlso_r": [],
 			"rdfs:comment": "Avatar dodges the rocks to emerge at the summit.",
 			"rdfs:label": "Summit"
@@ -439,7 +615,8 @@
 				}
 			],
 			"rdfs:comment": "Climb! is a musical composition that combines the ideas of a classical virtuoso piece and a computer game. Written for a Disklavier grand piano, the work engages the pianist in an unusual musical dialogue where there is no fixed musical form: the performer’s/gamer’s actions define how the story continues. As the performer plays key passages, so both the music and the instrument respond, jumping to new points in the score, transforming the sound, or independently playing along with them – physically in the case of the Disklavier. An interactive system like this resembles “an invisible chamber music partner” leading some musicians to claim that electroacoustic works can never be treated as solo compositions, but should instead be seen as “concertos in a modern guise”. Like a computer game or the World Wide Web, Climb! is non-linear, with a branching structure that allows the performer to choose different routes through the work. It consists of three macro-compositions called paths with some further side paths between them. Various micro-compositions are then dispersed along each path. Depending on how the performer plays, they may continue to progress along their current path or be diverted onto another one. \r\n",
-			"rdfs:label": "Climb!"
+			"rdfs:label": "Climb!",
+			"coll:map_url": "assets/images/Climb_Map_background.jpg"
 		}
 	]
 }

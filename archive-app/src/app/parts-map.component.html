@@ -1,0 +1,29 @@
+<!-- parts-map -->
+<div class="col-12">
+	<svg class="parts-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" width="400px" height="400px">
+		<!-- cludge to cut off top/bottom -->
+		<g [attr.transform]="work.id=='Climb' ? 'matrix(0.4 0 0 0.4 0 -75)' : 'scale(0.4)'">
+			<image [attr.xlink:href]="work.getValue('coll:map_url')" x="0" y="0" width="1000px" height="1500px" preserveAspectRatio="none"></image>
+			<line *ngFor="let line of lines"
+				[attr.x1]="line.from.getNumberValue('coll:map_x')*1000"
+				[attr.y1]="line.from.getNumberValue('coll:map_y')*1500" 
+				[attr.x2]="line.to.getNumberValue('coll:map_x')*1000"
+				[attr.y2]="line.to.getNumberValue('coll:map_y')*1500" 
+				class="part-line">
+			</line>
+			<g *ngFor="let part of parts" [attr.transform]="'translate('+(part.getNumberValue('coll:map_x')*1000)+' '+(part.getNumberValue('coll:map_y')*1500)+')'"
+				class="part-g" [ngClass]="{'active': part.active, 'available': part.available, 'selected': part.selected, 'default': !part.selected && !part.active && !part.available }">
+				<text x="0" y="40" text-anchor="middle" class="part-label">{{part.label}}</text>
+			</g>
+			<g *ngFor="let part of parts" [attr.transform]="'translate('+(part.getNumberValue('coll:map_x')*1000)+' '+(part.getNumberValue('coll:map_y')*1500)+')'"
+				class="part-g" [ngClass]="{'active': part.active, 'available': part.available, 'selected': part.selected, 'default': !part.selected && !part.active && !part.available }">
+				<a (click)="clickPartPlay($event,part)" class="pointer">
+					<circle class="part-circle" r="20" ></circle>
+				</a>
+			</g>
+		</g>
+	</svg>
+	<!-- <ul>
+		<li *ngFor="let part of parts">{{part.label}}</li>
+	</ul> -->
+</div>

@@ -9,6 +9,7 @@ import { WorksComponent } from './works.component';
 import { WorkDetailComponent } from './work-detail.component';
 import { WorkExplorerComponent } from './work-explorer.component';
 import { PerformanceDetailComponent } from './performance-detail.component';
+import { PartsMapComponent } from './parts-map.component';
 import { RecordsService } from './records.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     WorksComponent,
     WorkDetailComponent,
     WorkExplorerComponent,
-    PerformanceDetailComponent
+    PerformanceDetailComponent,
+    PartsMapComponent
   ],
   imports: [
     BrowserModule,

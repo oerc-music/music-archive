@@ -34,6 +34,10 @@
 		</div>
 		<p *ngIf="selectedPart">{{selectedPart.description}}</p>
 	</div>
+	<h2>Map (<input type="checkbox" [(ngModel)]="showMap"> show)</h2>
+	<div class="row" *ngIf="showMap">
+		<parts-map [parts]="parts" [work]="work" (select)="clickMapPart($event)"></parts-map>
+	</div>
 	<h2>Playing</h2>
 	<div class="row" *ngIf="!!currentlyPlaying">
 		<div class="col-12">
