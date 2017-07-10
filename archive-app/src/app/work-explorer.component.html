@@ -18,8 +18,8 @@
 		</div>
 		<p *ngIf="selectedPerformance">{{selectedPerformance.description}}</p>
 	</div>
-	<h2>Parts (fragments)</h2>
-	<div class="row">
+	<h2>Parts (fragments) / Map<input type="checkbox" [(ngModel)]="showMap"></h2>
+	<div class="row" *ngIf="!showMap">
 		<div class="col-4 part" *ngFor="let part of parts" [ngClass]="{'highlighted': part.highlighted}"
 			(click)="clickPart(part)">
 			<a (click)="clickPartCheckbox($event,part)" class="pointer">
@@ -34,7 +34,6 @@
 		</div>
 		<p *ngIf="selectedPart">{{selectedPart.description}}</p>
 	</div>
-	<h2>Map (<input type="checkbox" [(ngModel)]="showMap"> show)</h2>
 	<div class="row" *ngIf="showMap">
 		<parts-map [parts]="parts" [work]="work" (select)="clickMapPart($event)"></parts-map>
 	</div>
