@@ -353,6 +353,10 @@ export class WorkExplorerComponent implements OnInit {
 		}
 	}
 	stop() {
+		if (this.currentlyPlaying) {
+			this.currentlyPlaying.part.active = false;
+			this.currentlyPlaying.performance.active = false;
+		}
 		this.pause();
 		this.currentlyPlaying = null;
 	}
@@ -409,15 +413,15 @@ export class WorkExplorerComponent implements OnInit {
 	play() {
 		if (!!this.currentlyPlaying && !this.currentlyPlaying.clip.recording.shouldplay) {
 			this.currentlyPlaying.clip.recording.shouldplay = true;
-		if (!!this.elRef) {
-			let audios = this.elRef.nativeElement.getElementsByTagName('audio');
-			for (var ai=0; ai<audios.length; ai++) {
-				let audio = audios[ai];
-				if (audio.id==this.currentlyPlaying.clip.recording.id) {
-					this.currentlyPlaying.clip.recording.shouldplay = true;
-					if (audio.readyState>=2)
-						// canplay
-						audio.play();
+			if (!!this.elRef) {
+				let audios = this.elRef.nativeElement.getElementsByTagName('audio');
+				for (var ai=0; ai<audios.length; ai++) {
+					let audio = audios[ai];
+					if (audio.id==this.currentlyPlaying.clip.recording.id) {
+						this.currentlyPlaying.clip.recording.shouldplay = true;
+						if (audio.readyState>=2)
+							// canplay
+							audio.play();
 					}
 				}
 			}
@@ -425,8 +429,6 @@ export class WorkExplorerComponent implements OnInit {
 	}
 	pause() {
 		if (this.currentlyPlaying) {
-			this.currentlyPlaying.performance.active = false;
-			this.currentlyPlaying.part.active = false;
 			if (!!this.elRef) {
 				let audios = this.elRef.nativeElement.getElementsByTagName('audio');
 				for (var ai=0; ai<audios.length; ai++) {
