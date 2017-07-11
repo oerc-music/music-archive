@@ -1,6 +1,5 @@
 <!-- parts-map -->
-<div class="col-12">
-	<svg class="parts-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" width="400px" height="400px">
+	<svg class="parts-map img-fluid" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" width="400px" height="400px">
 		<!-- cludge to cut off top/bottom -->
 		<g [attr.transform]="work.id=='Climb' ? 'matrix(0.4 0 0 0.4 0 -50)' : 'scale(0.4)'">
 			<!-- and again for image/coordinate offset - don't know why at all on this one! -->
@@ -29,4 +28,3 @@
 	<!-- <ul>
 		<li *ngFor="let part of parts">{{part.label}}</li>
 	</ul> -->
-</div>

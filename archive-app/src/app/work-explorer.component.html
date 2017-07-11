@@ -2,25 +2,14 @@
 <!-- <i class="material-icons">face</i> -->
 	<p><a [routerLink]="['/work', work.id]">More about {{work.label}}...</a></p>
 	<p>Select <i class="material-icons">check_box_outline_blank</i> a Performance or a Part, then play <i class="material-icons">play_circle_outline</i> the different parts or versions available.</p>
-	<h2>Performances</h2>
-	<div class="row">
-		<div class="col-4 performance" *ngFor="let perf of performances" [ngClass]="{'highlighted': perf.highlighted}"
-			(click)="clickPerformance(perf)">
-			<a (click)="clickPerformanceCheckbox($event,perf)" class="pointer">
-				<i class="material-icons">{{perf.selected ? 'check_box' : 'check_box_outline_blank'}}</i>
-			</a>
-			<a (click)="clickPerformancePlay($event,perf)" class="pointer">
-				<span *ngIf="perf.active && perf.available"><i class="material-icons">play_circle_filled</i></span>
-				<span *ngIf="!perf.active && perf.available"><i class="material-icons">play_circle_outline</i></span>
-				<span *ngIf="!perf.available"><i class="material-icons">&nbsp;</i></span>
-			</a>
-			{{perf.label}}<!-- (@ {{perf.startTime}}) -->
-		</div>
-		<p *ngIf="selectedPerformance">{{selectedPerformance.description}}</p>
+	<h2>Parts (fragments) 
+	<div class="btn-group">
+		<button class="btn btn-secondary" [ngClass]="{'active':!showMap}" (click)="setShowMap(false)">List</button>
+		<button class="btn btn-secondary" [ngClass]="{'active':showMap}" (click)="setShowMap(true)">Map</button>
 	</div>
-	<h2>Parts (fragments) / Map<input type="checkbox" [(ngModel)]="showMap"></h2>
+	</h2>
 	<div class="row" *ngIf="!showMap">
-		<div class="col-4 part" *ngFor="let part of parts" [ngClass]="{'highlighted': part.highlighted}"
+		<div class="col-sm-6 col-md-4 part" *ngFor="let part of parts" [ngClass]="{'highlighted': part.highlighted}"
 			(click)="clickPart(part)">
 			<a (click)="clickPartCheckbox($event,part)" class="pointer">
 				<i class="material-icons">{{part.selected ? 'check_box' : 'check_box_outline_blank'}}</i>
@@ -35,13 +24,18 @@
 		<p *ngIf="selectedPart">{{selectedPart.description}}</p>
 	</div>
 	<div class="row" *ngIf="showMap">
-		<parts-map [parts]="parts" [work]="work" (select)="clickMapPart($event)"></parts-map>
+		<div class="col-sm-12 col-md-8 col-lg-6">
+			<parts-map [parts]="parts" [work]="work" (select)="clickMapPart($event)"></parts-map>
+		</div>
+		<div class="col-sm-12 col-md-4 col-lg-6">
+			<p *ngIf="selectedPart"><em>{{selectedPart.label}}</em>: {{selectedPart.description}}</p>
+		</div>
 	</div>
 	<h2>Playing</h2>
 	<div class="row" *ngIf="!!currentlyPlaying">
 		<div class="col-12">
-			{{currentlyPlaying.performance.label}}: {{currentlyPlaying.performance.description}}<br>
-			{{currentlyPlaying.part.label}}: {{currentlyPlaying.part.description}}
+			<em>{{currentlyPlaying.performance.label}}</em>: {{currentlyPlaying.performance.description}}<br>
+			<em>{{currentlyPlaying.part.label}}</em>: {{currentlyPlaying.part.description}}
 		</div>
 		<div class="col-12">
 			<a (click)="previous()"><i class="material-icons">skip_previous</i></a>
@@ -67,5 +61,21 @@
 				Your browser does not support audio
 			</audio>
 		</div>
+	</div>
+	<h2>Performances</h2>
+	<div class="row">
+		<div class="col-sm-6 col-md-4 performance" *ngFor="let perf of performances" [ngClass]="{'highlighted': perf.highlighted}"
+			(click)="clickPerformance(perf)">
+			<a (click)="clickPerformanceCheckbox($event,perf)" class="pointer">
+				<i class="material-icons">{{perf.selected ? 'check_box' : 'check_box_outline_blank'}}</i>
+			</a>
+			<a (click)="clickPerformancePlay($event,perf)" class="pointer">
+				<span *ngIf="perf.active && perf.available"><i class="material-icons">play_circle_filled</i></span>
+				<span *ngIf="!perf.active && perf.available"><i class="material-icons">play_circle_outline</i></span>
+				<span *ngIf="!perf.available"><i class="material-icons">&nbsp;</i></span>
+			</a>
+			{{perf.label}}<!-- (@ {{perf.startTime}}) -->
+		</div>
+		<p *ngIf="selectedPerformance">{{selectedPerformance.description}}</p>
 	</div>
 </div>

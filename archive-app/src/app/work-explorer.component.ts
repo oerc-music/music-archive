@@ -113,6 +113,7 @@ export class WorkExplorerComponent implements OnInit {
   }
 	initialiseForWork(work:Entity):void {
 		this.work = work; 
+		this.showMap = !!work.getValue('coll:map_url');
 		/* get all performances of work */
 		this.recordsService.getPerformancesOfWork(work)
 		.then(performances => {
@@ -157,6 +158,9 @@ export class WorkExplorerComponent implements OnInit {
     this.location.back();
   }
   
+	setShowMap(value) {
+		this.showMap = value;
+	}
 	buildAudioClips() {
 		for (var pi in this.performances) {
 			let p = this.performances[pi];
