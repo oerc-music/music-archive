@@ -21,8 +21,8 @@
 			</a>
 			{{part.label}}
 		</div>
-		<p *ngIf="selectedPart">{{selectedPart.description}}</p>
 	</div>
+	<p *ngIf="selectedPart">{{selectedPart.description}}</p>
 	<div class="row" *ngIf="showMap">
 		<div class="col-sm-12 col-md-8 col-lg-6">
 			<parts-map [parts]="parts" [work]="work" (select)="clickMapPart($event)"></parts-map>
@@ -76,6 +76,6 @@
 			</a>
 			{{perf.label}}<!-- (@ {{perf.startTime}}) -->
 		</div>
-		<p *ngIf="selectedPerformance">{{selectedPerformance.description}}</p>
 	</div>
+	<p *ngIf="selectedPerformance">{{selectedPerformance.description}}</p>
 </div>
