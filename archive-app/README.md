@@ -1,5 +1,19 @@
 # ArchiveApp
 
+This is a single-page web app view for the music archive. It is built using
+[Angular (2)](https://angular.io/), with [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
+via [ng-bootstrap](https://ng-bootstrap.github.io/).
+
+As of 2017-07-13 all data is loaded on start-up from URLs specified in 
+[src/assets/data/urls.json](src/assets/data/urls.json).
+
+For more details, especially on the data format and generation
+see [designnotes.md](../docs/designnotes.md) and [README.md](../README.md).
+
+## Angular...
+
+Generic Angular documentation follows...
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
 ## Development server
