@@ -36,8 +36,9 @@
 		<div class="col-12">
 			<em>{{currentlyPlaying.performance.label}}</em>: {{currentlyPlaying.performance.description}}<br>
 			<em>{{currentlyPlaying.part.label}}</em>: {{currentlyPlaying.part.description}}
+			<p *ngIf="!currentlyPlaying.clip || !currentlyPlaying.clip.recording">Sorry, the recording for this performance is not yet available</p>
 		</div>
-		<div class="col-12">
+		<div class="col-12" *ngIf="!!currentlyPlaying.clip && !!currentlyPlaying.clip.recording">
 			<a (click)="previous()"><i class="material-icons">skip_previous</i></a>
 			<a (click)="back()"><i class="material-icons">fast_rewind</i></a>
 			<i *ngIf="!(!!currentlyPlaying && !currentlyPlaying.clip.recording.shouldplay)" class="material-icons">play_circle_filled</i>
