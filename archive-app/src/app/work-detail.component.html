@@ -1,6 +1,6 @@
 <div class="container" *ngIf="work"><h1>{{work.label}}</h1>
 <!-- 	<p>By <a >{{}}</a></p> -->
-	<p>{{work.description}}</p>
+	<div [innerHTML]="work.description"></div>
 <!-- 
 	<h2>Performances</h2>
 	<ul>
@@ -13,7 +13,7 @@
 	</ul>
 	<div *ngFor="let composer of composers">
 		<h2>By {{composer.label}}</h2>
-		<p>{{composer.description}}</p>
+		<div [innerHTML]="composer.description"></div>
 		<p>See also:</p>
 		<ul>
 			<li *ngFor="let url of composer.getValues('entity:seeAlso_r','rdfs:seeAlso')"><a href="{{url}}" target="_seealso">{{url}}</a></li>
