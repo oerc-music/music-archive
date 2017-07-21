@@ -1,0 +1,17 @@
+{
+	"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_{{performanceid}}_{{codeix}}/",
+	"@type": [
+		"crm:E5_Event",
+		"prov:Activity",
+		"annal:EntityData"
+	],
+	"annal:id": "Trigger_{{performanceid}}_{{codeix}}",
+	"annal:type": "crm:E5_Event",
+	"annal:type_id": "Event",
+	"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_{{performanceid}}_{{codeix}}/",
+	"coll:musicode_id": "{{codeid}}",
+	"coll:musicode_type": "{{codetype}}",
+	"prov:startedAtTime": "{{datetime}}",
+	"rdfs:comment": "{{description}}",
+	"rdfs:label": "{{codeid}}"
+}

@@ -4,10 +4,12 @@ mclog = require('./mclog');
 stagetools = require('./stages');
 performances = require('./performances');
 recordings = require('./recordings');
+experience = require('./experience');
 output = require('./output');
+fs = require('fs');
 
-if (process.argv.length!=7) {
-	console.log('ERROR: usage: node processlogs.js ANNALISTEXPORTFILE MUSICODESLOGFILE MUZIVISUALCSVFILE RECORDINGSYMLFILE MUZIVISUALNARRATIVESFILE');
+if (process.argv.length!=8) {
+	console.log('ERROR: usage: node processlogs.js ANNALISTEXPORTFILE MUSICODESLOGFILE MUZIVISUALCSVFILE RECORDINGSYMLFILE MUZIVISUALNARRATIVESFILE EXPERIENCEXLSX');
 	process.exit(-1);
 }
 
@@ -78,6 +80,24 @@ var stageoutfile = mvfile+'-annalist.json';
 console.log('write stages to '+stageoutfile);
 output.writeFile( stageoutfile, annalistStages.concat([annalistClimb]));
 
+var expfile = process.argv[7];
+try {
+	console.log('read experience spreadsheet '+expfile);
+	experience.readSpreadsheet(expfile);
+}
+catch(err) {
+	console.log('ERROR: reading experience spreadsheet '+expfile+': '+err.message, err);
+	process.exit(-2);
+}
+
+var expoutfile = expfile+'.json';
+console.log('write experience info to '+expoutfile);
+var text = JSON.stringify({
+	stages: experience.getStages(), 
+	codes: experience.getCodes() 
+}, null, '\t');
+fs.writeFileSync( expoutfile, text, {encoding:'utf-8'});
+
 var performanceEntities = [];
 for (var performanceId in mcperformances) {
 	var performance = mcperformances[performanceId];
@@ -87,7 +107,7 @@ for (var performanceId in mcperformances) {
 			console.log('Warning: could not find annalist entry for performance '+performanceId+' - ignored');
 			continue;
 		}
-		var annalistStagePerformances = performances.makeAnnalistStagePerformances( stages, performanceId, performanceTitle, performance.stages);
+		var annalistStagePerformances = performances.makeAnnalistStagePerformances( stages, performanceId, performanceTitle, performance.stages, experience.getCodes() );
 		performanceEntities = performanceEntities.concat(annalistStagePerformances);
 		console.log('part performances for '+performanceTitle+' ('+performanceId+'): '+annalistStagePerformances.length);
 		var annalistPerformance = performances.fixAnnalistPerformance( annalistEntries, annalistStagePerformances, performance );

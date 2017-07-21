@@ -61,6 +61,8 @@ Currently the internal data model is based on annalist definitions
 of specific pieces and movements/part of specific pieces (such as 
 fragments of Climb!)
 
+- `Event`, specifically triggering a musicode (could be a new sub-type).
+
 - `Performed_work`s, including "Climb!" as a whole, and also its 
 individual fragments using the new type `Part_of_Work`
 (which are loosely comparable to movements)
@@ -113,6 +115,12 @@ the whole-piece visualisation/mobile app:
 - `coll:map_path` - which main "path" in the composition the part lies on
 - `coll:map_cue` - array of possible next parts (part_IDs)
 - `coll:map_narratives` - map from previous part (part_ID) to narrative for this stage.
+
+There are also some properties being added to generated
+`Event` for each musicode being triggered:
+
+- `coll:musicode_id` - ID of musicode
+- `coll:musicode_type` - `choice`, `challenge`, `trigger` (start disklav), `approach` (challenge approaching).
 
 ## Recording config file
 

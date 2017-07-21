@@ -3,7 +3,9 @@
 var utils = require('./utils');
 var path = require('path');
 
-module.exports.makeAnnalistStagePerformances = function( stages, performanceId, performanceTitle, performanceStages ) {
+var SUB_EVENT = "event:sub_event";
+
+module.exports.makeAnnalistStagePerformances = function( stages, performanceId, performanceTitle, performanceStages, codes ) {
 	var templatefile = path.join( __dirname, '..', 'templates', 'part_performance.json' );
 	var template;
 	try {
@@ -11,6 +13,15 @@ module.exports.makeAnnalistStagePerformances = function( stages, performanceId, 
 	}
 	catch (err) {
 		console.log('ERROR: reading part_performance template file '+templatefile+': '+err.message);
+		return null;
+	}
+	var templatefile2 = path.join( __dirname, '..', 'templates', 'code_event.json' );
+	var template2;
+	try {
+		template2 = JSON.parse(fs.readFileSync( templatefile2, {encoding:'utf-8'} ));
+	}
+	catch (err) {
+		console.log('ERROR: reading code_event template file '+templatefile2+': '+err.message);
 		return null;
 	}
 	var stageTitles = {};
@@ -26,6 +37,41 @@ module.exports.makeAnnalistStagePerformances = function( stages, performanceId, 
 		variables.stagetitle = stageTitles[stage.id];
 		variables.datetime = stage.datetime;
 		utils.replaceVariables(value, variables);
+		// codes triggered within stage
+		value[SUB_EVENT] = [];
+		for (var ci in stage.codes) {
+			var code = stage.codes[ci];
+			// TODO codetype, narrative
+			var description = "Performed code "+code.id;
+			var cvar = {performanceid: performanceId, codeix: (ci+1), codeid: code.id, 
+					datetime: code.datetime, codetype: 'unknown', description: description };
+			if (codes) {
+				var code = codes.find(function(c) { return c.id==code.id; });
+				if (code) {
+					cvar.codetype = code.type;
+					switch(code.type) {
+					case 'choice':
+						cvar.description = 'Performed choice code '+code.id;
+						break;
+					case 'challenge':
+						cvar.description = 'Performed challenge code '+code.id+' successfully';
+						break;
+					case 'trigger':
+						cvar.description = 'Performed code '+code.id+' to start disklavier';
+						break;
+					case 'approach':
+						cvar.description = 'Performed code '+code.id+' on approach to a challenge';
+						break;
+					}
+				}
+			}
+			var value2 = JSON.parse(JSON.stringify(template2));
+			utils.replaceVariables(value2, cvar);
+			performances.push(value2);
+			var item = {};
+			item[SUB_EVENT] = value2['annal:type_id']+'/'+value2['annal:id'];
+			value[SUB_EVENT].push(item); 
+		}
 		performances.push(value);
 	}
 	return performances;
@@ -58,10 +104,11 @@ module.exports.fixAnnalistPerformance = function( annalistEntries, annalistStage
 			if (performance.startDatetime) {
 				entry["prov:startedAtTime"] = performance.startDatetime;
 			}
-			var SUB_EVENT = "event:sub_event";
 			entry[SUB_EVENT] = [];
 			for (var si in annalistStagePerformances) {
 				var stage = annalistStagePerformances[si];
+				if (stage['annal:type_id']!='Performance')
+					continue;
 				var item = {};
 				item[SUB_EVENT] = stage['annal:type_id']+'/'+stage['annal:id'];
 				entry[SUB_EVENT].push(item); 

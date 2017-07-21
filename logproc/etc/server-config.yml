@@ -4,6 +4,7 @@ annalistfiles:
  - output/records.json
 mvfile: output/Climb!June8.csv
 narrativefile: output/narrativesJune8.csv
+experiencefile: output/mkGameEngine.xlsx
 httpuser: uploader
 httppass: changeme
 port: 8000

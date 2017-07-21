@@ -12,6 +12,7 @@ mclog = require('./mclog');
 performances = require('./performances');
 output = require('./output');
 stagetools = require('./stages');
+experience = require('./experience');
 
 logging.init('server', 'music-archive-uploader');
 
@@ -58,6 +59,16 @@ try {
 }
 catch (err) {
 	console.log('ERROR: reading muzivisual config file '+mvfile+': '+err.message, err);
+	process.exit(-2);
+}
+
+var expfile = config.experiencefile;
+try {
+	console.log('read experience spreadsheet '+expfile);
+	experience.readSpreadsheet(expfile);
+}
+catch(err) {
+	console.log('ERROR: reading experience spreadsheet '+expfile+': '+err.message, err);
 	process.exit(-2);
 }
 
@@ -120,7 +131,7 @@ app.post('/api/1/processlog', function(req,resp) {
 				console.log('Warning: could not find annalist entry for performance '+performanceId+' - ignored');
 				continue;
 			}
-			var annalistStagePerformances = performances.makeAnnalistStagePerformances( stages, performanceId, performanceTitle, performance.stages);
+			var annalistStagePerformances = performances.makeAnnalistStagePerformances( stages, performanceId, performanceTitle, performance.stages, experience.getCodes() );
 			performanceEntities = performanceEntities.concat(annalistStagePerformances);
 			console.log('part performances for '+performanceTitle+' ('+performanceId+'): '+annalistStagePerformances.length);
 			var annalistPerformance = performances.fixAnnalistPerformance( annalistEntries, annalistStagePerformances, performance );

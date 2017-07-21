@@ -12,6 +12,7 @@
     "express": "^4.14.0",
     "js-yaml": "^3.8.4",
     "midi-file": "git+https://github.com/cgreenhalgh/midi-file.git",
-    "uuid": "^3.0.1"
+    "uuid": "^3.0.1",
+    "xlsx": "^0.10.8"
   }
 }

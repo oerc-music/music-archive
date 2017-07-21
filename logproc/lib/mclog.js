@@ -30,10 +30,10 @@ module.exports.read = function( path ) {
 								console.log('Warning: performance '+perfid+' restarted at '+entry.datetime);
 							}
 							console.log('adding performance '+perfid);
-							var performance = { startTime: entry.time, startDatetime: entry.datetime, id: perfid, stages: [], notes: [] };
+							var performance = { startTime: entry.time, startDatetime: entry.datetime, id: perfid, stages: [], notes: [], codes: [] };
 							currentPerformance = performance;
 							performances[perfid] = performance;
-							performance.stages.push({id: parts[4], time: entry.time, datetime: entry.datetime});
+							performance.stages.push({id: parts[4], time: entry.time, datetime: entry.datetime, codes: []});
 						}
 						else {
 							console.log('WARNING: Found start for unspecified performance: '+action.url+' a tline '+(l+1));
@@ -67,13 +67,18 @@ module.exports.read = function( path ) {
 								if (ix<0) {
 									console.log('Found invalid vStageChange at line '+(l+1)+': '+action.url);
 								} else {
-									performance.stages.push({id: parts[4].substring(ix+2), time: entry.time, datetime: entry.datetime});
+									performance.stages.push({id: parts[4].substring(ix+2), time: entry.time, datetime: entry.datetime, codes: []});
 								}
 							} else {
 								console.log('Warning: performance '+perfid+' not found (vStageChange) at '+entry.datetime);
 							}
 						}						
 					}
+				}
+				if (entry.info.title && entry.info.code && currentPerformance) {
+					var code = {id: entry.info.title, time: entry.time, datetime: entry.datetime};
+					currentPerformance.codes.push(code);
+					currentPerformance.stages[performance.stages.length-1].codes.push(code);
 				}
 			} else if ('midi.note'==entry.event) {
 				// like {"localTime":1495029177971,"note":"E4","midinote":64,"freq":329.59534665249885,"velocity":127,"off":false}
