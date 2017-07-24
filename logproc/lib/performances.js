@@ -30,6 +30,7 @@ module.exports.makeAnnalistStagePerformances = function( stages, performanceId, 
 	}
 	var performances = [];
 	var variables = {performanceid: performanceId, performancetitle: performanceTitle};
+	var codeix = 1;
 	for (var si in performanceStages) {
 		var stage = performanceStages[si];
 		var value = JSON.parse(JSON.stringify(template));
@@ -43,7 +44,7 @@ module.exports.makeAnnalistStagePerformances = function( stages, performanceId, 
 			var code = stage.codes[ci];
 			// TODO codetype, narrative
 			var description = "Performed code "+code.id;
-			var cvar = {performanceid: performanceId, codeix: (ci+1), codeid: code.id, 
+			var cvar = {performanceid: performanceId, codeix: (codeix++), codeid: code.id, 
 					datetime: code.datetime, codetype: 'unknown', description: description };
 			if (codes) {
 				var code = codes.find(function(c) { return c.id==code.id; });

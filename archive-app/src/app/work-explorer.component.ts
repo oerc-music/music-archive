@@ -59,12 +59,41 @@ class AudioClip {
 	}
 }
 
+class SubEvent extends Entity {
+	startTime:number;
+	startTimeText:string;
+	highlight:boolean=false;
+	countdown:number=0;
+	constructor(fields:object, pp: PartPerformance) {
+		super(fields);
+		this.startTime = this.getTime('prov:startedAtTime');
+		var partOffset = this.startTime - pp.startTime;
+		let minutes = Math.floor(partOffset / 60);
+		let seconds = Math.floor(partOffset-60*minutes);
+		this.startTimeText = (minutes)+':'+Math.floor(seconds/10)+(seconds%10);
+	}
+	clear() {
+		this.countdown = 0;
+		this.highlight = false;
+	}
+	setAbsTime(time:number) {
+		var delta = this.startTime-time;
+		this.highlight = (delta<=0 && delta> -1);
+		if (delta>0 && delta<5)
+			this.countdown = Math.floor(delta+1);
+		else
+			this.countdown = 0;
+		console.log('setAbsTime '+time+'/'+this.startTime+'='+delta+', countdown='+this.countdown+', highlight='+this.highlight);
+	}
+}
+
 class PartPerformance extends Entity {
 	startTime:number;
 	performance:Performance;
 	part:Part;
 	clip:AudioClip;
 	currentTimeText:string = '0:00';
+	subevents:SubEvent[] = [];
 	constructor(fields:object, performance:Performance, part:Part) {
 		super(fields);
 		this.startTime = this.getTime('prov:startedAtTime');
@@ -98,6 +127,7 @@ export class WorkExplorerComponent implements OnInit {
 	selectedPart: Part = null;
 	selectedPerformance: Performance = null;
 	showMap: boolean = false;
+	countdownLevels: number[] = [5,4,3,2,1];
 	
   constructor(
 	private elRef:ElementRef,
@@ -147,6 +177,14 @@ export class WorkExplorerComponent implements OnInit {
 					)
 				))
 			)
+		)
+		.then(() => 
+			Promise.all(this.partPerformances.map(pp =>
+				this.recordsService.getSubEvents(pp)
+				.then(subevents => 
+					pp.subevents = subevents.map(subevent => new SubEvent(subevent.fields, pp))
+				)
+			))
 		)
 		.then(() => {
 			console.log('loaded work to explore');
@@ -311,6 +349,7 @@ export class WorkExplorerComponent implements OnInit {
 		
 		let wasPlaying = this.currentlyPlaying;
 		this.currentlyPlaying = this.partPerformances.find(pp => pp.performance===perf && pp.part===part);
+		this.currentlyPlaying.subevents.map(ev => ev.clear());
 		
 		//console.log('elRef',this.elRef);
 		let rec = this.recordings.find(r => r.performance===perf);
@@ -366,6 +405,7 @@ export class WorkExplorerComponent implements OnInit {
 		if (!!this.currentlyPlaying && this.currentlyPlaying.clip.recording===rec) {
 			let offset = rec.lastTime+rec.startTime-this.currentlyPlaying.startTime;
 			this.currentlyPlaying.setCurrentTime(offset);
+			this.currentlyPlaying.subevents.map(ev => ev.setAbsTime(rec.lastTime+rec.startTime));
 			if (this.currentlyPlaying.performance.selected) {
 				// check best clip...
 				let nextPp = this.partPerformances.filter(pp=>pp.performance===this.currentlyPlaying.performance
@@ -380,6 +420,7 @@ export class WorkExplorerComponent implements OnInit {
 					this.currentlyPlaying = nextPp;
 					this.currentlyPlaying.part.active = true;
 					this.currentlyPlaying.setCurrentTime(rec.lastTime+rec.startTime-this.currentlyPlaying.startTime);
+					this.currentlyPlaying.subevents.map(ev => ev.setAbsTime(rec.lastTime+rec.startTime));
 				}
 			}
 			else if (this.currentlyPlaying.part.selected) {
@@ -516,6 +557,23 @@ export class WorkExplorerComponent implements OnInit {
 					pp.startTime<this.currentlyPlaying.startTime).sort((a,b)=>b.startTime-a.startTime).find(()=>true);
 				if (!!pp)
 					this.playInternal(pp.performance, pp.part);
+			}
+		}
+	}
+	playSubevent(subevent) {
+		if (!!this.currentlyPlaying) {
+			let audio = this.getAudio(this.currentlyPlaying.clip.recording);
+			if (!!audio) {
+				var time = subevent.startTime - this.currentlyPlaying.clip.recording.startTime - 3;
+				console.log('seek to subevent '+subevent.startTime+' => '+time);
+				if (time<0)
+					time = 0;
+				if (audio.duration!=0 && time>audio.duration) {
+					this.pause();
+					audio.currentTime = audio.duration;
+				}
+				else
+					audio.currentTime = time;
 			}
 		}
 	}

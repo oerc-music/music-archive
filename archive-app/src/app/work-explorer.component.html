@@ -39,6 +39,7 @@
 			<p *ngIf="!currentlyPlaying.clip || !currentlyPlaying.clip.recording">Sorry, the recording for this performance is not yet available</p>
 		</div>
 		<div class="col-12" *ngIf="!!currentlyPlaying.clip && !!currentlyPlaying.clip.recording">
+			<span class="time">{{currentlyPlaying.currentTimeText}}</span>
 			<a (click)="previous()"><i class="material-icons">skip_previous</i></a>
 			<a (click)="back()"><i class="material-icons">fast_rewind</i></a>
 			<i *ngIf="!(!!currentlyPlaying && !currentlyPlaying.clip.recording.shouldplay)" class="material-icons">play_circle_filled</i>
@@ -48,7 +49,21 @@
 			<a (click)="pause()"><i class="material-icons">pause_circle_outline</i></a>
 			<a (click)="forward()"><i class="material-icons">fast_forward</i></a>
 			<a (click)="next()"><i class="material-icons">skip_next</i></a>
-			<span class="time">{{currentlyPlaying.currentTimeText}}</span>
+		</div>
+		<div class="col-12">
+			<table>
+				<tbody>
+					<tr *ngFor="let subevent of currentlyPlaying.subevents">
+						<td>
+							<a (click)="playSubevent(subevent)">
+								<span *ngFor="let i of countdownLevels" [ngClass]="{countdown:true, active:subevent.countdown==i, inactive: subevent.countdown!=i}">&nbsp;</span>
+								<span class="time" [ngClass]="{highlight:subevent.highlight}">{{subevent.startTimeText}}</span>
+							</a>
+						</td>
+						<td>{{subevent.description}}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<!-- <ul>
