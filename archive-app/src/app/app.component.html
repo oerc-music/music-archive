@@ -15,4 +15,8 @@
 	</div>
 </nav>
 
+<div class="container">
+	<ngb-alert type="info" (close)="closeResearchWarning()" *ngIf="!research.dismissed">{{research.warning}}</ngb-alert>
+</div>
+
 <router-outlet></router-outlet>
