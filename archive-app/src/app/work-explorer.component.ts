@@ -400,8 +400,8 @@ export class WorkExplorerComponent implements OnInit {
 		this.currentlyPlaying = null;
 	}
 	audioTimeupdate(event,rec) {
-		console.log('timeupdate '+rec.id+' '+event.srcElement.currentTime);
-		rec.lastTime = event.srcElement.currentTime;
+		console.log('timeupdate '+rec.id+' '+event.target.currentTime);
+		rec.lastTime = event.target.currentTime;
 		if (!!this.currentlyPlaying && this.currentlyPlaying.clip.recording===rec) {
 			let offset = rec.lastTime+rec.startTime-this.currentlyPlaying.startTime;
 			this.currentlyPlaying.setCurrentTime(offset);
@@ -427,10 +427,10 @@ export class WorkExplorerComponent implements OnInit {
 				if (this.currentlyPlaying.clip.duration && offset > this.currentlyPlaying.clip.duration) {
 					// pause
 					this.pause();
-					event.srcElement.currentTime = this.currentlyPlaying.startTime-rec.startTime;
+					event.target.currentTime = this.currentlyPlaying.startTime-rec.startTime;
 				} else if (offset < 0) {
 					// before clip?!
-					event.srcElement.currentTime = rec.lastTime-offset;
+					event.target.currentTime = rec.lastTime-offset;
 				}
 			}
 		}
@@ -438,14 +438,14 @@ export class WorkExplorerComponent implements OnInit {
 	audioEnded(event,rec) {
 		console.log('ended '+rec.id);
 		this.pause();
-		event.srcElement.currentTime = 0;
+		event.target.currentTime = 0;
 	}
 	audioCanplay(event,rec) {
 		console.log('canplay '+rec.id);
 		rec.canplay = true;
 		if (rec.shouldplay) {
 			console.log('play '+rec.id+' on canplay');
-			event.srcElement.play();
+			event.target.play();
 		}
 	}
 	audioSeeked(event,rec) {
