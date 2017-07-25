@@ -268,6 +268,12 @@ export class WorkExplorerComponent implements OnInit {
 			else
 				this.currentlyPlaying.part.active = true;
 		}
+		if (!this.currentlyPlaying) {
+			var part = this.parts.find(p => p.available);
+		 	if (part) {
+				this.playInternal(perf, part);
+			}
+		}
 	}
 	clickPerformancePlay(event,perf) {
 		event.preventDefault();
@@ -320,10 +326,17 @@ export class WorkExplorerComponent implements OnInit {
 			performance.available = !!this.partPerformances.find(pp => pp.performance === performance && pp.part === part);
 		}
 		if (this.currentlyPlaying) {
-			if (this.currentlyPlaying.part!==part|| !this.currentlyPlaying.performance.available)
+			if (this.currentlyPlaying.part!==part|| !this.currentlyPlaying.performance.available) {
 				this.stop();
+			}
 			else
 				this.currentlyPlaying.performance.active = true;
+		}
+		if (!this.currentlyPlaying) {
+			var perf = this.performances.find(p => p.available);
+		 	if (perf) {
+				this.playInternal(perf, part);
+			}
 		}
 	}
 	clickPartPlay(event,part) {
@@ -402,7 +415,7 @@ export class WorkExplorerComponent implements OnInit {
 	audioTimeupdate(event,rec) {
 		console.log('timeupdate '+rec.id+' '+event.target.currentTime);
 		rec.lastTime = event.target.currentTime;
-		if (!!this.currentlyPlaying && this.currentlyPlaying.clip.recording===rec) {
+		if (!!this.currentlyPlaying && this.currentlyPlaying.clip && this.currentlyPlaying.clip.recording===rec) {
 			let offset = rec.lastTime+rec.startTime-this.currentlyPlaying.startTime;
 			this.currentlyPlaying.setCurrentTime(offset);
 			this.currentlyPlaying.subevents.map(ev => ev.setAbsTime(rec.lastTime+rec.startTime));
