@@ -146,7 +146,7 @@
       "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_1/",
       "coll:system_id": "f01a5d26-6569-4879-9aef-58334110c307",
       "coll:uploaded_image_r": [],
-      "crm:P7_took_place_at": "",
+      "crm:P7_took_place_at": "Place/Oxford_House_Theatre",
       "entity:seeAlso_r": [],
       "event:sub_event": [],
       "frbroo:R25F_performed_r": [
@@ -160,45 +160,10 @@
           "prov:hadRole": ""
         }
       ],
-      "prov:startedAtTime": "2017-08-23T16:00:00Z",
+      "prov:startedAtTime": "2017-08-25T20:00:00Z",
       "prov:used_r": [],
-      "rdfs:comment": "First performance of Climb! at AudioMostly, date/time to be confirmed.",
-      "rdfs:label": "First performance of Climb! at AudioMostly"
-    },
-    {
-      "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_2/",
-      "@type": [
-        "frbroo:F31_Performance",
-        "prov:Activity",
-        "crm:E5_Event",
-        "crm:E7_Activity",
-        "mo:Performance",
-        "annal:EntityData"
-      ],
-      "annal:id": "Climb_am_performance_2",
-      "annal:type": "frbroo:F31_Performance",
-      "annal:type_id": "Performance",
-      "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_performance_2/",
-      "coll:system_id": "438d52bd-935e-4ff1-a5f1-cd60226a5950",
-      "coll:uploaded_image_r": [],
-      "crm:P7_took_place_at": "",
-      "entity:seeAlso_r": [],
-      "event:sub_event": [],
-      "frbroo:R25F_performed_r": [
-        {
-          "frbroo:R25F_performed": "Performed_work/Climb"
-        }
-      ],
-      "prov:qualifiedAssociation": [
-        {
-          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
-          "prov:hadRole": ""
-        }
-      ],
-      "prov:startedAtTime": "2017-08-23T16:30:00Z",
-      "prov:used_r": [],
-      "rdfs:comment": "Second performance of Climb! at AudioMostly 2017, date/time to be confirmed",
-      "rdfs:label": "Second performance of Climb! at AudioMostly"
+      "rdfs:comment": "The performance of Climb! at AudioMostly, 25th August 2017.",
+      "rdfs:label": "Performance of Climb! at AudioMostly"
     },
     {
       "@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_rehearsal/",
@@ -216,7 +181,7 @@
       "annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Climb_am_rehearsal/",
       "coll:system_id": "e888ea0f-8c81-48a8-8462-bc98dd04f495",
       "coll:uploaded_image_r": [],
-      "crm:P7_took_place_at": "",
+      "crm:P7_took_place_at": "Place/Oxford_House_Theatre",
       "entity:seeAlso_r": [],
       "event:sub_event": [],
       "frbroo:R25F_performed_r": [
@@ -230,9 +195,9 @@
           "prov:hadRole": ""
         }
       ],
-      "prov:startedAtTime": "2017-08-23T15:00:00Z",
+      "prov:startedAtTime": "2017-08-25T15:00:00Z",
       "prov:used_r": [],
-      "rdfs:comment": "Dress rehearsal of Climb! for AudioMostly 2017, QMUL. Date/time to be confirmed.",
+      "rdfs:comment": "Dress rehearsal of Climb! (if there is one) at AudioMostly, 25th August 2017.",
       "rdfs:label": "Climb rehearsal at AudioMostly"
     },
     {
@@ -264,7 +229,7 @@
       "prov:qualifiedAssociation": [],
       "prov:startedAtTime": "2017-06-08T16:05:00Z",
       "prov:used_r": [],
-      "rdfs:comment": "The world premiere performance of Climb!",
+      "rdfs:comment": "The world premiere performance of Climb!, 8th June 2017.",
       "rdfs:label": "Premiere performance of Climb!"
     },
     {
@@ -360,6 +325,15 @@
       "annal:url": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
       "entity:seeAlso_r": [
         {
+          "rdfs:seeAlso": "http://homes.create.aau.dk/dano/nime17/papers/0088/index.html"
+        },
+        {
+          "rdfs:seeAlso": "http://eprints.nottingham.ac.uk/37081/"
+        },
+        {
+          "rdfs:seeAlso": "http://eprints.nottingham.ac.uk/41837/"
+        },
+        {
           "rdfs:seeAlso": "https://musicbrainz.org/work/aa3fc450-f768-470f-91aa-045b6db0d6f3"
         }
       ],
@@ -368,7 +342,7 @@
           "frbroo:R10_has_member": "Part_of_Work/Climb_basecamp"
         }
       ],
-      "rdfs:comment": "Climb! is a musical composition that combines the ideas of a classical virtuoso piece and a computer game. Written for a Disklavier grand piano, the work engages the pianist in an unusual musical dialogue where there is no fixed musical form: the performer\u2019s/gamer\u2019s actions define how the story continues. As the performer plays key passages, so both the music and the instrument respond, jumping to new points in the score, transforming the sound, or independently playing along with them \u2013 physically in the case of the Disklavier. An interactive system like this resembles \u201can invisible chamber music partner\u201d leading some musicians to claim that electroacoustic works can never be treated as solo compositions, but should instead be seen as \u201cconcertos in a modern guise\u201d. Like a computer game or the World Wide Web, Climb! is non-linear, with a branching structure that allows the performer to choose different routes through the work. It consists of three macro-compositions called paths with some further side paths between them. Various micro-compositions are then dispersed along each path. Depending on how the performer plays, they may continue to progress along their current path or be diverted onto another one. \r\n",
+      "rdfs:comment": "<p>Climb! is a musical composition that combines the ideas of a classical virtuoso piece and a computer game.</p>\r\n\r\n<p>Written for a Disklavier grand piano, the work engages the pianist in an unusual musical dialogue where there is no fixed musical form: the performer\u2019s/gamer\u2019s actions define how the story continues. As the performer plays key passages, so both the music and the instrument respond, jumping to new points in the score, transforming the sound, or independently playing along with them \u2013 physically in the case of the Disklavier. An interactive system like this resembles \u201can invisible chamber music partner\u201d leading some musicians to claim that electroacoustic works can never be treated as solo compositions, but should instead be seen as \u201cconcertos in a modern guise\u201d.</p>\r\n\r\n<p>Like a computer game or the World Wide Web, Climb! is non-linear, with a branching structure that allows the performer to choose different routes through the work. It consists of three macro-compositions called paths with some further side paths between them. Various micro-compositions are then dispersed along each path. Depending on how the performer plays, they may continue to progress along their current path or be diverted onto another one.</p>\r\n\r\n<h3>How it works</h3>\r\n\r\n<p>Climb! Is realised using a combination of technologies. It is played on a Disklavier piano that can be instructed to physically play back computer generated parts (using the MIDI protocol) and can even duet along with the pianist, moving its keys around and between their fingers. Climb! also uses the Max/MSP software running on a laptop to generate various audio effects that transform the piano\u2019s sound.</p>\r\n \r\n<p>The performer controls how the work progresses \u2013 which path they follow and how they negotiate various events along the way \u2013 directly through their playing rather than by pressing buttons, pushing pedals or having someone do this from behind the scenes. This employs a technology called <a href=\"http://eprints.nottingham.ac.uk/37081/\">Muzicodes</a> from the University of Nottingham\u2019s Mixed Reality Lab. Muzicodes allows certain phrases in the score to be designated as hidden codes that, when successfully played by the pianist, trigger events such as jumping to a new place in the score (like following a hyperlink on the World Wide Web); introducing an audio effect to represent weather, animals, stones and so forth; causing the Disklavier to duet with the pianist; driving the projected animations; and finally controlling the dynamic programme notes.</p>\r\n \r\n<p>The MELD software from the University of Oxford is used to render the pianist\u2019s score, turning the digital pages for them as they negotiate their route through the piece.</p>\r\n",
       "rdfs:label": "Climb!"
     },
     {
@@ -416,6 +390,22 @@
       ],
       "rdfs:comment": "Djanogly Recital Hall, Nottingham",
       "rdfs:label": "Djanogly Recital Hall, Nottingham"
+    },
+    {
+      "@id": "/annalist/c/annalist_performance_archive/d/Place/Oxford_House_Theatre/",
+      "@type": [
+        "crm:E53_Place",
+        "annal:EntityData"
+      ],
+      "annal:id": "Oxford_House_Theatre",
+      "annal:type": "crm:E53_Place",
+      "annal:type_id": "Place",
+      "annal:url": "/annalist/c/annalist_performance_archive/d/Place/Oxford_House_Theatre/",
+      "crm:P89_falls_within": "",
+      "crm:P89i_contains_repeat": [],
+      "entity:seeAlso_r": [],
+      "rdfs:comment": "Oxford House Theatre, London",
+      "rdfs:label": "Oxford House Theatre, London"
     },
     {
       "@id": "/annalist/c/annalist_performance_archive/d/Recording/Example_recording_of_climb/",
