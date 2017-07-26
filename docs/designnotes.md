@@ -71,7 +71,7 @@ individual fragments using the new type `Part_of_Work`
 
 - `Place`s, in particular performance venues.
 
-- `Recording`s, of particular `Performance`s.
+- `Recording`s, of particular `Performance`s. 
 
 See [sample data](../test/data/example_entity_list.json).
 
@@ -106,6 +106,8 @@ additional properties:
 - `part_ID` and `part_rank` for system ID and sort-order of fragments
 within Climb
 
+Note that `Recording` is using `linked_audio_clips` for both video and audio recordings!
+
 There are also some properties being added to generated 
 `Part_of_Work` for each fragment to carry information used in
 the whole-piece visualisation/mobile app:
@@ -129,7 +131,9 @@ Recordings are specified in a YAML file. E.g.
 - id: example # unique among recordings of a performance
   url: http://somedomain/somefile.wav
   performanceid: 13a7fa70-ae91-4541-9526-fd3b332b585d # match with muzicodes/vStart performance id
+  description: a textual description of the recording
   firstNoteOffset: 5.5 # time from start of file in seconds
+  video: true # or false (default)
 - url: ...
   ...
 ```

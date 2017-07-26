@@ -24,6 +24,6 @@
 	"mo:records": "Performance/{{performanceid}}",
 	"prov:hadMember_repeat": [],
 	"prov:startedAtTime": "{{datetime}}",
-	"rdfs:comment": "Recording of {{recordingid}} from {{performancetitle}}",
+	"rdfs:comment": "{{description}}",
 	"rdfs:label": "Recording of {{recordingid}} from {{performancetitle}}"
 }

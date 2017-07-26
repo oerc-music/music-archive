@@ -34,8 +34,12 @@ module.exports.makeAnnalistRecording = function(recording, performanceAnnalistId
 	}
 	var variables = {
 			performanceid: performanceAnnalistId, performancetitle: performanceTitle, 
-			recordingid: recording.id, url: recording.url, datetime: datetime
+			recordingid: recording.id, url: recording.url, datetime: datetime,
+			description: recording.description
 	};
+	if (variables.description===undefined) {
+		variables.description = "Recording of "+recording.id+" from "+performanceTitle;
+	}
 	utils.replaceVariables(template, variables);
 	var res = [ template ];
 	templatefile = path.join( __dirname, '..', 'templates', 'audio_clip.json' );

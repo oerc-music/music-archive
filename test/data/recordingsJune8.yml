@@ -1,13 +1,37 @@
 - id: mix
   url: http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_mix2.mp3
   performanceid: 9333e7a2-16a9-4352-a45a-f6f42d848cde
+  description: june 8 2017, rehearsal, mix from desk
   firstNoteOffset: 2.0
+  video: false
 - id: mix
   url: http://music-mrl.nott.ac.uk/1/recordings/Performance1_mix2.mp3
   performanceid: be418821-436d-41c2-880c-058dffb57d91
+  description: june 8 2017, first performance, mix from desk
   firstNoteOffset: 8.0
+  video: false
 - id: mix
   url: http://music-mrl.nott.ac.uk/1/recordings/Performance2_mix2.mp3
   performanceid: 13a7fa70-ae91-4541-9526-fd3b332b585d
+  description: june 8 2017, second performance, mix from desk
   firstNoteOffset: 4.5
+  video: false
+- id: video
+  url: http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_480.mp4
+  performanceid: 9333e7a2-16a9-4352-a45a-f6f42d848cde
+  description: june 8 2017, rehearsal, composite of score, keys and stage view
+  firstNoteOffset: 0.0
+  video: true
+- id: video
+  url: http://music-mrl.nott.ac.uk/1/recordings/Performance1_480.mp4
+  performanceid: be418821-436d-41c2-880c-058dffb57d91
+  description: june 8 2017, first performance, stage view (close)
+  firstNoteOffset: 12.0
+  video: true
+- id: video
+  url: http://music-mrl.nott.ac.uk/1/recordings/Performance2_480.mp4
+  performanceid: 13a7fa70-ae91-4541-9526-fd3b332b585d
+  description: june 8 2017, second performance, stage view (distant)
+  firstNoteOffset: 6.0
+  video: true
 

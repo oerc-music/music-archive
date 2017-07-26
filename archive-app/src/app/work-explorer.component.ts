@@ -25,11 +25,18 @@ class Recording extends Entity {
 	canplay:boolean = false;
 	shouldplay:boolean = false;
 	lastTime:number = 0;
+	isVideo:boolean = false;
 	constructor(fields: object, performance:Performance) {
 		super(fields);
 		this.performance = performance;
 		this.startTime = this.getTime('prov:startedAtTime');
 		
+	}
+	setUrls(urls:string[]) {
+		this.urls = urls;
+		this.isVideo = urls.find(url => url.length>4 && '.mp4'==url.substr(-4))!==undefined;
+		//if (this.isVideo)
+		//	console.log('found video recording '+urls);
 	}
 }
 
@@ -164,7 +171,7 @@ export class WorkExplorerComponent implements OnInit {
 					p.recordings = recs.map(rec => new Recording(rec.fields, p));
 					/* and the URLs for each performance */
 					return Promise.all(p.recordings.map(r => 
-						this.recordsService.getUrlsOfRecording(r).then(urls => r.urls = urls )));
+						this.recordsService.getUrlsOfRecording(r).then(urls => r.setUrls(urls) )));
 				})));
 		})
 		.then(() => 
@@ -202,7 +209,7 @@ export class WorkExplorerComponent implements OnInit {
 	buildAudioClips() {
 		for (var pi in this.performances) {
 			let p = this.performances[pi];
-			let rec = p.recordings.find(r => !!r.urls && r.urls.length>0);
+			let rec = p.recordings.find(r => !r.isVideo && !!r.urls && r.urls.length>0);
 			if (undefined===rec) {
 				console.log('Note: no recording with url for performance '+p.label);
 				continue;
