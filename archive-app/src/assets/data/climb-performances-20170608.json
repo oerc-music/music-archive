@@ -21,7 +21,7 @@
 			"coll:musicode_id": "BC_Ending2",
 			"coll:musicode_type": "choice",
 			"prov:startedAtTime": "2017-06-08T14:14:23.858Z",
-			"rdfs:comment": "Performed choice code BC_Ending2",
+			"rdfs:comment": "Performed choice code (\"BC_Ending2\")",
 			"rdfs:label": "BC_Ending2"
 		},
 		{
@@ -72,7 +72,7 @@
 			"coll:musicode_id": "1b",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T14:14:58.471Z",
-			"rdfs:comment": "Performed challenge code 1b successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"1b\")",
 			"rdfs:label": "1b"
 		},
 		{
@@ -153,7 +153,7 @@
 			"coll:musicode_id": "2b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T14:16:32.638Z",
-			"rdfs:comment": "Performed code 2b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"2b_1\")",
 			"rdfs:label": "2b_1"
 		},
 		{
@@ -204,7 +204,7 @@
 			"coll:musicode_id": "1a_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T14:18:44.345Z",
-			"rdfs:comment": "Performed code 1a_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"1a_1\")",
 			"rdfs:label": "1a_1"
 		},
 		{
@@ -221,7 +221,7 @@
 			"coll:musicode_id": "1a_2",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T14:18:57.964Z",
-			"rdfs:comment": "Performed challenge code 1a_2 successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"1a_2\")",
 			"rdfs:label": "1a_2"
 		},
 		{
@@ -305,7 +305,7 @@
 			"coll:musicode_id": "2a",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T14:21:36.317Z",
-			"rdfs:comment": "Performed challenge code 2a successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"2a\")",
 			"rdfs:label": "2a"
 		},
 		{
@@ -446,7 +446,7 @@
 			"coll:musicode_id": "4a_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T14:25:46.559Z",
-			"rdfs:comment": "Performed code 4a_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"4a_1\")",
 			"rdfs:label": "4a_1"
 		},
 		{
@@ -463,7 +463,7 @@
 			"coll:musicode_id": "4a_2",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T14:26:45.959Z",
-			"rdfs:comment": "Performed challenge code 4a_2 successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"4a_2\")",
 			"rdfs:label": "4a_2"
 		},
 		{
@@ -547,7 +547,7 @@
 			"coll:musicode_id": "4b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T14:29:47.205Z",
-			"rdfs:comment": "Performed code 4b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"4b_1\")",
 			"rdfs:label": "4b_1"
 		},
 		{
@@ -598,7 +598,7 @@
 			"coll:musicode_id": "5b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T14:31:05.258Z",
-			"rdfs:comment": "Performed code 5b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"5b_1\")",
 			"rdfs:label": "5b_1"
 		},
 		{
@@ -649,7 +649,7 @@
 			"coll:musicode_id": "summit",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T14:32:28.231Z",
-			"rdfs:comment": "Performed code summit to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"summit\")",
 			"rdfs:label": "summit"
 		},
 		{
@@ -809,7 +809,7 @@
 			"coll:musicode_id": "BC_Ending1",
 			"coll:musicode_type": "choice",
 			"prov:startedAtTime": "2017-06-08T16:14:55.832Z",
-			"rdfs:comment": "Performed choice code BC_Ending1",
+			"rdfs:comment": "Performed choice code (\"BC_Ending1\")",
 			"rdfs:label": "BC_Ending1"
 		},
 		{
@@ -860,7 +860,7 @@
 			"coll:musicode_id": "1a_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:15:10.758Z",
-			"rdfs:comment": "Performed code 1a_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"1a_1\")",
 			"rdfs:label": "1a_1"
 		},
 		{
@@ -911,7 +911,7 @@
 			"coll:musicode_id": "2b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:15:57.237Z",
-			"rdfs:comment": "Performed code 2b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"2b_1\")",
 			"rdfs:label": "2b_1"
 		},
 		{
@@ -928,7 +928,7 @@
 			"coll:musicode_id": "2b_2",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T16:17:02.911Z",
-			"rdfs:comment": "Performed challenge code 2b_2 successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"2b_2\")",
 			"rdfs:label": "2b_2"
 		},
 		{
@@ -1072,7 +1072,7 @@
 			"coll:musicode_id": "4b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:22:30.047Z",
-			"rdfs:comment": "Performed code 4b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"4b_1\")",
 			"rdfs:label": "4b_1"
 		},
 		{
@@ -1123,7 +1123,7 @@
 			"coll:musicode_id": "5b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:23:50.815Z",
-			"rdfs:comment": "Performed code 5b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"5b_1\")",
 			"rdfs:label": "5b_1"
 		},
 		{
@@ -1174,7 +1174,7 @@
 			"coll:musicode_id": "5a_1",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T16:25:48.666Z",
-			"rdfs:comment": "Performed challenge code 5a_1 successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"5a_1\")",
 			"rdfs:label": "5a_1"
 		},
 		{
@@ -1225,7 +1225,7 @@
 			"coll:musicode_id": "summit",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:27:17.753Z",
-			"rdfs:comment": "Performed code summit to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"summit\")",
 			"rdfs:label": "summit"
 		},
 		{
@@ -1339,7 +1339,7 @@
 			"coll:musicode_id": "BC_Ending2",
 			"coll:musicode_type": "choice",
 			"prov:startedAtTime": "2017-06-08T16:49:35.217Z",
-			"rdfs:comment": "Performed choice code BC_Ending2",
+			"rdfs:comment": "Performed choice code (\"BC_Ending2\")",
 			"rdfs:label": "BC_Ending2"
 		},
 		{
@@ -1390,7 +1390,7 @@
 			"coll:musicode_id": "1b",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T16:50:09.443Z",
-			"rdfs:comment": "Performed challenge code 1b successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"1b\")",
 			"rdfs:label": "1b"
 		},
 		{
@@ -1471,7 +1471,7 @@
 			"coll:musicode_id": "2b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:51:40.558Z",
-			"rdfs:comment": "Performed code 2b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"2b_1\")",
 			"rdfs:label": "2b_1"
 		},
 		{
@@ -1488,7 +1488,7 @@
 			"coll:musicode_id": "2b_2",
 			"coll:musicode_type": "challenge",
 			"prov:startedAtTime": "2017-06-08T16:52:45.956Z",
-			"rdfs:comment": "Performed challenge code 2b_2 successfully",
+			"rdfs:comment": "Performed challenge code successfully (\"2b_2\")",
 			"rdfs:label": "2b_2"
 		},
 		{
@@ -1632,7 +1632,7 @@
 			"coll:musicode_id": "4b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:57:56.415Z",
-			"rdfs:comment": "Performed code 4b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"4b_1\")",
 			"rdfs:label": "4b_1"
 		},
 		{
@@ -1683,7 +1683,7 @@
 			"coll:musicode_id": "5b_1",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T16:59:17.363Z",
-			"rdfs:comment": "Performed code 5b_1 to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"5b_1\")",
 			"rdfs:label": "5b_1"
 		},
 		{
@@ -1764,7 +1764,7 @@
 			"coll:musicode_id": "summit",
 			"coll:musicode_type": "trigger",
 			"prov:startedAtTime": "2017-06-08T17:02:38.827Z",
-			"rdfs:comment": "Performed code summit to start disklavier",
+			"rdfs:comment": "Performed code to start disklavier (\"summit\")",
 			"rdfs:label": "summit"
 		},
 		{

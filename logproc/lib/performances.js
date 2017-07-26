@@ -52,16 +52,16 @@ module.exports.makeAnnalistStagePerformances = function( stages, performanceId, 
 					cvar.codetype = code.type;
 					switch(code.type) {
 					case 'choice':
-						cvar.description = 'Performed choice code '+code.id;
+						cvar.description = 'Performed choice code ("'+code.id+'")';
 						break;
 					case 'challenge':
-						cvar.description = 'Performed challenge code '+code.id+' successfully';
+						cvar.description = 'Performed challenge code successfully ("'+code.id+'")';
 						break;
 					case 'trigger':
-						cvar.description = 'Performed code '+code.id+' to start disklavier';
+						cvar.description = 'Performed code to start disklavier ("'+code.id+'")';
 						break;
 					case 'approach':
-						cvar.description = 'Performed code '+code.id+' on approach to a challenge';
+						cvar.description = 'Performed code on approach to a challenge ("'+code.id+'")';
 						break;
 					}
 				}
