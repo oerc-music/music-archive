@@ -32,3 +32,10 @@ span.time {
 .time.highlight {
 	background-color: rgba(0,1,0,0.2);
 }
+video {
+	width: 100%;
+	height: auto;
+}
+video.hidden {
+	display: none;
+}

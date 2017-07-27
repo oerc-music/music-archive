@@ -26,6 +26,7 @@ class Recording extends Entity {
 	shouldplay:boolean = false;
 	lastTime:number = 0;
 	isVideo:boolean = false;
+	visible:boolean = true;
 	constructor(fields: object, performance:Performance) {
 		super(fields);
 		this.performance = performance;
@@ -35,8 +36,8 @@ class Recording extends Entity {
 	setUrls(urls:string[]) {
 		this.urls = urls;
 		this.isVideo = urls.find(url => url.length>4 && '.mp4'==url.substr(-4))!==undefined;
-		//if (this.isVideo)
-		//	console.log('found video recording '+urls);
+		if (this.isVideo)
+			console.log('found video recording '+this.id+' url '+urls);
 	}
 }
 
@@ -99,6 +100,8 @@ class PartPerformance extends Entity {
 	performance:Performance;
 	part:Part;
 	clip:AudioClip;
+	audioClip:AudioClip;
+	videoClip:AudioClip;
 	currentTimeText:string = '0:00';
 	subevents:SubEvent[] = [];
 	constructor(fields:object, performance:Performance, part:Part) {
@@ -135,6 +138,7 @@ export class WorkExplorerComponent implements OnInit {
 	selectedPerformance: Performance = null;
 	showMap: boolean = false;
 	countdownLevels: number[] = [5,4,3,2,1];
+	showVideo: boolean = true;
 	
   constructor(
 	private elRef:ElementRef,
@@ -206,32 +210,48 @@ export class WorkExplorerComponent implements OnInit {
 	setShowMap(value) {
 		this.showMap = value;
 	}
+	setShowVideo(value) {
+		this.showVideo = value;
+	}
 	buildAudioClips() {
 		for (var pi in this.performances) {
 			let p = this.performances[pi];
-			let rec = p.recordings.find(r => !r.isVideo && !!r.urls && r.urls.length>0);
-			if (undefined===rec) {
-				console.log('Note: no recording with url for performance '+p.label);
-				continue;
+			for (var video=0; video<2; video++) {
+				let rec = p.recordings.find(r => r.isVideo==(video>0) && !!r.urls && r.urls.length>0);
+				if (undefined===rec) {
+					console.log('Note: no '+(video ? 'video' : 'audio')+' recording with url for performance '+p.label);
+					continue;
+				}
+				this.recordings.push(rec);
 			}
-			this.recordings.push(rec);
 		}
 		for (var pi in this.partPerformances) {
 			let pp = this.partPerformances[pi];
-			// first recording for now
-			let rec = this.recordings.find(r => r.performance===pp.performance);
-			if (undefined===rec) {
-				console.log('Note: no recording with url for performance '+pp.label);
-				continue;
+			for (var video=0; video<2; video++) {
+				// first recording for now
+				let rec = this.recordings.find(r => r.isVideo==(video>0) && r.performance===pp.performance);
+				if (undefined===rec) {
+					console.log('Note: no '+(video ? 'video' : 'audio')+' recording with url for performance '+pp.label);
+					continue;
+				}
+				let startTime = pp.startTime;
+				let recStartTime = rec.startTime;
+				// TODO end of last stage??
+				let endTime = this.partPerformances.filter(p => p.performance===pp.performance && p.startTime > pp.startTime)
+				.map(p => p.startTime).sort().find(() => true);
+				let clip = new AudioClip(rec, startTime-recStartTime, endTime? endTime-startTime : null);
+				console.log('part '+pp.id+' is '+clip.start+'+'+clip.duration);
+				if (video) {
+					pp.videoClip = clip;
+					if (this.showVideo)
+						pp.clip = pp.videoClip;
+				}
+				else {
+					pp.audioClip = clip;
+					if (!this.showVideo)
+						pp.clip = clip;
+				}
 			}
-			let startTime = pp.startTime;
-			let recStartTime = rec.startTime;
-			// TODO end of last stage??
-			let endTime = this.partPerformances.filter(p => p.performance===pp.performance && p.startTime > pp.startTime)
-			.map(p => p.startTime).sort().find(() => true);
-			let clip = new AudioClip(rec, startTime-recStartTime, endTime? endTime-startTime : null);
-			console.log('part '+pp.id+' is '+clip.start+'+'+clip.duration);
-			pp.clip = clip;
 		}
 	}
 	clickPerformance(perf) {
@@ -372,15 +392,23 @@ export class WorkExplorerComponent implements OnInit {
 		this.currentlyPlaying.subevents.map(ev => ev.clear());
 		
 		//console.log('elRef',this.elRef);
-		let rec = this.recordings.find(r => r.performance===perf);
+		let rec = this.recordings.find(r => r.isVideo==this.showVideo && r.performance===perf);
 		if (!rec) {
-			console.log('no recording for performance '+perf.id);
+			console.log('no '+(this.showVideo ? 'video' : 'audio')+' recording for performance '+perf.id);
 		}
 		if (!!this.elRef) {
 			let audios = this.elRef.nativeElement.getElementsByTagName('audio');
+			let videos = this.elRef.nativeElement.getElementsByTagName('video');
+			var media = [];
 			for (var ai=0; ai<audios.length; ai++) {
-				let audio = audios[ai];
-				console.log('audio '+ai+'/'+audios.length+':', audio);
+				media.push(audios[ai]);
+			}
+			for (var ai=0; ai<videos.length; ai++) {
+				media.push(videos[ai]);
+			}
+			for (var ai=0; ai<media.length; ai++) {
+				let audio = media[ai];
+				console.log('media '+ai+'/'+audios.length+':', audio);
 				if (!!rec && audio.id==rec.id) {
 					rec.shouldplay = true;
 					// start time...

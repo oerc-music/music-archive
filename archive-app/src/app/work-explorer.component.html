@@ -77,7 +77,26 @@
 			<p ><em>{{currentlyPlaying.part.label}}</em>: {{currentlyPlaying.part.description}}</p>
 		</div>
 	</div>
-	<h2>Playing</h2>
+	<h2>Playing
+		<div class="btn-group">
+			<button class="btn btn-secondary" [ngClass]="{'active':!showVideo}" (click)="setShowVideo(false)">Audio</button>
+			<button class="btn btn-secondary" [ngClass]="{'active':showVideo}" (click)="setShowVideo(true)">Video</button>
+		</div>
+	</h2>
+	<div class="row" id="recordings">
+		<div class="col-12" *ngFor="let rec of recordings"><!-- audio controls -->
+			<audio *ngIf="!rec.isVideo" id="{{rec.id}}" (canplay)="audioCanplay($event,rec)" (seeked)="audioSeeked($event,rec)"
+			(timeupdate)="audioTimeupdate($event,rec)" (ended)="audioEnded($event,rec)">
+				<source src="{{rec.urls[0]}}" type="audio/mpeg">
+				Your browser does not support audio
+			</audio>
+			<video *ngIf="rec.isVideo" id="{{rec.id}}" (canplay)="audioCanplay($event,rec)" (seeked)="audioSeeked($event,rec)"
+			(timeupdate)="audioTimeupdate($event,rec)" (ended)="audioEnded($event,rec)">
+				<source src="{{rec.urls[0]}}" type="video/mp4" [ngClass]="{hidden:!rec.visible}">
+				Your browser does not support video
+			</video>
+		</div>
+	</div>
 	<div class="row" *ngIf="!!currentlyPlaying">
 		<div class="col-12" *ngIf="!!currentlyPlaying.clip && !!currentlyPlaying.clip.recording">
 			<span class="time">{{currentlyPlaying.currentTimeText}}</span>
@@ -115,13 +134,4 @@
 	<!-- <ul>
 		<li *ngFor="let pp of partPerformances">{{pp.performance.id}} / {{pp.part.id}}</li>
 	</ul> -->
-	<div class="row" id="recordings">
-		<div class="col-4" *ngFor="let rec of recordings"><!-- audio controls -->
-			<audio id="{{rec.id}}" (canplay)="audioCanplay($event,rec)" (seeked)="audioSeeked($event,rec)"
-			(timeupdate)="audioTimeupdate($event,rec)" (ended)="audioEnded($event,rec)">
-				<source src="{{rec.urls[0]}}" type="audio/mpeg">
-				Your browser does not support audio
-			</audio>
-		</div>
-	</div>
 </div>
