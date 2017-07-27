@@ -26,7 +26,7 @@ class Recording extends Entity {
 	shouldplay:boolean = false;
 	lastTime:number = 0;
 	isVideo:boolean = false;
-	visible:boolean = true;
+	visible:boolean = false;
 	constructor(fields: object, performance:Performance) {
 		super(fields);
 		this.performance = performance;
@@ -211,7 +211,13 @@ export class WorkExplorerComponent implements OnInit {
 		this.showMap = value;
 	}
 	setShowVideo(value) {
+		this.pause();
 		this.showVideo = value;
+		this.partPerformances.forEach(pp => pp.clip = (this.showVideo ? pp.videoClip : pp.audioClip) );
+		this.recordings.forEach(r => r.visible = r.isVideo==this.showVideo && (r.performance==this.selectedPerformance || (this.currentlyPlaying && this.currentlyPlaying.performance==r.performance)));
+		if (this.currentlyPlaying) {
+			this.playInternal(this.currentlyPlaying.performance, this.currentlyPlaying.part);
+		}
 	}
 	buildAudioClips() {
 		for (var pi in this.performances) {
@@ -332,6 +338,21 @@ export class WorkExplorerComponent implements OnInit {
 			this.clickPartCheckbox(null, part);
 		}
 	}
+	getMedia() {
+		var media = [];
+		if (!!this.elRef) {
+			let audios = this.elRef.nativeElement.getElementsByTagName('audio');
+			let videos = this.elRef.nativeElement.getElementsByTagName('video');
+			for (var ai=0; ai<audios.length; ai++) {
+				media.push(audios[ai]);
+			}
+			for (var ai=0; ai<videos.length; ai++) {
+				media.push(videos[ai]);
+			}
+		}
+		return media;
+	}
+
 	clickPartCheckbox(event,part) {
 		console.log('select part'+part.id);
 		for (var pi in this.parts) {
@@ -396,21 +417,15 @@ export class WorkExplorerComponent implements OnInit {
 		if (!rec) {
 			console.log('no '+(this.showVideo ? 'video' : 'audio')+' recording for performance '+perf.id);
 		}
+		this.recordings.forEach(r => r.visible = r==rec );
 		if (!!this.elRef) {
-			let audios = this.elRef.nativeElement.getElementsByTagName('audio');
-			let videos = this.elRef.nativeElement.getElementsByTagName('video');
-			var media = [];
-			for (var ai=0; ai<audios.length; ai++) {
-				media.push(audios[ai]);
-			}
-			for (var ai=0; ai<videos.length; ai++) {
-				media.push(videos[ai]);
-			}
+			let media = this.getMedia();
 			for (var ai=0; ai<media.length; ai++) {
 				let audio = media[ai];
-				console.log('media '+ai+'/'+audios.length+':', audio);
+				console.log('media '+ai+'/'+media.length+': '+rec.id+' vs '+audio.id, audio);
 				if (!!rec && audio.id==rec.id) {
 					rec.shouldplay = true;
+					console.log('media '+ai+' visible!');
 					// start time...
 					var partOffset = 0;
 					if (!!wasPlaying && wasPlaying.part===part && wasPlaying!==this.currentlyPlaying) {
@@ -503,7 +518,7 @@ export class WorkExplorerComponent implements OnInit {
 		if (!!this.currentlyPlaying && !this.currentlyPlaying.clip.recording.shouldplay) {
 			this.currentlyPlaying.clip.recording.shouldplay = true;
 			if (!!this.elRef) {
-				let audios = this.elRef.nativeElement.getElementsByTagName('audio');
+				let audios = this.getMedia();
 				for (var ai=0; ai<audios.length; ai++) {
 					let audio = audios[ai];
 					if (audio.id==this.currentlyPlaying.clip.recording.id) {
@@ -519,7 +534,7 @@ export class WorkExplorerComponent implements OnInit {
 	pause() {
 		if (this.currentlyPlaying) {
 			if (!!this.elRef) {
-				let audios = this.elRef.nativeElement.getElementsByTagName('audio');
+				let audios = this.getMedia();
 				for (var ai=0; ai<audios.length; ai++) {
 					let audio = audios[ai];
 					audio.pause();
@@ -530,7 +545,8 @@ export class WorkExplorerComponent implements OnInit {
 	}
 	getAudio(rec:Recording) {
 		if (!!this.elRef) {
-			let audios = this.elRef.nativeElement.getElementsByTagName('audio');
+			let audios = rec.isVideo ? this.elRef.nativeElement.getElementsByTagName('video') :
+				this.elRef.nativeElement.getElementsByTagName('audio');
 			for (var ai=0; ai<audios.length; ai++) {
 				let audio = audios[ai];
 				console.log('audio '+ai+'/'+audios.length+':', audio);
