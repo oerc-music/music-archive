@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<!-- <p *ngIf="selectedPerformance"><em>{{selectedPerformance.label}}</em>: {{selectedPerformance.description}}</p>  -->
-	<h2>Parts (fragments) 
+	<h2>Parts (sections) 
 	<div class="btn-group">
 		<button class="btn btn-secondary" [ngClass]="{'active':!showMap}" (click)="setShowMap(false)">List</button>
 		<button class="btn btn-secondary" [ngClass]="{'active':showMap}" (click)="setShowMap(true)">Map</button>
@@ -40,6 +40,7 @@
 		</div>
 		<div class="col-sm-12 col-md-4 col-lg-6">
 			<p *ngIf="selectedPart"><em>{{selectedPart.label}}</em>: {{selectedPart.description}}</p>
+			<p *ngIf="!selectedPart && currentlyPlaying"><em>{{currentlyPlaying.part.label}}</em>: {{currentlyPlaying.part.description}}</p>
 		</div>
 	</div>
 	<div class="row">

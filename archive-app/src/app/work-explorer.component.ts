@@ -305,6 +305,8 @@ export class WorkExplorerComponent implements OnInit {
 			var part = this.parts.find(p => p.available);
 		 	if (part) {
 				this.playInternal(perf, part);
+			} else {
+				this.recordings.forEach(r => r.visible = r.isVideo==this.showVideo && r.performance==perf);
 			}
 		}
 	}
@@ -384,6 +386,9 @@ export class WorkExplorerComponent implements OnInit {
 			var perf = this.performances.find(p => p.available);
 		 	if (perf) {
 				this.playInternal(perf, part);
+			}
+			else {
+				this.recordings.forEach(r => r.visible = false );
 			}
 		}
 	}
