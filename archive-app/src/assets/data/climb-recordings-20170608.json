@@ -161,7 +161,7 @@
 			"entity:seeAlso_r": [],
 			"mo:records": "Performance/Climb_performance_test",
 			"prov:hadMember_repeat": [],
-			"prov:startedAtTime": "2017-06-08T14:13:33.216Z",
+			"prov:startedAtTime": "2017-06-08T14:13:24.216Z",
 			"rdfs:comment": "june 8 2017, rehearsal, composite of score, keys and stage view",
 			"rdfs:label": "Recording of video from Dress rehearsal of Climb!"
 		},
@@ -175,7 +175,7 @@
 			"annal:type": "coll:Linked_audio",
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_performance_test_video/",
-			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_480.mp4",
+			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Rehearsal_480_v2.mp4",
 			"rdfs:comment": "Audio of video from Dress rehearsal of Climb!",
 			"rdfs:label": "Audio of video from Dress rehearsal of Climb!"
 		},
@@ -204,7 +204,7 @@
 			"entity:seeAlso_r": [],
 			"mo:records": "Performance/Climb_performance_1",
 			"prov:hadMember_repeat": [],
-			"prov:startedAtTime": "2017-06-08T16:13:56.178Z",
+			"prov:startedAtTime": "2017-06-08T16:13:51.678Z",
 			"rdfs:comment": "june 8 2017, first performance, stage view (close)",
 			"rdfs:label": "Recording of video from Premiere performance of Climb!"
 		},
@@ -218,7 +218,7 @@
 			"annal:type": "coll:Linked_audio",
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_performance_1_video/",
-			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance1_480.mp4",
+			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance1_480_v2.mp4",
 			"rdfs:comment": "Audio of video from Premiere performance of Climb!",
 			"rdfs:label": "Audio of video from Premiere performance of Climb!"
 		},
@@ -247,7 +247,7 @@
 			"entity:seeAlso_r": [],
 			"mo:records": "Performance/Climb_Performance_2",
 			"prov:hadMember_repeat": [],
-			"prov:startedAtTime": "2017-06-08T16:48:37.151Z",
+			"prov:startedAtTime": "2017-06-08T16:48:29.151Z",
 			"rdfs:comment": "june 8 2017, second performance, stage view (distant)",
 			"rdfs:label": "Recording of video from Second performance of Climb!"
 		},
@@ -261,7 +261,7 @@
 			"annal:type": "coll:Linked_audio",
 			"annal:type_id": "Linked_audio",
 			"annal:url": "/annalist/c/annalist_performance_archive/d/Linked_audio/Climb_Performance_2_video/",
-			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance2_480.mp4",
+			"coll:audio_clip": "http://music-mrl.nott.ac.uk/1/recordings/Performance2_480_v2.mp4",
 			"rdfs:comment": "Audio of video from Second performance of Climb!",
 			"rdfs:label": "Audio of video from Second performance of Climb!"
 		}

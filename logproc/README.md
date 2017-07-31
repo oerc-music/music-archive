@@ -21,15 +21,24 @@ node lib/processlogs.js ../test/data/example_entity_list.json \
 
 Copy processed logs over to archive app...
 ```
-cp ../test/data/recordingsJune8.yml-annalist.json ../archive-app/src/assets/data/climb-recordings-20170608.json
-cp ../test/data/Climb\!June8.csv-annalist.json ../archive-app/src/assets/data/climb-stages-20170608.json
-cp ../test/data/20170608T112725862Z-default.log-annalist.json ../archive-app/src/assets/data/climb-performances-20170608.json
-cp ../test/data/example_entity_list.json ../archive-app/src/assets/data/records.json
-cp ../test/data/Climb\!June8.csv ../archive-app/src/assets/data/
-cp ../test/data/narrativesJune8.csv ../archive-app/src/assets/data/
-cp ../test/data/mkGameEngine.xlsx ../archive-app/src/assets/data/mkGameEngine.xlsx
-cp ../test/data/empty_entity_list.json ../archive-app/src/assets/data/performance-e888ea0f-8c81-48a8-8462-bc98dd04f495-annalist.json
-cp ../test/data/empty_entity_list.json ../archive-app/src/assets/data/performance-f01a5d26-6569-4879-9aef-58334110c307-annalist.json
+cp ../test/data/recordingsJune8.yml-annalist.json \
+ ../archive-app/src/assets/data/climb-recordings-20170608.json
+cp ../test/data/Climb\!June8.csv-annalist.json \
+ ../archive-app/src/assets/data/climb-stages-20170608.json
+cp ../test/data/20170608T112725862Z-default.log-annalist.json \
+ ../archive-app/src/assets/data/climb-performances-20170608.json
+cp ../test/data/example_entity_list.json \
+ ../archive-app/src/assets/data/records.json
+cp ../test/data/Climb\!June8.csv \
+ ../archive-app/src/assets/data/
+cp ../test/data/narrativesJune8.csv \
+ ../archive-app/src/assets/data/
+cp ../test/data/mkGameEngine.xlsx \
+ ../archive-app/src/assets/data/mkGameEngine.xlsx
+cp ../test/data/empty_entity_list.json \
+ ../archive-app/src/assets/data/performance-e888ea0f-8c81-48a8-8462-bc98dd04f495-annalist.json
+cp ../test/data/empty_entity_list.json \
+ ../archive-app/src/assets/data/performance-f01a5d26-6569-4879-9aef-58334110c307-annalist.json
 ```
 Note, app data files to load in ../archive-app/src/assets/data/. See especially
 urls.json (list of files to read).
