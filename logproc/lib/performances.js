@@ -122,4 +122,35 @@ module.exports.fixAnnalistPerformance = function( annalistEntries, annalistStage
 	}
 	console.log('ERROR could not find Performance '+performance.id+' in annalist entries');
 	return null;
-} 
+}
+
+module.exports.getMuzivisualPerformances = function( annalistEntries ) {
+	var perfs = [];
+	for (var i in annalistEntries) {
+		var entry = annalistEntries[i];
+		if ('Performance'==entry['annal:type_id']) {
+			// for muzivisual! performer location time title
+			var perf = { 'title': entry['rdfs:label'], 'id': entry['coll:system_id'], 'performer': 'unspecified performer' };
+			// prov:startedAtTime xsd:datetime
+			if (entry['prov:startedAtTime'])
+				perf.time = new Date(entry['prov:startedAtTime']).getTime();
+			perf.location = 'unspecified location';
+			//"prov:qualifiedAssociation": [ { "crm:P12i_was_present_at":
+			if (entry['prov:qualifiedAssociation'] && entry['prov:qualifiedAssociation'].length>0) {
+				var pid = entry['prov:qualifiedAssociation'][0]['crm:P12i_was_present_at'];
+				if (pid) {
+					var pe = annalistEntries.find(function(e) { return pid == e['annal:type_id']+'/'+e['annal:id']; });
+					if (pe)
+						perf.performer = pe['rdfs:label'];
+					else
+						console.log('Warning: could not find performer '+pid);
+				}
+				else
+					console.log('Warning: no performer specified for '+entry['rdfs:label']);
+			}
+			perfs.push(perf);
+		}
+	}
+	return perfs;
+}
+

@@ -6,10 +6,12 @@ performances = require('./performances');
 recordings = require('./recordings');
 experience = require('./experience');
 output = require('./output');
+muzivisual = require('./muzivisual');
+
 fs = require('fs');
 
-if (process.argv.length!=8) {
-	console.log('ERROR: usage: node processlogs.js ANNALISTEXPORTFILE MUSICODESLOGFILE MUZIVISUALCSVFILE RECORDINGSYMLFILE MUZIVISUALNARRATIVESFILE EXPERIENCEXLSX');
+if (process.argv.length!=9) {
+	console.log('ERROR: usage: node processlogs.js ANNALISTEXPORTFILE MUSICODESLOGFILE MUZIVISUALCSVFILE RECORDINGSYMLFILE MUZIVISUALNARRATIVESFILE EXPERIENCEXLSX MUZIVISUALOUT');
 	process.exit(-1);
 }
 
@@ -146,3 +148,11 @@ for (var ri in recs) {
 var recoutfile = recfile+'-annalist.json';
 console.log('write recordings to '+recoutfile);
 output.writeFile(recoutfile, recordingEntities);
+
+var mvfile = process.argv[8];
+var mvperf = muzivisual.makePerformances( annalistEntries, mcperformances );
+console.log('write muzivisual performances to '+mvfile);
+var mvperftext = JSON.stringify(mvperf, null, '\t');
+fs.writeFileSync( mvfile, mvperftext, {encoding:'utf-8'});
+
+console.log('done');

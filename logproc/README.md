@@ -16,7 +16,7 @@ e.g.
 node lib/processlogs.js ../test/data/example_entity_list.json \
   ../test/data/20170608T112725862Z-default.log '../test/data/Climb!June8.csv' \
   ../test/data/recordingsJune8.yml ../test/data/narrativesJune8.csv \
-  ../test/data/mkGameEngine.xlsx
+  ../test/data/mkGameEngine.xlsx ../test/data/performances.json
 ```
 
 Copy processed logs over to archive app...

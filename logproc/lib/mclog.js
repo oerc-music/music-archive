@@ -30,10 +30,11 @@ module.exports.read = function( path ) {
 								console.log('Warning: performance '+perfid+' restarted at '+entry.datetime);
 							}
 							console.log('adding performance '+perfid);
-							var performance = { startTime: entry.time, startDatetime: entry.datetime, id: perfid, stages: [], notes: [], codes: [] };
+							var performance = { startTime: entry.time, startDatetime: entry.datetime, id: perfid, stages: [], notes: [], codes: [], emits: []  };
 							currentPerformance = performance;
 							performances[perfid] = performance;
 							performance.stages.push({id: parts[4], time: entry.time, datetime: entry.datetime, codes: []});
+							performance.emits.push({name:'vStart', time:entry.time, data: action.url.substring('emit:vStart:mobileapp:'.length)});
 						}
 						else {
 							console.log('WARNING: Found start for unspecified performance: '+action.url+' a tline '+(l+1));
@@ -49,6 +50,7 @@ module.exports.read = function( path ) {
 							if (performance) {
 								performance.stopTime = entry.time;
 								performance.stopDatetime = entry.datetime;
+								performance.emits.push({name:'vStop', time:entry.time, data: action.url.substring('emit:vStop:mobileapp:'.length)});
 							} else {
 								console.log('Warning: performance '+perfid+' not found (vStop) at '+entry.datetime);
 							}
@@ -63,6 +65,7 @@ module.exports.read = function( path ) {
 							//console.log('Found stage change for performance '+perfid+' at '+entry.datetime);
 							var performance = performances[perfid];
 							if (performance && parts[4]) {
+								performance.emits.push({name:'vStageChange', time:entry.time, data: action.url.substring('emit:vStageChange:mobileapp:'.length)});
 								var ix = parts[4].indexOf('->');
 								if (ix<0) {
 									console.log('Found invalid vStageChange at line '+(l+1)+': '+action.url);
