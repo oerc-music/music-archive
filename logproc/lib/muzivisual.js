@@ -12,7 +12,8 @@ module.exports.makePerformances = function( annalistEntries, mcperformances ) {
 			perfs['performance:'+ap.id] = ap;
 			var performance = mcperformances[ap.id];
 			if (performance) {
-				ap.value = performance.emits;
+				for (var ei in performance.emits) 
+					ap.value.push(JSON.stringify(performance.emits[ei]));
 			}
 		}
 	}

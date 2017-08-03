@@ -64,7 +64,10 @@ module.exports.read = function( path ) {
 						if (perfid) {
 							//console.log('Found stage change for performance '+perfid+' at '+entry.datetime);
 							var performance = performances[perfid];
-							if (performance && parts[4]) {
+							if (performance && performance.stopTime) {
+								console.log('Warning: ignore vStageChange after end of performance '+perfid);
+							}
+							else if (performance && parts[4]) {
 								performance.emits.push({name:'vStageChange', time:entry.time, data: action.url.substring('emit:vStageChange:mobileapp:'.length)});
 								var ix = parts[4].indexOf('->');
 								if (ix<0) {

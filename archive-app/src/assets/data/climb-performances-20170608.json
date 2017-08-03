@@ -687,36 +687,6 @@
 			]
 		},
 		{
-			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a/",
-			"@type": [
-				"frbroo:F31_Performance",
-				"prov:Activity",
-				"crm:E5_Event",
-				"crm:E7_Activity",
-				"mo:Performance",
-				"annal:EntityData"
-			],
-			"annal:id": "Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a",
-			"annal:type": "frbroo:F31_Performance",
-			"annal:type_id": "Performance",
-			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a/",
-			"coll:system_id": "",
-			"coll:uploaded_image_r": [],
-			"crm:P7_took_place_at": "",
-			"entity:seeAlso_r": [],
-			"frbroo:R25F_performed_r": [
-				{
-					"frbroo:R25F_performed": "Part_of_Work/Climb_p1a"
-				}
-			],
-			"prov:qualifiedAssociation": [],
-			"prov:startedAtTime": "2017-06-08T14:36:07.877Z",
-			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Path 1 (a) in Dress rehearsal of Climb!",
-			"rdfs:label": "Path 1 (a)",
-			"event:sub_event": []
-		},
-		{
 			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Climb_performance_test/",
 			"@type": [
 				"frbroo:F31_Performance",
@@ -779,9 +749,6 @@
 				},
 				{
 					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_summit"
-				},
-				{
-					"event:sub_event": "Performance/Perform_Climb_9333e7a2-16a9-4352-a45a-f6f42d848cde_p1a"
 				}
 			],
 			"frbroo:R25F_performed_r": [
