@@ -14,8 +14,8 @@ npm install --no-bin-links
 e.g.
 ```
 node lib/processlogs.js ../test/data/example_entity_list.json \
-  ../test/data/20170608T112725862Z-default.log '../test/data/Climb!June8.csv' \
-  ../test/data/recordingsJune8.yml ../test/data/narrativesJune8.csv \
+  ../test/data/20170608T112725862Z-default.log '../test/data/Climb!London.csv' \
+  ../test/data/recordingsJune8.yml ../test/data/narrativesLondon.csv \
   ../test/data/mkGameEngine.xlsx ../test/data/performances.json
 ```
 
@@ -23,15 +23,15 @@ Copy processed logs over to archive app...
 ```
 cp ../test/data/recordingsJune8.yml-annalist.json \
  ../archive-app/src/assets/data/climb-recordings-20170608.json
-cp ../test/data/Climb\!June8.csv-annalist.json \
- ../archive-app/src/assets/data/climb-stages-20170608.json
+cp ../test/data/Climb\!London.csv-annalist.json \
+ ../archive-app/src/assets/data/climb-stages-20170825.json
 cp ../test/data/20170608T112725862Z-default.log-annalist.json \
  ../archive-app/src/assets/data/climb-performances-20170608.json
 cp ../test/data/example_entity_list.json \
  ../archive-app/src/assets/data/records.json
-cp ../test/data/Climb\!June8.csv \
+cp ../test/data/Climb\!London.csv \
  ../archive-app/src/assets/data/
-cp ../test/data/narrativesJune8.csv \
+cp ../test/data/narrativesLondon.csv \
  ../archive-app/src/assets/data/
 cp ../test/data/mkGameEngine.xlsx \
  ../archive-app/src/assets/data/mkGameEngine.xlsx

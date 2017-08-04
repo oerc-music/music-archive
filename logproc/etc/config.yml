@@ -2,8 +2,8 @@ logdir: logs
 outputdir: output
 annalistfiles: 
  - ../test/data/example_entity_list.json
-mvfile: ../test/data/Climb!June8.csv
-narrativefile: ../test/data/narrativesJune8.csv
+mvfile: ../test/data/Climb!London.csv
+narrativefile: ../test/data/narrativesLondon.csv
 httpuser: uploader
 httppass: changeme
 port: 4201

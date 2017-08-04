@@ -1,0 +1,900 @@
+{
+	"@context": [
+		{
+			"@base": "/annalist/c/annalist_performance_archive/d/"
+		},
+		"/annalist/c/annalist_performance_archive/d/coll_context.jsonld"
+	],
+	"@id": "/annalist/c/annalist_performance_archive/l/Default_list_all/",
+	"annal:entity_list": [
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_basecamp/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_basecamp",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_basecamp/",
+			"coll:part_id": "basecamp",
+			"coll:part_rank": "1",
+			"coll:map_x": 0.4734375,
+			"coll:map_y": 0.68,
+			"coll:map_path": 0,
+			"coll:map_cue": [
+				"1a",
+				"1b",
+				"1c"
+			],
+			"coll:map_narratives": {
+				"": "Avatar prepares for their climb at Basecamp.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar prepares for their climb at Basecamp.,",
+			"rdfs:label": "Basecamp"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_1a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1a/",
+			"coll:part_id": "1a",
+			"coll:part_rank": "2",
+			"coll:map_x": 0.3140625,
+			"coll:map_y": 0.6375,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"p1a",
+				"2b"
+			],
+			"coll:map_narratives": {
+				"basecamp": "Avatar chooses to climb the first path. An angry deer confronts Avatar.,",
+				"2b": "Avatar can't cross the tree, so must climb down to the first path where they encounter an angry deer.",
+				"1b": "Avatar narrowly dodges the stones by diving onto the first path to be confronted by an angry deer.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar chooses to climb the first path. An angry deer confronts Avatar.,",
+			"rdfs:label": "Angry Deer"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p1a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1a/",
+			"coll:part_id": "p1a",
+			"coll:part_rank": "3",
+			"coll:map_x": 0.271875,
+			"coll:map_y": 0.604166667,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"2a"
+			],
+			"coll:map_narratives": {
+				"1a": "Avatar escapes the deer and heads along the first path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar escapes the deer and heads along the first path.,",
+			"rdfs:label": "Path 1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_2a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2a/",
+			"coll:part_id": "2a",
+			"coll:part_rank": "4",
+			"coll:map_x": 0.275,
+			"coll:map_y": 0.5375,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"p1b",
+				"1c"
+			],
+			"coll:map_narratives": {
+				"p1a": "The path is flooded. Avatar must wade through the water.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "The path is flooded. Avatar must wade through the water.,",
+			"rdfs:label": "Flooded Path"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p1b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1b/",
+			"coll:part_id": "p1b",
+			"coll:part_rank": "5",
+			"coll:map_x": 0.35625,
+			"coll:map_y": 0.510416667,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"3a"
+			],
+			"coll:map_narratives": {
+				"2a": "Avatar emerges from the water and continues up the path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar emerges from the water and continues up the path.,",
+			"rdfs:label": "Path 1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_3a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3a/",
+			"coll:part_id": "3a",
+			"coll:part_rank": "6",
+			"coll:map_x": 0.3515625,
+			"coll:map_y": 0.446875,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"p1c"
+			],
+			"coll:map_narratives": {
+				"p1b": "Avatar discovers a beautiful stone that shimmers in the light.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar discovers a beautiful stone that shimmers in the light.,",
+			"rdfs:label": "Shimmering Stone"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p1c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p1c/",
+			"coll:part_id": "p1c",
+			"coll:part_rank": "7",
+			"coll:map_x": 0.3828125,
+			"coll:map_y": 0.409375,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"4a"
+			],
+			"coll:map_narratives": {
+				"3a": "Avatar drops the stone and continues along the path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar drops the stone and continues along the path.,",
+			"rdfs:label": "Path 1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_4a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4a/",
+			"coll:part_id": "4a",
+			"coll:part_rank": "8",
+			"coll:map_x": 0.45625,
+			"coll:map_y": 0.400625,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"5a",
+				"3b",
+				"4b",
+				"3c",
+				"4c"
+			],
+			"coll:map_narratives": {
+				"p1c": "Avatar encounters a sleeping bear and tries to walk past without waking it.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar encounters a sleeping bear and tries to walk past without waking it.,",
+			"rdfs:label": "Sleeping Bear"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_5a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5a/",
+			"coll:part_id": "5a",
+			"coll:part_rank": "9",
+			"coll:map_x": 0.4828125,
+			"coll:map_y": 0.330208333,
+			"coll:map_path": 1,
+			"coll:map_cue": [
+				"summit",
+				"4b",
+				"4c",
+				"5b",
+				"5c"
+			],
+			"coll:map_narratives": {
+				"4a": "Avatar is nearly past the bear when they hear rocks rolling down the mountain.,",
+				"5b": "Avatar takes the first path to escape the birds, but now hears rocks falling down the mountain."
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar is nearly past the bear when they hear rocks rolling down the mountain.,",
+			"rdfs:label": "Rolling Rocks"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_1b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1b/",
+			"coll:part_id": "1b",
+			"coll:part_rank": "10",
+			"coll:map_x": 0.5046875,
+			"coll:map_y": 0.637708333,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"p2a",
+				"1c"
+			],
+			"coll:map_narratives": {
+				"basecamp": "Avatar chooses to climb the second path. Take care! Stones are falling down the path.,",
+				"2a": "Avatar can't cross this tree. They jump to the first path only to see stones falling towards them. ,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar chooses to climb the second path. Take care! Stones are falling down the path.,",
+			"rdfs:label": "Falling Stones"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p2a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2a/",
+			"coll:part_id": "p2a",
+			"coll:part_rank": "11",
+			"coll:map_x": 0.5671875,
+			"coll:map_y": 0.595416667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"2b"
+			],
+			"coll:map_narratives": {
+				"1b": "Avatar dances through the stones to continue along the second path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar dances through the stones to continue along the second path.,",
+			"rdfs:label": "Path 2 "
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_2b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2b/",
+			"coll:part_id": "2b",
+			"coll:part_rank": "12",
+			"coll:map_x": 0.609375,
+			"coll:map_y": 0.547916667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"p2b",
+				"1c",
+				"1a"
+			],
+			"coll:map_narratives": {
+				"p2a": "Avatar discovers a tree lying across the path.,",
+				"1a": "Avatar escapes the deer by veering onto the second path, but discovers a tree lying across it.",
+				"1c": "Avatar finds another way out of the cave that leads to the second path, but discovers a tree lying across it.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar discovers a tree lying across the path.,",
+			"rdfs:label": "Fallen Tree"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p2b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2b/",
+			"coll:part_id": "p2b",
+			"coll:part_rank": "13",
+			"coll:map_x": 0.55625,
+			"coll:map_y": 0.525,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"3b"
+			],
+			"coll:map_narratives": {
+				"2b": "Avatar clambers over the tree and heads up the path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar clambers over the tree and heads up the path.,",
+			"rdfs:label": "Path 2"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_3b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3b/",
+			"coll:part_id": "3b",
+			"coll:part_rank": "14",
+			"coll:map_x": 0.54375,
+			"coll:map_y": 0.474458333,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"p2c",
+				"2a",
+				"3a",
+				"2c",
+				"3c"
+			],
+			"coll:map_narratives": {
+				"p2b": "The path winds into a ghostly forest.,",
+				"4a": "Oh no! Avatar wakes the bear. They run to the second path to be swallowed by a ghostly forest.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "The path winds into a ghostly forest.,",
+			"rdfs:label": "Ghostly Forest"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p2c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p2c/",
+			"coll:part_id": "p2c",
+			"coll:part_rank": "15",
+			"coll:map_x": 0.546875,
+			"coll:map_y": 0.421041667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"4b"
+			],
+			"coll:map_narratives": {
+				"3b": "Avatar emerges into the uplands and continues along the second path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar emerges into the uplands and continues along the second path.,",
+			"rdfs:label": "Path 2"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_4b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4b/",
+			"coll:part_id": "4b",
+			"coll:part_rank": "16",
+			"coll:map_x": 0.5515625,
+			"coll:map_y": 0.368708333,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"5b"
+			],
+			"coll:map_narratives": {
+				"p2c": "Avatar has a hallucination where they meet their former lover.,",
+				"5a": "Avatar is hit by a stone! They tumble over to the second path and hallucinate about meeting their former lover.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar has a hallucination where they meet their former lover.,",
+			"rdfs:label": "Hallucination"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_5b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5b/",
+			"coll:part_id": "5b",
+			"coll:part_rank": "17",
+			"coll:map_x": 0.55625,
+			"coll:map_y": 0.297916667,
+			"coll:map_path": 2,
+			"coll:map_cue": [
+				"summit",
+				"5a",
+				"5c"
+			],
+			"coll:map_narratives": {
+				"4b": "Birds attack Avatar! The hallucination is broken.,",
+				"5c": "Avatar ducks over to the second path only to be attacked by some birds.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Birds attack Avatar! The hallucination is broken.,",
+			"rdfs:label": "Birds Attack"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_1c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_1c/",
+			"coll:part_id": "1c",
+			"coll:part_rank": "18",
+			"coll:map_x": 0.6359375,
+			"coll:map_y": 0.64375,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"p3a",
+				"2b"
+			],
+			"coll:map_narratives": {
+				"basecamp": "Avatar chooses to climb the third path. Avatar discovers a cave and goes inside to explore,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar chooses to climb the third path. Avatar discovers a cave and goes inside to explore,",
+			"rdfs:label": "The Cave"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p3a/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p3a",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p3a/",
+			"coll:part_id": "p3a",
+			"coll:part_rank": "19",
+			"coll:map_x": 0.7453125,
+			"coll:map_y": 0.641666667,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"2c"
+			],
+			"coll:map_narratives": {
+				"1c": "Avatar leaves the cave and continues to climb the third path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar leaves the cave and continues to climb the third path.,",
+			"rdfs:label": "Path 3"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_2c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_2c/",
+			"coll:part_id": "2c",
+			"coll:part_rank": "20",
+			"coll:map_x": 0.803125,
+			"coll:map_y": 0.608333333,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"2b",
+				"2a"
+			],
+			"coll:map_narratives": {
+				"3a": "The path is blocked by cows. Avatar must chase them away.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "The path is blocked by cows. Avatar must chase them away.,",
+			"rdfs:label": "Herd of Cows"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p3b/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p3b",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p3b/",
+			"coll:part_id": "p3b",
+			"coll:part_rank": "21",
+			"coll:map_x": 0.8,
+			"coll:map_y": 0.56875,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"3c"
+			],
+			"coll:map_narratives": {
+				"2c": "Avatar leaves the cave and continues to climb the third path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar leaves the cave and continues to climb the third path.,",
+			"rdfs:label": "Path 3"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_3c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_3c/",
+			"coll:part_id": "3c",
+			"coll:part_rank": "22",
+			"coll:map_x": 0.696875,
+			"coll:map_y": 0.54125,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"p3c",
+				"3a",
+				"3b"
+			],
+			"coll:map_narratives": {
+				"3b": "Avatar meets a talkative stranger. They try to leave them behind.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar meets a talkative stranger. They try to leave them behind.,",
+			"rdfs:label": "Talkative Stranger"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p3c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_p3c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_p3c/",
+			"coll:part_id": "p3c",
+			"coll:part_rank": "23",
+			"coll:map_x": 0.6796875,
+			"coll:map_y": 0.492708333,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"4c"
+			],
+			"coll:map_narratives": {
+				"3c": "Avatar loses the talkative stranger and continues along the third path.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar loses the talkative stranger and continues along the third path.,",
+			"rdfs:label": "Path 3"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_4c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_4c/",
+			"coll:part_id": "4c",
+			"coll:part_rank": "24",
+			"coll:map_x": 0.6390625,
+			"coll:map_y": 0.434375,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"5c"
+			],
+			"coll:map_narratives": {
+				"p3c": "Avatar spies an apple tree in the middle of the mountain. Hungry, they pick an apple to eat.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar spies an apple tree in the middle of the mountain. Hungry, they pick an apple to eat.,",
+			"rdfs:label": "Apple Tree"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5c/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_5c",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_5c/",
+			"coll:part_id": "5c",
+			"coll:part_rank": "25",
+			"coll:map_x": 0.6203125,
+			"coll:map_y": 0.367708333,
+			"coll:map_path": 3,
+			"coll:map_cue": [
+				"summit",
+				"5b"
+			],
+			"coll:map_narratives": {
+				"4c": "A sudden storm fells the apple tree. Avatar must dodge.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "A sudden storm fells the apple tree. Avatar must dodge.,",
+			"rdfs:label": "Storm"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_summit/",
+			"@type": [
+				"coll:Part_of_Work",
+				"frbroo:F20_Performance_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb_summit",
+			"annal:member": [],
+			"annal:member__2": [],
+			"annal:type": "coll:Part_of_Work",
+			"annal:type_id": "Part_of_Work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Part_of_Work/Climb_summit/",
+			"coll:part_id": "summit",
+			"coll:part_rank": "26",
+			"coll:map_x": 0.5484375,
+			"coll:map_y": 0.224458333,
+			"coll:map_path": 0,
+			"coll:map_cue": [],
+			"coll:map_narratives": {
+				"5a": "Avatar dodges the rocks to emerge at the summit.,",
+				"5b": "Avatar runs from the birds to emerge at the summit.,",
+				"5c": "Avatar shelters �til the storm passes and then emerges at the summit.,"
+			},
+			"entity:seeAlso_r": [],
+			"rdfs:comment": "Avatar dodges the rocks to emerge at the summit.,",
+			"rdfs:label": "Summit"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
+			"@type": [
+				"frbroo:F20_Performance_Work",
+				"prov:Entity",
+				"crm:E77_Persistent_Item",
+				"crm:E70_Thing",
+				"crm:E71_Man-Made_Thing",
+				"crm:E29_Design_or_Procedure",
+				"crm:E73_Information_Object",
+				"crm:E28_Conceptual_Object",
+				"frbroo:frbroo:F1_Work",
+				"annal:EntityData"
+			],
+			"annal:id": "Climb",
+			"annal:member": [
+				{
+					"prov:wasAttributedTo": "Person/Maria_Kallionpaa"
+				}
+			],
+			"annal:member__2": [
+				{
+					"crm:P12i_was_present_at": "Event/Climb_Concert_20170608"
+				}
+			],
+			"annal:type": "frbroo:F20_Performance_Work",
+			"annal:type_id": "Performed_work",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performed_work/Climb/",
+			"entity:seeAlso_r": [
+				{
+					"rdfs:seeAlso": "http://homes.create.aau.dk/dano/nime17/papers/0088/index.html"
+				},
+				{
+					"rdfs:seeAlso": "http://eprints.nottingham.ac.uk/37081/"
+				},
+				{
+					"rdfs:seeAlso": "http://eprints.nottingham.ac.uk/41837/"
+				},
+				{
+					"rdfs:seeAlso": "https://musicbrainz.org/work/aa3fc450-f768-470f-91aa-045b6db0d6f3"
+				}
+			],
+			"frbroo:R10_has_member": [
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_basecamp"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_1a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p1a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_2a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p1b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_3a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p1c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_4a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_5a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_1b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p2a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_2b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p2b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_3b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p2c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_4b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_5b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_1c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p3a"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_2c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p3b"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_3c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_p3c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_4c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_5c"
+				},
+				{
+					"frbroo:R10_has_member": "Part_of_Work/Climb_summit"
+				}
+			],
+			"rdfs:comment": "<p>Climb! is a musical composition that combines the ideas of a classical virtuoso piece and a computer game.</p>\r\n\r\n<p>Written for a Disklavier grand piano, the work engages the pianist in an unusual musical dialogue where there is no fixed musical form: the performer’s/gamer’s actions define how the story continues. As the performer plays key passages, so both the music and the instrument respond, jumping to new points in the score, transforming the sound, or independently playing along with them – physically in the case of the Disklavier. An interactive system like this resembles “an invisible chamber music partner” leading some musicians to claim that electroacoustic works can never be treated as solo compositions, but should instead be seen as “concertos in a modern guise”.</p>\r\n\r\n<p>Like a computer game or the World Wide Web, Climb! is non-linear, with a branching structure that allows the performer to choose different routes through the work. It consists of three macro-compositions called paths with some further side paths between them. Various micro-compositions are then dispersed along each path. Depending on how the performer plays, they may continue to progress along their current path or be diverted onto another one.</p>\r\n\r\n<h3>How it works</h3>\r\n\r\n<p>Climb! Is realised using a combination of technologies. It is played on a Disklavier piano that can be instructed to physically play back computer generated parts (using the MIDI protocol) and can even duet along with the pianist, moving its keys around and between their fingers. Climb! also uses the Max/MSP software running on a laptop to generate various audio effects that transform the piano’s sound.</p>\r\n \r\n<p>The performer controls how the work progresses – which path they follow and how they negotiate various events along the way – directly through their playing rather than by pressing buttons, pushing pedals or having someone do this from behind the scenes. This employs a technology called <a href=\"http://eprints.nottingham.ac.uk/37081/\">Muzicodes</a> from the University of Nottingham’s Mixed Reality Lab. Muzicodes allows certain phrases in the score to be designated as hidden codes that, when successfully played by the pianist, trigger events such as jumping to a new place in the score (like following a hyperlink on the World Wide Web); introducing an audio effect to represent weather, animals, stones and so forth; causing the Disklavier to duet with the pianist; driving the projected animations; and finally controlling the dynamic programme notes.</p>\r\n \r\n<p>The MELD software from the University of Oxford is used to render the pianist’s score, turning the digital pages for them as they negotiate their route through the piece.</p>\r\n",
+			"rdfs:label": "Climb!",
+			"coll:map_url": "assets/images/Climb_Map_background.jpg"
+		}
+	]
+}

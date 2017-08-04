@@ -2,8 +2,8 @@ logdir: logs
 outputdir: output
 annalistfiles: 
  - output/records.json
-mvfile: output/Climb!June8.csv
-narrativefile: output/narrativesJune8.csv
+mvfile: output/Climb!London.csv
+narrativefile: output/narrativesLondon.csv
 experiencefile: output/mkGameEngine.xlsx
 httpuser: uploader
 httppass: changeme

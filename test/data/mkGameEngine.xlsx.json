@@ -17,14 +17,21 @@
 			"mc1_name": "BC_Ending1",
 			"mc1_cue": "1a",
 			"mc1_v.mc": "codeEvent.webm",
+			"mc1_app": "The performer chose the first path:5:true",
 			"mc2_": "Ending 2",
 			"mc2_name": "BC_Ending2",
 			"mc2_cue": "1b",
 			"mc2_v.mc": "codeEvent.webm",
+			"mc2_app": "The performer chose the second path:5:true",
 			"mc3_": "Ending 3",
 			"mc3_name": "BC_Ending3",
 			"mc3_cue": "1c",
 			"mc3_v.mc": "codeEvent.webm",
+			"mc3_app": "The performer chose the third path:5:true",
+			"mc4_": 6,
+			"mc4_name": "BC_SP",
+			"mc4_v.mc.delay": 3.6,
+			"mc4_app": "The performer has to choose a path:9:true",
 			"_index": 0
 		},
 		{
@@ -46,10 +53,13 @@
 			"mc1_midi": "90407f",
 			"mc1_v.animate": "1aDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
+			"mc1_v.mc.delay": 3.195,
+			"mc1_app": "A challenge is approaching:9:true",
 			"mc2_": "12",
 			"mc2_name": "1a_2",
 			"mc2_cue": "p1a",
 			"mc2_v.mc": "codeEvent.webm",
+			"mc2_app": "The challenge was completed successfully:5:true",
 			"_index": 1
 		},
 		{
@@ -62,20 +72,25 @@
 			"wind_effect": "N",
 			"storm_effect": "N",
 			"sun_effect": "N",
-			"auto_cue": "1a",
+			"auto_cue": "1c",
 			"auto_midi": "90017f",
 			"auto_delay": 1,
 			"auto_midi2": "90407f",
 			"auto_v.animate": "1bDiskAni.webm",
 			"auto_v.background": "BG_1b.webm",
+			"auto_v.mc": "approach.png",
+			"auto_v.mc.delay": 20.2,
+			"auto_app": "A challenge is approaching:9:true",
 			"mc1_": "10",
 			"mc1_name": "1b",
 			"mc1_cue": "p2a",
 			"mc1_v.mc": "codeEvent.webm",
+			"mc1_app": "The challenge was completed successfully:5:true",
 			"_index": 2
 		},
 		{
 			"stage": "1c",
+			"next": "p3a",
 			"meifile": "1cEcho.mei",
 			"no_effect": "N",
 			"rain_effect": "N",
@@ -86,10 +101,20 @@
 			"auto_cue": "2b",
 			"auto_midi": "90027f",
 			"auto_v.animate": "mountainOutline.png",
+			"auto_v.background": "BG_1c.webm",
 			"mc1_": "1",
 			"mc1_name": "1c_1",
 			"mc1_midi": "90407f",
+			"mc1_delay": 0.5,
+			"mc1_v.animate": "p1cCustomDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
+			"mc1_v.mc.delay": 17,
+			"mc1_app": "A challenge is approaching:9:true",
+			"mc2_": 8,
+			"mc2_name": "1c_2",
+			"mc2_cue": "p3a",
+			"mc2_v.mc": "codeEvent.webm",
+			"mc2_app": "The challenge was completed successfully:5:true",
 			"_index": 3
 		},
 		{
@@ -129,6 +154,27 @@
 			"_index": 5
 		},
 		{
+			"stage": "p3a",
+			"next": "2c",
+			"meifile": "Path3a.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "2c",
+			"auto_midi": "90047f",
+			"auto_v.animate": "mountainOutline.png",
+			"auto_v.background": "BG_path.webm",
+			"mc1_": 1,
+			"mc1_name": "p3a_1",
+			"mc1_midi": "90407f",
+			"mc1_v.animate": "p3aCustomDiskAni.webm",
+			"mc1_v.mc": "codeDisk.webm",
+			"_index": 6
+		},
+		{
 			"stage": "2a",
 			"next": "p1b",
 			"meifile": "2aAFloodedPath.mei",
@@ -138,17 +184,21 @@
 			"wind_effect": "N",
 			"storm_effect": "N",
 			"sun_effect": "N",
-			"auto_cue": "1b",
+			"auto_cue": "1c",
 			"auto_midi": "90057f",
 			"auto_delay": 1,
 			"auto_midi2": "90407f",
 			"auto_v.animate": "2aDiskAni.webm",
 			"auto_v.background": "BG_2a.webm",
+			"auto_v.mc": "approach.png",
+			"auto_v.mc.delay": 45.245,
+			"auto_app": "A challenge is approaching:9:true",
 			"mc1_": "19",
 			"mc1_name": "2a",
 			"mc1_cue": "p1b",
 			"mc1_v.mc": "codeEvent.webm",
-			"_index": 6
+			"mc1_app": "The challenge was completed successfully:5:true",
+			"_index": 7
 		},
 		{
 			"stage": "2b",
@@ -160,7 +210,7 @@
 			"wind_effect": "Y",
 			"storm_effect": "Y",
 			"sun_effect": "Y",
-			"auto_cue": "1a",
+			"auto_cue": "1c",
 			"auto_midi": "90067f",
 			"auto_v.animate": "mountainOutline.png",
 			"auto_v.background": "BG_2b.webm",
@@ -173,7 +223,36 @@
 			"mc2_name": "2b_2",
 			"mc2_cue": "p2b",
 			"mc2_v.mc": "codeEvent.webm",
-			"_index": 7
+			"mc2_app": "The challenge was completed successfully:5:true",
+			"_index": 8
+		},
+		{
+			"stage": "2c",
+			"next": "p3b",
+			"meifile": "2cHerdOfCows.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "2a/2b",
+			"auto_midi": "90147f",
+			"auto_v.animate": "mountainOutline.png",
+			"auto_v.background": "BG_2c.webm",
+			"mc1_": 2,
+			"mc1_name": "2c_1",
+			"mc1_midi": "90407f",
+			"mc1_v.animate": "2cCustomDiskAni.webm",
+			"mc1_v.mc": "codeDisk.webm",
+			"mc1_v.mc.delay": 25.536,
+			"mc1_app": "A challenge is approaching:9:true",
+			"mc2_": 12,
+			"mc2_name": "2c_2",
+			"mc2_cue": "p3b",
+			"mc2_v.mc": "codeEvent.webm",
+			"mc2_app": "The challenge was completed successfully:5:true",
+			"_index": 9
 		},
 		{
 			"stage": "p1b",
@@ -194,7 +273,7 @@
 			"mc1_midi": "90407f",
 			"mc1_v.animate": "p1bCustomDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
-			"_index": 8
+			"_index": 10
 		},
 		{
 			"stage": "p2b",
@@ -209,7 +288,28 @@
 			"auto_cue": "3b",
 			"auto_v.animate": "mountainOutline.png",
 			"auto_v.background": "BG_path.webm",
-			"_index": 9
+			"_index": 11
+		},
+		{
+			"stage": "p3b",
+			"next": "3c",
+			"meifile": "Path3b.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "3c",
+			"auto_midi": "90087f",
+			"auto_v.animate": "mountainOutline.png",
+			"auto_v.background": "BG_path.webm",
+			"mc1_": 1,
+			"mc1_name": "p3b",
+			"mc1_midi": "90407f",
+			"mc1_v.animate": "p3bCustomDiskAni.webm",
+			"mc1_v.mc": "codeDisk.webm",
+			"_index": 12
 		},
 		{
 			"stage": "3a",
@@ -227,7 +327,7 @@
 			"auto_midi2": "90407f",
 			"auto_v.animate": "3aCustomDiskAni.webm",
 			"auto_v.background": "BG_3a.webm",
-			"_index": 10
+			"_index": 13
 		},
 		{
 			"stage": "3b",
@@ -239,13 +339,47 @@
 			"wind_effect": "Y",
 			"storm_effect": "Y",
 			"sun_effect": "Y",
-			"auto_cue": "p2c",
+			"auto_cue": "2a/2c/3a/3c",
 			"auto_midi": "900a7f",
 			"auto_delay": 1,
 			"auto_midi2": "90407f",
 			"auto_v.animate": "3bCustomDiskAni.webm",
 			"auto_v.background": "BG_3b.webm",
-			"_index": 11
+			"auto_v.mc": "approach.png",
+			"auto_v.mc.delay": 38.331,
+			"auto_app": "A challenge is approaching:9:true",
+			"mc1_": 18,
+			"mc1_name": "3b_1",
+			"mc1_cue": "p2c",
+			"mc1_v.mc": "codeEvent.webm",
+			"mc1_app": "The challenge was completed successfully:5:true",
+			"_index": 14
+		},
+		{
+			"stage": "3c",
+			"next": "p3c",
+			"meifile": "3cTalkativeStranger.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "3a/3b",
+			"auto_midi": "90127f",
+			"auto_delay": 1,
+			"auto_midi2": "90407f",
+			"auto_v.animate": "3cCustomDiskAni.webm",
+			"auto_v.background": "BG_3c.webm",
+			"auto_v.mc": "approach.png",
+			"auto_v.mc.delay": 19.331,
+			"auto_app": "A challenge is approaching:9:true",
+			"mc1_": 11,
+			"mc1_name": "3c_1",
+			"mc1_cue": "p3c",
+			"mc1_v.mc": "codeEvent.webm",
+			"mc1_app": "The challenge was completed successfully:5:true",
+			"_index": 15
 		},
 		{
 			"stage": "p1c",
@@ -260,7 +394,7 @@
 			"auto_cue": "4a",
 			"auto_v.animate": "mountainOutline.png",
 			"auto_v.background": "BG_path.webm",
-			"_index": 12
+			"_index": 16
 		},
 		{
 			"stage": "p2c",
@@ -275,7 +409,28 @@
 			"auto_cue": "4b",
 			"auto_v.animate": "mountainOutline.png",
 			"auto_v.background": "BG_path.webm",
-			"_index": 13
+			"_index": 17
+		},
+		{
+			"stage": "p3c",
+			"next": "4c",
+			"meifile": "Path3c.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "4c",
+			"auto_midi": "90117f",
+			"auto_v.animate": "mountainOutline.png",
+			"auto_v.background": "BG_path.webm",
+			"mc1_": 1,
+			"mc1_name": "p3c",
+			"mc1_midi": "90407f",
+			"mc1_v.animate": "p3cCustomDiskAni.webm",
+			"mc1_v.mc": "codeDisk.webm",
+			"_index": 18
 		},
 		{
 			"stage": "4a",
@@ -287,7 +442,7 @@
 			"wind_effect": "Y",
 			"storm_effect": "Y",
 			"sun_effect": "Y",
-			"auto_cue": "3b",
+			"auto_cue": "3b/3c/4b/4c",
 			"auto_midi": "900b7f",
 			"auto_v.animate": "mountainOutline.png",
 			"auto_v.background": "BG_4a.webm",
@@ -296,11 +451,14 @@
 			"mc1_midi": "90407f",
 			"mc1_v.animate": "4aCustomDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
+			"mc1_v.mc.delay": 49.233,
+			"mc1_app": "A challenge is approaching:9:true",
 			"mc2_": "14",
 			"mc2_name": "4a_2",
 			"mc2_cue": "5a",
 			"mc2_v.mc": "codeEvent.webm",
-			"_index": 14
+			"mc2_app": "The challenge was completed successfully:5:true",
+			"_index": 19
 		},
 		{
 			"stage": "4b",
@@ -321,7 +479,25 @@
 			"mc1_midi": "90407f",
 			"mc1_v.animate": "4bCustomDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
-			"_index": 15
+			"_index": 20
+		},
+		{
+			"stage": "4c",
+			"next": "5c",
+			"meifile": "4cAnAppleTree.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "5c",
+			"auto_midi": "90157f",
+			"auto_delay": 1,
+			"auto_midi2": "90407f",
+			"auto_v.animate": "mountainOutline.png",
+			"auto_v.background": "BG_4c.webm",
+			"_index": 21
 		},
 		{
 			"stage": "5a",
@@ -333,17 +509,21 @@
 			"wind_effect": "Y",
 			"storm_effect": "Y",
 			"sun_effect": "Y",
-			"auto_cue": "4b",
+			"auto_cue": "4b/4c/5b/5c",
 			"auto_midi": "900d7f",
 			"auto_delay": 1,
 			"auto_midi2": "90407f",
 			"auto_v.animate": "5aCustomDiskAni.webm",
 			"auto_v.background": "BG_5a.webm",
+			"auto_v.mc": "approach.png",
+			"auto_v.mc.delay": 33.22,
+			"auto_app": "A challenge is approaching:9:true",
 			"mc1_": "8",
 			"mc1_name": "5a_1",
 			"mc1_cue": "summit",
 			"mc1_v.mc": "codeEvent.webm",
-			"_index": 16
+			"mc1_app": "The challenge was completed successfully:5:true",
+			"_index": 22
 		},
 		{
 			"stage": "5b",
@@ -355,7 +535,7 @@
 			"wind_effect": "Y",
 			"storm_effect": "Y",
 			"sun_effect": "Y",
-			"auto_cue": "5a",
+			"auto_cue": "5a/5c",
 			"auto_midi": "900e7f",
 			"auto_v.animate": "mountainOutline.png",
 			"auto_v.background": "BG_5b.webm",
@@ -364,17 +544,46 @@
 			"mc1_midi": "90407f",
 			"mc1_v.animate": "5bCustomDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
+			"mc1_v.mc.delay": 1.298,
+			"mc1_app": "A challenge is approaching:9:true",
 			"mc2_": "7",
 			"mc2_name": "5b_2",
 			"mc2_cue": "summit",
 			"mc2_v.mc": "codeEvent.webm",
-			"_index": 17
+			"mc2_app": "The challenge was completed successfully:5:true",
+			"_index": 23
+		},
+		{
+			"stage": "5c",
+			"next": "summit",
+			"meifile": "5cFallingTrees.mei",
+			"no_effect": "Y",
+			"rain_effect": "y",
+			"snow_effect": "y",
+			"wind_effect": "y",
+			"storm_effect": "y",
+			"sun_effect": "y",
+			"auto_cue": "5b",
+			"auto_midi": "90137F",
+			"auto_delay": 1,
+			"auto_midi2": "90407f",
+			"auto_v.animate": "5cCustomDiskAni.webm",
+			"auto_v.background": "BG_5c.webm",
+			"auto_v.mc": "approach.png",
+			"auto_v.mc.delay": 55.5,
+			"auto_app": "A challenge is approaching:9:true",
+			"mc1_": 25,
+			"mc1_name": "5c_1",
+			"mc1_cue": "summit",
+			"mc1_v.mc": "codeEvent.webm",
+			"mc1_app": "The challenge was completed successfully:5:true",
+			"_index": 24
 		},
 		{
 			"stage": "summit",
 			"next": "end",
 			"meifile": "Summit.mei",
-			"no_effect": "N",
+			"no_effect": "Y",
 			"rain_effect": "N",
 			"snow_effect": "N",
 			"wind_effect": "N",
@@ -389,7 +598,7 @@
 			"mc1_midi": "90407f",
 			"mc1_v.animate": "summitDiskAni.webm",
 			"mc1_v.mc": "codeDisk.webm",
-			"_index": 18
+			"_index": 25
 		},
 		{
 			"stage": "end",
@@ -401,7 +610,8 @@
 			"storm_effect": "N",
 			"sun_effect": "N",
 			"auto_midi": "90107f",
-			"_index": 19
+			"auto_v.animate": "mountainOutline.png",
+			"_index": 26
 		}
 	],
 	"codes": [
@@ -425,6 +635,13 @@
 			"meifile": "BaseCamp.mei",
 			"measure": "Ending 3",
 			"type": "choice"
+		},
+		{
+			"id": "BC_SP",
+			"stage": "basecamp",
+			"meifile": "BaseCamp.mei",
+			"measure": 6,
+			"type": "approach"
 		},
 		{
 			"id": "1a_1",
@@ -455,10 +672,24 @@
 			"type": "trigger"
 		},
 		{
+			"id": "1c_2",
+			"stage": "1c",
+			"meifile": "1cEcho.mei",
+			"measure": 8,
+			"type": "challenge"
+		},
+		{
 			"id": "p1a",
 			"stage": "p1a",
 			"meifile": "Path1a.mei",
 			"measure": "8",
+			"type": "trigger"
+		},
+		{
+			"id": "p3a_1",
+			"stage": "p3a",
+			"meifile": "Path3a.mei",
+			"measure": 1,
 			"type": "trigger"
 		},
 		{
@@ -483,10 +714,52 @@
 			"type": "challenge"
 		},
 		{
+			"id": "2c_1",
+			"stage": "2c",
+			"meifile": "2cHerdOfCows.mei",
+			"measure": 2,
+			"type": "trigger"
+		},
+		{
+			"id": "2c_2",
+			"stage": "2c",
+			"meifile": "2cHerdOfCows.mei",
+			"measure": 12,
+			"type": "challenge"
+		},
+		{
 			"id": "p1b",
 			"stage": "p1b",
 			"meifile": "Path1b.mei",
 			"measure": "7",
+			"type": "trigger"
+		},
+		{
+			"id": "p3b",
+			"stage": "p3b",
+			"meifile": "Path3b.mei",
+			"measure": 1,
+			"type": "trigger"
+		},
+		{
+			"id": "3b_1",
+			"stage": "3b",
+			"meifile": "3bAScaryWhisperingForest.mei",
+			"measure": 18,
+			"type": "challenge"
+		},
+		{
+			"id": "3c_1",
+			"stage": "3c",
+			"meifile": "3cTalkativeStranger.mei",
+			"measure": 11,
+			"type": "challenge"
+		},
+		{
+			"id": "p3c",
+			"stage": "p3c",
+			"meifile": "Path3c.mei",
+			"measure": 1,
 			"type": "trigger"
 		},
 		{
@@ -529,6 +802,13 @@
 			"stage": "5b",
 			"meifile": "5bBirdsAttack.mei",
 			"measure": "7",
+			"type": "challenge"
+		},
+		{
+			"id": "5c_1",
+			"stage": "5c",
+			"meifile": "5cFallingTrees.mei",
+			"measure": 25,
 			"type": "challenge"
 		},
 		{
