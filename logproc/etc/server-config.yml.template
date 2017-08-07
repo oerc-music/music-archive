@@ -1,0 +1,11 @@
+logdir: logs
+outputdir: output
+annalistfiles: 
+ - output/records.json
+mvfile: output/Climb!London.csv
+narrativefile: output/narrativesLondon.csv
+experiencefile: output/mkGameEngine.xlsx
+httpuser: uploader
+httppass: PASSWORD
+port: 8000
+
