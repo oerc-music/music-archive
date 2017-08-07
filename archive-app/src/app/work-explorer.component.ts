@@ -427,7 +427,7 @@ export class WorkExplorerComponent implements OnInit {
 			let media = this.getMedia();
 			for (var ai=0; ai<media.length; ai++) {
 				let audio = media[ai];
-				console.log('media '+ai+'/'+media.length+': '+rec.id+' vs '+audio.id, audio);
+				console.log('media '+ai+'/'+media.length+': '+(!!rec ? rec.id : '(none)')+' vs '+audio.id, audio);
 				if (!!rec && audio.id==rec.id) {
 					rec.shouldplay = true;
 					console.log('media '+ai+' visible!');
