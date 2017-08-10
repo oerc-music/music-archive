@@ -17,6 +17,10 @@ module.exports.readMuzivisualStages = function( mvpath, narrativespath ) {
 		if (l==0)
 			continue;
 		var values = nlines[l].split('/');
+		// ignore trailing , if present (historical artefact)
+		if (values[2].length>0 && values[2].charAt(values[2].length-1)==',') {
+			values[2] = values[2].substring(0, values[2].length-1);
+		}
 		// from/to/narrative
 		// use the first one
 		if (narratives[values[1]]===undefined)
@@ -30,6 +34,19 @@ module.exports.readMuzivisualStages = function( mvpath, narrativespath ) {
 	var lines = text.split('\n');
 	var stages = [];
 	var headings = lines[0].split(',');
+	for (var l in lines) {
+		if (l==0)
+			continue;
+		var data = {};
+		var values = lines[l].split(',');
+		for (var h in headings) {
+			data[headings[h]] = values[h];
+		}
+		var cue = data.cue.length>0 ? data.cue.split('/') : [];
+		// prefer the narrative in the same path, i.e. where this is the first option
+		if (cue.length>0 && depnarratives[cue[0]][data.stage]!==undefined)
+			narratives[cue[0]] = depnarratives[cue[0]][data.stage];
+	}
 	for (var l in lines) {
 		if (l==0)
 			continue;

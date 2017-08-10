@@ -101,8 +101,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:14:25.658Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Falling Stones in Dress rehearsal of Climb!",
-			"rdfs:label": "Falling Stones",
+			"rdfs:comment": "Performance of Climb The Stones in Dress rehearsal of Climb!",
+			"rdfs:label": "The Stones",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_9333e7a2-16a9-4352-a45a-f6f42d848cde_2"
@@ -135,8 +135,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:15:00.566Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Path 2  in Dress rehearsal of Climb!",
-			"rdfs:label": "Path 2 ",
+			"rdfs:comment": "Performance of Climb Path 2 in Dress rehearsal of Climb!",
+			"rdfs:label": "Path 2",
 			"event:sub_event": []
 		},
 		{
@@ -182,8 +182,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:16:08.666Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Fallen Tree in Dress rehearsal of Climb!",
-			"rdfs:label": "Fallen Tree",
+			"rdfs:comment": "Performance of Climb A Tree Trunk on the Path in Dress rehearsal of Climb!",
+			"rdfs:label": "A Tree Trunk on the Path",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_9333e7a2-16a9-4352-a45a-f6f42d848cde_3"
@@ -250,8 +250,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:18:31.498Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Angry Deer in Dress rehearsal of Climb!",
-			"rdfs:label": "Angry Deer",
+			"rdfs:comment": "Performance of Climb The Angry Deer in Dress rehearsal of Climb!",
+			"rdfs:label": "The Angry Deer",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_9333e7a2-16a9-4352-a45a-f6f42d848cde_4"
@@ -334,8 +334,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:20:41.827Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Flooded Path in Dress rehearsal of Climb!",
-			"rdfs:label": "Flooded Path",
+			"rdfs:comment": "Performance of Climb A Flooded Path in Dress rehearsal of Climb!",
+			"rdfs:label": "A Flooded Path",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_9333e7a2-16a9-4352-a45a-f6f42d848cde_6"
@@ -398,8 +398,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:23:18.689Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Shimmering Stone in Dress rehearsal of Climb!",
-			"rdfs:label": "Shimmering Stone",
+			"rdfs:comment": "Performance of Climb Avatar Finds a Shimmering Stone in Dress rehearsal of Climb!",
+			"rdfs:label": "Avatar Finds a Shimmering Stone",
 			"event:sub_event": []
 		},
 		{
@@ -492,8 +492,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:25:38.209Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Sleeping Bear in Dress rehearsal of Climb!",
-			"rdfs:label": "Sleeping Bear",
+			"rdfs:comment": "Performance of Climb A Sleeping Bear in Dress rehearsal of Climb!",
+			"rdfs:label": "A Sleeping Bear",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_9333e7a2-16a9-4352-a45a-f6f42d848cde_7"
@@ -529,8 +529,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:27:27.204Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Rolling Rocks in Dress rehearsal of Climb!",
-			"rdfs:label": "Rolling Rocks",
+			"rdfs:comment": "Performance of Climb Rolling Stones in Dress rehearsal of Climb!",
+			"rdfs:label": "Rolling Stones",
 			"event:sub_event": []
 		},
 		{
@@ -576,8 +576,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T14:29:22.161Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Hallucination in Dress rehearsal of Climb!",
-			"rdfs:label": "Hallucination",
+			"rdfs:comment": "Performance of Climb A Hallucination in Dress rehearsal of Climb!",
+			"rdfs:label": "A Hallucination",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_9333e7a2-16a9-4352-a45a-f6f42d848cde_9"
@@ -856,8 +856,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:15:01.236Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Angry Deer in Premiere performance of Climb!",
-			"rdfs:label": "Angry Deer",
+			"rdfs:comment": "Performance of Climb The Angry Deer in Premiere performance of Climb!",
+			"rdfs:label": "The Angry Deer",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_be418821-436d-41c2-880c-058dffb57d91_2"
@@ -924,8 +924,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:15:30.077Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Fallen Tree in Premiere performance of Climb!",
-			"rdfs:label": "Fallen Tree",
+			"rdfs:comment": "Performance of Climb A Tree Trunk on the Path in Premiere performance of Climb!",
+			"rdfs:label": "A Tree Trunk on the Path",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_be418821-436d-41c2-880c-058dffb57d91_3"
@@ -991,8 +991,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:19:06.621Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Ghostly Forest in Premiere performance of Climb!",
-			"rdfs:label": "Ghostly Forest",
+			"rdfs:comment": "Performance of Climb A Scary Whispering Forest in Premiere performance of Climb!",
+			"rdfs:label": "A Scary Whispering Forest",
 			"event:sub_event": []
 		},
 		{
@@ -1068,8 +1068,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:21:49.411Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Hallucination in Premiere performance of Climb!",
-			"rdfs:label": "Hallucination",
+			"rdfs:comment": "Performance of Climb A Hallucination in Premiere performance of Climb!",
+			"rdfs:label": "A Hallucination",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_be418821-436d-41c2-880c-058dffb57d91_5"
@@ -1170,8 +1170,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:25:04.601Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Rolling Rocks in Premiere performance of Climb!",
-			"rdfs:label": "Rolling Rocks",
+			"rdfs:comment": "Performance of Climb Rolling Stones in Premiere performance of Climb!",
+			"rdfs:label": "Rolling Stones",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_be418821-436d-41c2-880c-058dffb57d91_7"
@@ -1386,8 +1386,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:49:38.242Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Falling Stones in Second performance of Climb!",
-			"rdfs:label": "Falling Stones",
+			"rdfs:comment": "Performance of Climb The Stones in Second performance of Climb!",
+			"rdfs:label": "The Stones",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_13a7fa70-ae91-4541-9526-fd3b332b585d_2"
@@ -1420,8 +1420,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:50:13.542Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Path 2  in Second performance of Climb!",
-			"rdfs:label": "Path 2 ",
+			"rdfs:comment": "Performance of Climb Path 2 in Second performance of Climb!",
+			"rdfs:label": "Path 2",
 			"event:sub_event": []
 		},
 		{
@@ -1484,8 +1484,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:51:20.513Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Fallen Tree in Second performance of Climb!",
-			"rdfs:label": "Fallen Tree",
+			"rdfs:comment": "Performance of Climb A Tree Trunk on the Path in Second performance of Climb!",
+			"rdfs:label": "A Tree Trunk on the Path",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_13a7fa70-ae91-4541-9526-fd3b332b585d_3"
@@ -1551,8 +1551,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:54:46.716Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Ghostly Forest in Second performance of Climb!",
-			"rdfs:label": "Ghostly Forest",
+			"rdfs:comment": "Performance of Climb A Scary Whispering Forest in Second performance of Climb!",
+			"rdfs:label": "A Scary Whispering Forest",
 			"event:sub_event": []
 		},
 		{
@@ -1628,8 +1628,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T16:57:28.931Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Hallucination in Second performance of Climb!",
-			"rdfs:label": "Hallucination",
+			"rdfs:comment": "Performance of Climb A Hallucination in Second performance of Climb!",
+			"rdfs:label": "A Hallucination",
 			"event:sub_event": [
 				{
 					"event:sub_event": "Event/Trigger_13a7fa70-ae91-4541-9526-fd3b332b585d_5"
@@ -1713,8 +1713,8 @@
 			"prov:qualifiedAssociation": [],
 			"prov:startedAtTime": "2017-06-08T17:00:30.089Z",
 			"prov:used_r": [],
-			"rdfs:comment": "Performance of Climb Rolling Rocks in Second performance of Climb!",
-			"rdfs:label": "Rolling Rocks",
+			"rdfs:comment": "Performance of Climb Rolling Stones in Second performance of Climb!",
+			"rdfs:label": "Rolling Stones",
 			"event:sub_event": []
 		},
 		{
