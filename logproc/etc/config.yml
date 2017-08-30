@@ -4,6 +4,7 @@ annalistfiles:
  - ../test/data/example_entity_list.json
 mvfile: ../test/data/Climb!London.csv
 narrativefile: ../test/data/narrativesLondon.csv
+experiencefile: ../test/data/mkGameEngine.xlsx
 httpuser: uploader
 httppass: changeme
 port: 4201
