@@ -72,6 +72,15 @@ catch(err) {
 	process.exit(-2);
 }
 
+app.post('/api/1/ping', function(req, resp) {
+	var user = auth(req);
+	if (user===undefined || user.name!=config.httpuser || user.pass!=config.httppass) {
+		logging.log('server', 'post.error.auth', {path:req.path, user:user}, logging.LEVEL_INFO);
+		resp.status(401).send('wrong or missing credentials');
+		return;
+	}
+	resp.sendStatus(200);
+});	
 app.post('/api/1/processlog', function(req,resp) {
 	var user = auth(req);
 	if (user===undefined || user.name!=config.httpuser || user.pass!=config.httppass) {
