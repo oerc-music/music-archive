@@ -55,6 +55,7 @@ export class RecordsService {
 		return this.getRecords().
 			then(records => records.filter
 			(record => 'Performance'==record.type_id &&
+			!record.getValue('coll:hidden') &&
 			record.getValues('frbroo:R25F_performed_r','frbroo:R25F_performed').indexOf(work.type_id+'/'+work.id)>=0));
 	}
 	getPerformance(id:string): Promise<Entity> {
