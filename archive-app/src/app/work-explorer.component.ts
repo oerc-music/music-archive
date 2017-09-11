@@ -450,9 +450,7 @@ export class WorkExplorerComponent implements OnInit {
 						console.log('warning: clip start <0: '+this.currentlyPlaying.id+', '+this.currentlyPlaying.clip.start+'+'+partOffset);
 						audio.currentTime = 0;
 					}
-					if (audio.readyState>=2)
-						// canplay
-						audio.play();
+					audio.play();
 				} else {
 					audio.pause();
 				}
@@ -511,6 +509,7 @@ export class WorkExplorerComponent implements OnInit {
 	audioCanplay(event,rec) {
 		console.log('canplay '+rec.id);
 		rec.canplay = true;
+		// shouldn't be needed?!
 		if (rec.shouldplay) {
 			console.log('play '+rec.id+' on canplay');
 			event.target.play();
@@ -528,9 +527,7 @@ export class WorkExplorerComponent implements OnInit {
 					let audio = audios[ai];
 					if (audio.id==this.currentlyPlaying.clip.recording.id) {
 						this.currentlyPlaying.clip.recording.shouldplay = true;
-						if (audio.readyState>=2)
-							// canplay
-							audio.play();
+						audio.play();
 					}
 				}
 			}
