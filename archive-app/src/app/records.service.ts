@@ -9,7 +9,7 @@ import 'rxjs/add/operator/toPromise';
 export class RecordsService {
   private recordsUrl = 'assets/data/urls.json';
   private records:Entity[] = [];
-  private rawRecords:object[] = [];
+  private rawRecords:object[][] = [];
   private recordsPromise: Promise<Entity[]> = null;
 
   constructor(private http: Http) { }
@@ -20,25 +20,42 @@ export class RecordsService {
     this.recordsPromise = this.http.get(this.recordsUrl)
              .toPromise()
              // get all names files then concat
-             .then(response => Promise.all(
-                    response.json().map(url => this.http.get(url)
-                       .toPromise().then(response => this.rawRecords = this.rawRecords.concat(response.json()['annal:entity_list'])))).then(res=> this.fixRecords()))
+             .then(response => {
+               let urls = response.json()
+               console.log('read '+urls.length+' urls');
+               return Promise.all(
+                    urls.map((url, ix) => {
+                      return this.http.get(url)
+                       .toPromise().then((response) => {
+                         let records = response.json()['annal:entity_list']
+                         this.rawRecords[ix] = records;
+                         console.log('read '+url+' => '+records.length+' records'); 
+                       })
+                    })
+               )
+               .then(res=> this.fixRecords())
+             })
              .catch(this.handleError);
     return this.recordsPromise;
   }
   private fixRecords(): Entity[] {
-    //console.log('fixRecords '+this.records.length);
-    var rs = this.rawRecords.reverse();
+    console.log('fixRecords '+this.rawRecords.length);
     this.records = [];
     var ids = {};
-    for (let r of rs) {
-      let id = r['annal:type_id']+'/'+r['annal:id'];
-      if (ids[id]===undefined) {
-        ids[id] = r;
-        this.records.push(new Entity(r));
-        //console.log('added '+id);
+    // in reverse order
+    var rrs = this.rawRecords.reverse();
+    for (let rr of rrs) {
+      var rs = rr.reverse(); // probably not needed
+      for (let r of rs) {
+        let id = r['annal:type_id']+'/'+r['annal:id'];
+        if (ids[id]===undefined) {
+          ids[id] = r;
+          this.records.push(new Entity(r));
+          //console.log('added '+id);
+        }
       }
     }
+    console.log('fixRecords -> total '+this.records.length+' records');
     return this.records;
   }
 	getEntity(type_id:string, id:string): Promise<Entity> {

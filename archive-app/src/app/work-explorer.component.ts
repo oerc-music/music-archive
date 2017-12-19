@@ -106,6 +106,7 @@ class PartPerformance extends Entity {
 	subevents:SubEvent[] = [];
 	constructor(fields:object, performance:Performance, part:Part) {
 		super(fields);
+    if(!part) console.log('Error: create PP '+this.id+' with null part; fields:', fields);
 		this.startTime = this.getTime('prov:startedAtTime');
 		this.performance = performance;
 		this.part = part;
@@ -153,6 +154,7 @@ export class WorkExplorerComponent implements OnInit {
       .subscribe(work => this.initialiseForWork(work));
   }
 	initialiseForWork(work:Entity):void {
+    console.log('initialiseForWork...');
 		this.work = work; 
 		this.showMap = !!work.getValue('coll:map_url');
 		/* get all performances of work */
@@ -161,6 +163,7 @@ export class WorkExplorerComponent implements OnInit {
 			this.performances = performances
 			.map(p => new Performance(p.fields))
 			.sort((a,b) => a.compareTo(b, 'prov:startedAtTime'));
+      console.log('got '+this.performances.length+' performances');
 			/* then get all parts (members) of work */
 			return this.recordsService.getMembers(work); 
 		})
@@ -168,6 +171,7 @@ export class WorkExplorerComponent implements OnInit {
 			this.parts = members
 			.map(m => new Part(m.fields))
 			.sort((a,b) => a.compareToNumber(b, 'coll:part_rank'));
+      console.log('got '+this.parts.length+' parts')
 			/* then get all recordings of each performance */
 			return Promise.all(this.performances.map(p => 
 				this.recordsService.getRecordingsOfPerformance(p)
@@ -178,25 +182,28 @@ export class WorkExplorerComponent implements OnInit {
 						this.recordsService.getUrlsOfRecording(r).then(urls => r.setUrls(urls) )));
 				})));
 		})
-		.then(() => 
-			Promise.all(this.performances.map(p =>
+		.then(() => {
+      console.log('(hopefully) got associated recordings and urls');
+			return Promise.all(this.performances.map(p =>
 				this.recordsService.getSubEvents(p)
-				.then(events => 
+				.then((events) => {
 					this.partPerformances = this.partPerformances.concat(
 						events.map(ev => new PartPerformance(ev.fields, p, this.parts.find(p => 
 							ev.getValues('frbroo:R25F_performed_r','frbroo:R25F_performed').indexOf(p.type_id+'/'+p.id)>=0)))
-					)
-				))
-			)
-		)
-		.then(() => 
-			Promise.all(this.partPerformances.map(pp =>
+					);
+          console.log('got '+events.length+' subevents for performance '+p.id+' -> '+this.partPerformances.length+' total part-performances');
+				})
+			))
+		})
+		.then(() => {
+      console.log('after sub-events, get sub-sub-events');
+			return Promise.all(this.partPerformances.map(pp =>
 				this.recordsService.getSubEvents(pp)
 				.then(subevents => 
 					pp.subevents = subevents.map(subevent => new SubEvent(subevent.fields, pp))
 				)
 			))
-		)
+		})
 		.then(() => {
 			console.log('loaded work to explore');
 			this.buildAudioClips();

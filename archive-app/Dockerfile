@@ -3,13 +3,11 @@ FROM node:8.9.1-stretch
 RUN mkdir -p /root/work
 WORKDIR /root/work
 
-RUN apt-get update && apt-get install -y zip
-
 # bootstrap project
 #RUN npm install @angular/cli
 
-#hub-app/package-lock.json 
 COPY package.json .
+COPY package-lock.json .
 
 RUN npm install
 
