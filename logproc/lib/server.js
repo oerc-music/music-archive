@@ -16,8 +16,9 @@ experience = require('./experience');
 
 logging.init('server', 'music-archive-uploader');
 
-app.use(require('body-parser').json());
-app.use(require('body-parser').urlencoded({ extended: true })); 
+var upload_limit = '100mb';
+app.use(require('body-parser').json({limit: upload_limit}));
+app.use(require('body-parser').urlencoded({ limit: upload_limit, extended: true })); 
 
 var configfile = path.join( __dirname, '..', 'etc', 'config.yml' );
 if (process.argv.length>2) {
