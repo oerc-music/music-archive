@@ -110,6 +110,9 @@ export class RecordsService {
 			then(audio_clips => 
 			{var urls=audio_clips.map(audio_clip => audio_clip.getValue('coll:audio_clip')); /*console.log('urls',urls); */ return urls;});
 	}
+  getPerformersOfPerformance(performance:Entity): Promise<Entity[]> {
+    return this.getValuesAsEntities(performance, 'prov:qualifiedAssociation', 'crm:P12i_was_present_at');
+  }
 	getComposersOfWork(work:Entity): Promise<Entity[]> {
 		return this.getValuesAsEntities(work, 'annal:member', 'prov:wasAttributedTo');
 	}

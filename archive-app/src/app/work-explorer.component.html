@@ -16,6 +16,7 @@
 				<span *ngIf="!perf.available"><i class="material-icons">&nbsp;</i></span>
 			</a>
 			{{perf.label}}<!-- (@ {{perf.startTime}}) -->
+			<span class="performer" *ngFor="let performer of perf.performers">{{performer.label}} </span>
 		</div>
 	</div>
 	<!-- <p *ngIf="selectedPerformance"><em>{{selectedPerformance.label}}</em>: {{selectedPerformance.description}}</p>  -->
@@ -131,6 +132,7 @@
 		<div class="col-12">
 			<p *ngIf="!currentlyPlaying.clip || !currentlyPlaying.clip.recording">Sorry, the recording for this performance is not yet available</p>
 			<em>{{currentlyPlaying.performance.label}}</em>: {{currentlyPlaying.performance.description}}<br>
+			<p>Performed by <span class="performer" *ngFor="let performer of currentlyPlaying.performance.performers">{{performer.label}} </span></p>
 			<em>{{currentlyPlaying.part.label}}</em>: {{currentlyPlaying.part.description}}
 		</div>
 	</div>

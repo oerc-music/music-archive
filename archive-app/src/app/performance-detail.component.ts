@@ -14,6 +14,7 @@ export class PerformanceDetailComponent implements OnInit {
   performance: Entity;
   subevents: Entity[] = [];
   recordings: Entity[] = [];
+  performers: Entity[] = [];
 
   constructor(
     private recordsService: RecordsService,
@@ -25,6 +26,9 @@ export class PerformanceDetailComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.recordsService.getPerformance(params['id']))
       .subscribe(performance => { this.performance = performance; 
+        this.recordsService.getPerformersOfPerformance(performance)
+        .then(performers => { /*console.log(subevents);*/ this.performers = performers
+          .sort((a,b) => a.compareTo(b, 'rdfs:label'))});
         this.recordsService.getSubEvents(performance)
         .then(subevents => { /*console.log(subevents);*/ this.subevents = subevents
           .sort((a,b) => a.compareTo(b, 'prov:startedAtTime'))});

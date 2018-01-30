@@ -1,5 +1,9 @@
 <div class="container" *ngIf="performance"><h3>{{performance.label}}</h3>
 	<p>At {{performance.getValue('prov:startedAtTime')}}</p>
+	<h4>Performers</h4>
+	<ul>
+		<li *ngFor="let perf of performers">{{perf.label}}</li>
+	</ul>
 	<h4>Sub-events</h4>
 	<ul>
 		<li *ngFor="let sub of subevents">{{sub.getValue('prov:startedAtTime')}}: {{sub.label}}</li>

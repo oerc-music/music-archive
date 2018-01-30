@@ -23,6 +23,9 @@ span.time {
 	font-family: monospace;
 	font-size: 150%;
 }
+span.performer {
+	font-style: italic;
+}
 .countdown.inactive {
 	/*background-color: rgba(0,0,0,0.1);*/
 }

@@ -44,9 +44,11 @@ class Recording extends Entity {
 class Performance extends ScreenEntity {
 	startTime:number;
 	recordings:Recording[];
+  performers:Entity[];
 	constructor(fields: object) {
 		super(fields);
 		this.startTime = this.getTime('prov:startedAtTime');
+    this.performers = [];
 	}
 }
 
@@ -164,9 +166,19 @@ export class WorkExplorerComponent implements OnInit {
 			.map(p => new Performance(p.fields))
 			.sort((a,b) => a.compareTo(b, 'prov:startedAtTime'));
       console.log('got '+this.performances.length+' performances');
-			/* then get all parts (members) of work */
-			return this.recordsService.getMembers(work); 
+			/* then get all performers of each performance*/
+      return Promise.all(this.performances.map(p => 
+        this.recordsService.getPerformersOfPerformance(p)
+        .then(performers => {
+          console.log('got '+performers.length+' performers for '+p.label);
+          p.performers = performers;
+        })
+      ))
 		})
+    .then(() => {
+      /* then get all parts (members) of work */
+      return this.recordsService.getMembers(work); 
+    })
 		.then(members => {
 			this.parts = members
 			.map(m => new Part(m.fields))
