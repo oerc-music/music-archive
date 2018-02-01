@@ -19,6 +19,7 @@ class ScreenEntity extends Entity {
 
 class Recording extends Entity {
 	startTime:number;
+    startTimeOffset:number;
 	urls:string[] = [];
 	performance:Performance;
 	audio:Object;
@@ -31,7 +32,14 @@ class Recording extends Entity {
 		super(fields);
 		this.performance = performance;
 		this.startTime = this.getTime('prov:startedAtTime');
-		
+		let stvs = this.getNumberValues('coll:startTimeOffset');
+        if (stvs.length>0) {
+            this.startTimeOffset = stvs[0];
+            console.log(`Fixing start time of recording ${this.id} to ${performance.startTime}-${1000*this.startTimeOffset} instead of ${this.startTime} (delta ${(performance.startTime-1000*this.startTimeOffset)-this.startTime})`);
+            this.startTime = performance.startTime-1000*this.startTimeOffset;
+        } else {
+            this.startTimeOffset = null;
+        }
 	}
 	setUrls(urls:string[]) {
 		this.urls = urls;
