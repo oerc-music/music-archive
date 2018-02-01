@@ -75,7 +75,10 @@ node lib/server.js [CONFIGFILE]
 ```
 
 By default runs on port 4202 (see config) and accepts musicodes log file POST to `/api/1/processlog`.
-
+e.g.
+```
+curl -X POST -H 'Content-type:application/binary' --data-binary @FILENAME http://uploader:changeme@localhost:8080/1/logproc/api/1/processlog
+```
 Outputs a file like `performance-PERFID-annalist.json` to the specified output directory.
 
 Note, will only output files for performances found in the annalist entries loaded at start-up time.

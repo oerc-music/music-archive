@@ -35,8 +35,8 @@ class Recording extends Entity {
 		let stvs = this.getNumberValues('coll:startTimeOffset');
         if (stvs.length>0) {
             this.startTimeOffset = stvs[0];
-            console.log(`Fixing start time of recording ${this.id} to ${performance.startTime}-${1000*this.startTimeOffset} instead of ${this.startTime} (delta ${(performance.startTime-1000*this.startTimeOffset)-this.startTime})`);
-            this.startTime = performance.startTime-1000*this.startTimeOffset;
+            console.log(`Fixing start time of recording ${this.id} to ${performance.startTime}-${this.startTimeOffset} instead of ${this.startTime} (delta ${(performance.startTime-this.startTimeOffset)-this.startTime})`);
+            this.startTime = performance.startTime-this.startTimeOffset;
         } else {
             this.startTimeOffset = null;
         }

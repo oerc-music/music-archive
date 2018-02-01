@@ -35,21 +35,25 @@ try {
 }
 
 var annalistEntries = [];
-for (var ai in config.annalistfiles) {
-	
-	var annalistfile = config.annalistfiles[ai];
-	console.log('read annalist file '+annalistfile);
-	var annalistContext;
-	try {
-		annalistContext = JSON.parse(fs.readFileSync(annalistfile, {encoding:'utf-8'}));
-		annalistEntries = annalistEntries.concat(annalistContext['annal:entity_list']);
-	}
-	catch (err) {
-		console.log('ERROR: reading annalist file '+annalistfile+': '+err.message);
-		process.exit(-3);
-	}
-	logging.log('server','read.annalist',{path: annalistfile}, logging.LEVEL_INFO);
-}	
+function loadAnnalistEntries() {
+	annalistEntries = [];
+	for (var ai in config.annalistfiles) {
+		
+		var annalistfile = config.annalistfiles[ai];
+		console.log('read annalist file '+annalistfile);
+		var annalistContext;
+		try {
+			annalistContext = JSON.parse(fs.readFileSync(annalistfile, {encoding:'utf-8'}));
+			annalistEntries = annalistEntries.concat(annalistContext['annal:entity_list']);
+		}
+		catch (err) {
+			console.log('ERROR: reading annalist file '+annalistfile+': '+err.message);
+			process.exit(-3);
+		}
+		logging.log('server','read.annalist',{path: annalistfile}, logging.LEVEL_INFO);
+	}	
+}
+loadAnnalistEntries();
 
 var mvfile = config.mvfile;
 var narrativefile = config.narrativefile;
@@ -114,7 +118,9 @@ app.post('/api/1/processlog', function(req,resp) {
 			resp.status(500).send('could not create complete log file copy on server ('+job.error+')');
 			return;
 		}
-		// TODO process
+		console.log('re-read performance info files');
+		loadAnnalistEntries();
+		// process log
 		console.log('read uploaded musicodes log '+logpath);
 		var mclogfile = logpath;
 		try {
