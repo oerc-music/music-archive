@@ -2,6 +2,7 @@ logdir: logs
 outputdir: output
 annalistfiles: 
  - output/records.json
+ - output/musichub-performances.json
 mvfile: output/Climb!London.csv
 narrativefile: output/narrativesLondon.csv
 experiencefile: output/mkGameEngine.xlsx
