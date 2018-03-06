@@ -61,6 +61,8 @@ class Performance extends ScreenEntity {
 }
 
 class Part extends ScreenEntity {
+  popularity:number; // 0-1
+  heatmapColor:string;
 	constructor(fields: object) {
 		super(fields);
 	}
@@ -141,6 +143,7 @@ class PartPerformance extends Entity {
 export class WorkExplorerComponent implements OnInit {
   work: Entity;
   performances: Performance[] = [];
+  allPerformancesSelected:boolean = true;
   parts: Part[] = [];
   recordings: Recording[] = [];
 	partPerformances: PartPerformance[] = [];
@@ -227,6 +230,7 @@ export class WorkExplorerComponent implements OnInit {
 		.then(() => {
 			console.log('loaded work to explore');
 			this.buildAudioClips();
+      this.buildPopularity();
 		});
 	}
 	
@@ -287,6 +291,26 @@ export class WorkExplorerComponent implements OnInit {
 			}
 		}
 	}
+  buildPopularity() {
+    let maxPopularity = 0;
+    this.parts.forEach(part => {
+      part.popularity = this.partPerformances.filter(p => p.part===part).length;
+      if (part.popularity > maxPopularity) {
+        maxPopularity = part.popularity;
+      }
+    })
+    this.parts.forEach(part => {
+      part.popularity = part.popularity / maxPopularity;
+      if (0==part.popularity) {
+        part.heatmapColor = 'rgb(80,80,80)';
+      } else {
+        // blue to red 
+        //part.heatmapColor = 'hsl('+(240+120*part.popularity+',100%,50%)');
+        // yellow to red 
+        part.heatmapColor = 'hsl('+(60-60*part.popularity+',100%,50%)');
+      }
+    });
+  }
 	clickPerformance(perf) {
 		console.log('highlight performance '+perf.id);
 		for (var pi in this.performances) {
@@ -301,8 +325,17 @@ export class WorkExplorerComponent implements OnInit {
 			part.highlighted = !!this.partPerformances.find(pp =>  pp.performance === perf && pp.part === part);
 		}
 	}
+  clickAllPerformancesCheckbox(event) {
+    this.clickPerformanceCheckbox(event,null);
+  }
 	clickPerformanceCheckbox(event,perf) {
-		console.log('select performance '+perf.id);
+    if (perf!==null) {
+      console.log('select performance '+perf.id);
+      this.allPerformancesSelected = false;
+    } else {
+      console.log('select all performances');
+      this.allPerformancesSelected = true;
+    }
 		for (var pi in this.performances) {
 			let p = this.performances[pi];
 			if (p!==perf && p.selected)
@@ -314,7 +347,7 @@ export class WorkExplorerComponent implements OnInit {
 			p.selected = false;
 		}
 		this.selectedPart = null;
-		if (!perf.selected)
+		if (perf!==null && !perf.selected)
 			perf.selected = true;
 		this.selectedPerformance = perf;
 		// available stages in this performance
@@ -395,6 +428,7 @@ export class WorkExplorerComponent implements OnInit {
 			p.selected = false;
 		}
 		this.selectedPerformance = null;
+    this.allPerformancesSelected = false;
 		if (!part.selected)
 			part.selected = true;
 		this.selectedPart = part;

@@ -11,6 +11,14 @@
 	user-select: none;
 }
 
+.part-g-heatmap circle {
+	stroke: black;
+	stroke-width: 4px;
+	opacity: 1;
+	cursor: pointer;
+	user-select: none;
+}
+
 .part-g.default circle {
 	fill: rgb(80,80,80);
 }

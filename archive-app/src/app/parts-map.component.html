@@ -19,8 +19,14 @@
 			</g>
 			<g *ngFor="let part of parts" [attr.transform]="'translate('+(part.getNumberValue('coll:map_x')*1000)+' '+(part.getNumberValue('coll:map_y')*1500)+')'"
 				class="part-g" [ngClass]="{'active': part.active, 'available': part.available, 'selected': part.selected, 'default': !part.selected && !part.active && !part.available }">
-				<a (click)="clickPartPlay($event,part)" class="pointer">
-					<circle class="part-circle" r="20" ></circle>
+				<a *ngIf="!heatmap" (click)="clickPartPlay($event,part)" class="pointer">
+					<circle class="part-circle" r="20"></circle>
+				</a>
+			</g>
+			<g *ngFor="let part of parts" [attr.transform]="'translate('+(part.getNumberValue('coll:map_x')*1000)+' '+(part.getNumberValue('coll:map_y')*1500)+')'"
+				class="part-g-heatmap" [ngClass]="{'active': part.active, 'available': part.available, 'selected': part.selected, 'default': !part.selected && !part.active && !part.available }">
+				<a *ngIf="heatmap" (click)="clickPartPlay($event,part)" class="pointer">
+					<circle class="part-circle" r="20" [style]="part.heatmapStyle"></circle>
 				</a>
 			</g>
 		</g>

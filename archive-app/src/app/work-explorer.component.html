@@ -5,6 +5,12 @@
 	<p *ngIf="showMap">Select <i class="material-icons">check_box_outline_blank</i> a Performance then click on its parts, or a click on and select <i class="material-icons">check_box_outline_blank</i> a Part then play <i class="material-icons">play_circle_outline</i> the different versions available.</p>
 	<h2>Performances</h2>
 	<div class="row">
+		<div class="col-sm-6 col-md-4 performance">
+			<a (click)="clickAllPerformancesCheckbox($event)" class="pointer">
+				<i class="material-icons">{{allPerformancesSelected ? 'check_box' : 'check_box_outline_blank'}}</i>
+			</a>
+			All Performances
+		</div>
 		<div class="col-sm-6 col-md-4 performance" *ngFor="let perf of performances" [ngClass]="{'highlighted': perf.highlighted}"
 			(click)="clickPerformance(perf)">
 			<a (click)="clickPerformanceCheckbox($event,perf)" class="pointer">
@@ -46,7 +52,7 @@
 	</div>
 	<div class="row">
 		<div *ngIf="showMap" class="col-sm-12 col-md-8 col-lg-6">
-			<parts-map [parts]="parts" [work]="work" (select)="clickMapPart($event)"></parts-map>
+			<parts-map [parts]="parts" [work]="work" [heatmap]="allPerformancesSelected" (select)="clickMapPart($event)"></parts-map>
 		</div>
 		<div class="col-sm-12 col-md-8 col-lg-6">
 		<div *ngIf="showMap && selectedPart">
