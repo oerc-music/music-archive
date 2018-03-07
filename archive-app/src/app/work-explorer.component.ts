@@ -555,8 +555,8 @@ export class WorkExplorerComponent implements OnInit {
 					// pause
 					this.pause();
 					event.target.currentTime = this.currentlyPlaying.startTime-rec.startTime;
-				} else if (offset < 0) {
-					// before clip?!
+				} else if (offset < -0.5) {
+					// (significantly) before clip?!
 					event.target.currentTime = rec.lastTime-offset;
 				}
 			}
