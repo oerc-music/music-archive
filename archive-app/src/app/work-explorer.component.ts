@@ -153,7 +153,8 @@ export class WorkExplorerComponent implements OnInit {
 	showMap: boolean = false;
 	countdownLevels: number[] = [5,4,3,2,1];
 	showVideo: boolean = true;
-	
+	popout: Window;
+  
   constructor(
 	private elRef:ElementRef,
     private recordsService: RecordsService,
@@ -162,9 +163,24 @@ export class WorkExplorerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.route.queryParams
+      .subscribe((params:Params) => { if (params['popout']!==undefined) { this.popoutPlayer(); } } );
     this.route.params
       .switchMap((params: Params) => this.recordsService.getWork(params['id']))
       .subscribe(work => this.initialiseForWork(work));
+  }
+  popoutPlayer(): void {
+    console.log('popout player');
+    // Warning: not injected
+    this.popout = window.open('about:blank', '_blank'); //,'archive_player' 'scrollbars=no,status=no,menubar=no,width=720,height=480');
+    //data:text/html,<html><head><title>Explorer player</title></head><body><div>hello</div></body></html>
+    this.popout.document.title = 'Archive Player Window';
+    let css = 'video {\n width: 100%;\n height: auto;\n}\nvideo.hidden {\n display: none;\n}\nbody {\n background: black; \n}',
+      head = this.popout.document.head || this.popout.document.getElementsByTagName('head')[0],
+      style = this.popout.document.createElement('style');
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+    head.appendChild(style);
   }
 	initialiseForWork(work:Entity):void {
     console.log('initialiseForWork...');
@@ -246,6 +262,7 @@ export class WorkExplorerComponent implements OnInit {
 		this.showVideo = value;
 		this.partPerformances.forEach(pp => pp.clip = (this.showVideo ? pp.videoClip : pp.audioClip) );
 		this.recordings.forEach(r => r.visible = r.isVideo==this.showVideo && (r.performance==this.selectedPerformance || (this.currentlyPlaying && this.currentlyPlaying.performance==r.performance)));
+    this.checkPopoutMediaVisible();
 		if (this.currentlyPlaying) {
 			this.playInternal(this.currentlyPlaying.performance, this.currentlyPlaying.part);
 		}
@@ -262,6 +279,8 @@ export class WorkExplorerComponent implements OnInit {
 				this.recordings.push(rec);
 			}
 		}
+    if(this.popout)
+      this.createPopoutMedia();
 		for (var pi in this.partPerformances) {
 			let pp = this.partPerformances[pi];
 			for (var video=0; video<2; video++) {
@@ -369,6 +388,7 @@ export class WorkExplorerComponent implements OnInit {
 				this.recordings.forEach(r => r.visible = r.isVideo==this.showVideo && r.performance==perf);
 			}
 		}
+    this.checkPopoutMediaVisible();
 	}
 	clickPerformancePlay(event,perf) {
 		event.preventDefault();
@@ -402,7 +422,17 @@ export class WorkExplorerComponent implements OnInit {
 	}
 	getMedia() {
 		var media = [];
-		if (!!this.elRef) {
+    if (!!this.popout) {
+      let audios = this.popout.document.body.getElementsByTagName('audio');
+      let videos = this.popout.document.body.getElementsByTagName('video');
+      for (var ai=0; ai<audios.length; ai++) {
+        media.push(audios[ai]);
+      }
+      for (var ai=0; ai<videos.length; ai++) {
+        media.push(videos[ai]);
+      }
+    }
+		else if (!!this.elRef) {
 			let audios = this.elRef.nativeElement.getElementsByTagName('audio');
 			let videos = this.elRef.nativeElement.getElementsByTagName('video');
 			for (var ai=0; ai<audios.length; ai++) {
@@ -452,6 +482,7 @@ export class WorkExplorerComponent implements OnInit {
 				this.recordings.forEach(r => r.visible = false );
 			}
 		}
+    this.checkPopoutMediaVisible();
 	}
 	clickPartPlay(event,part) {
 		if (event) {
@@ -484,6 +515,7 @@ export class WorkExplorerComponent implements OnInit {
 			console.log('no '+(this.showVideo ? 'video' : 'audio')+' recording for performance '+perf.id);
 		}
 		this.recordings.forEach(r => r.visible = r==rec );
+    this.checkPopoutMediaVisible();
 		if (!!this.elRef) {
 			let media = this.getMedia();
 			for (var ai=0; ai<media.length; ai++) {
@@ -607,7 +639,18 @@ export class WorkExplorerComponent implements OnInit {
 		}
 	}
 	getAudio(rec:Recording) {
-		if (!!this.elRef) {
+    if (!!this.popout) {
+      let audios = rec.isVideo ? this.popout.document.body.getElementsByTagName('video') :
+        this.popout.document.body.getElementsByTagName('audio');
+      for (var ai=0; ai<audios.length; ai++) {
+        let audio = audios[ai];
+        console.log('audio '+ai+'/'+audios.length+':', audio);
+        if (!!rec && audio.id==rec.id) {
+          return audio;
+        }
+      }
+    }
+		else if (!!this.elRef) {
 			let audios = rec.isVideo ? this.elRef.nativeElement.getElementsByTagName('video') :
 				this.elRef.nativeElement.getElementsByTagName('audio');
 			for (var ai=0; ai<audios.length; ai++) {
@@ -704,5 +747,39 @@ export class WorkExplorerComponent implements OnInit {
 			}
 		}
 	}
+  createPopoutMedia() {
+    console.log('create popout media...');
+    let parent = this.popout.document.body;
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+    for (let rec of this.recordings) {
+      if (rec.isVideo) {
+        let video = this.popout.document.createElement('video');
+        video.setAttribute('id', rec.id);
+        //video.setAttribute('controls', 'true');
+        if (!rec.visible) {
+          // class hidden
+        }
+        video.addEventListener('canplay', (event) => {console.log(`popout canplay ${rec.id}`)});
+        let url = this.popout.document.createElement('source');
+        url.setAttribute('src', rec.urls[0]);
+        url.setAttribute('type', 'video/mp4');
+        video.appendChild(url);
+        parent.appendChild(video);
+      }
+    }
+    this.checkPopoutMediaVisible();
+  }
+  checkPopoutMediaVisible() {
+    if (!this.popout)
+      return;
+    for (let rec of this.recordings) {
+      let video = this.popout.document.getElementById(rec.id);
+      if (!!video) {
+        video.className = rec.visible ? '' : 'hidden';
+      }
+    }
+  }
 }
 
