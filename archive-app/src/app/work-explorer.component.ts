@@ -1,7 +1,8 @@
 import 'rxjs/add/operator/switchMap';
-import { Component, OnInit, ElementRef }      from '@angular/core';
+import { Component, OnInit, ElementRef, NgZone, OnDestroy }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
+import { Renderer2 } from '@angular/core';
 
 import { Entity } from './entity';
 import { RecordsService }  from './records.service';
@@ -140,7 +141,7 @@ class PartPerformance extends Entity {
   styleUrls: ['./work-explorer.component.css']
 })
 
-export class WorkExplorerComponent implements OnInit {
+export class WorkExplorerComponent implements OnInit, OnDestroy {
   work: Entity;
   performances: Performance[] = [];
   allPerformancesSelected:boolean = true;
@@ -159,7 +160,9 @@ export class WorkExplorerComponent implements OnInit {
 	private elRef:ElementRef,
     private recordsService: RecordsService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private renderer: Renderer2,
+    private ngZone: NgZone
   ) {}
 
   ngOnInit(): void {
@@ -169,18 +172,31 @@ export class WorkExplorerComponent implements OnInit {
       .switchMap((params: Params) => this.recordsService.getWork(params['id']))
       .subscribe(work => this.initialiseForWork(work));
   }
+  ngOnDestroy(): void {
+    // mainly for popout
+    this.stop();
+  }
   popoutPlayer(): void {
     console.log('popout player');
     // Warning: not injected
-    this.popout = window.open('about:blank', '_blank'); //,'archive_player' 'scrollbars=no,status=no,menubar=no,width=720,height=480');
+    this.popout = window.open('', 'archive_player'); //,'archive_player'|'_blank' 'scrollbars=no,status=no,menubar=no,width=720,height=480');
     //data:text/html,<html><head><title>Explorer player</title></head><body><div>hello</div></body></html>
-    this.popout.document.title = 'Archive Player Window';
-    let css = 'video {\n width: 100%;\n height: auto;\n}\nvideo.hidden {\n display: none;\n}\nbody {\n background: black; \n}',
-      head = this.popout.document.head || this.popout.document.getElementsByTagName('head')[0],
-      style = this.popout.document.createElement('style');
-    style.type = 'text/css';
-    style.appendChild(document.createTextNode(css));
-    head.appendChild(style);
+    let init = () => {
+      if (!!this.popout.document.title) {
+        console.log('popout window initialised already as '+this.popout.document.title);
+        return;
+      }
+      console.log('initialise popout player window '+this.popout.document.title);
+      this.popout.document.title = 'Archive Player Window';
+      let css = 'video {\n width: 100%;\n height: auto;\n}\nvideo.hidden {\n display: none;\n}\nbody {\n background: black; \n}',
+        head = this.popout.document.head || this.popout.document.getElementsByTagName('head')[0],
+        style = this.popout.document.createElement('style');
+      style.type = 'text/css';
+      style.appendChild(document.createTextNode(css));
+      head.appendChild(style); 
+    }
+    init();
+    this.popout.addEventListener('load', init, true); 
   }
 	initialiseForWork(work:Entity):void {
     console.log('initialiseForWork...');
@@ -747,37 +763,70 @@ export class WorkExplorerComponent implements OnInit {
 			}
 		}
 	}
+  addPopoutVideo(rec:Recording) {
+    let parent = this.popout.document.body;
+    let video = this.popout.document.createElement('video');
+    video.setAttribute('id', rec.id);
+    //video.setAttribute('controls', 'true');
+    this.renderer.listen(video, 'canplay', (event) => this.ngZone.run(() => this.audioCanplay(event, rec)));
+    this.renderer.listen(video, 'seeked', (event) => this.ngZone.run(() => this.audioSeeked(event, rec)));
+    this.renderer.listen(video, 'timeupdate', (event) => this.ngZone.run(() => this.audioTimeupdate(event, rec)));
+    this.renderer.listen(video, 'ended', (event) => this.ngZone.run(() => this.audioEnded(event, rec)));
+    //video.addEventListener('canplay', (event) => {console.log(`popout canplay ${rec.id}`)});
+    let url = this.popout.document.createElement('source');
+    url.setAttribute('src', rec.urls[0]);
+    url.setAttribute('type', 'video/mp4');
+    video.appendChild(url);
+    parent.appendChild(video);
+    
+  }
   createPopoutMedia() {
     console.log('create popout media...');
+/*
     let parent = this.popout.document.body;
     while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
     }
     for (let rec of this.recordings) {
       if (rec.isVideo) {
-        let video = this.popout.document.createElement('video');
-        video.setAttribute('id', rec.id);
-        //video.setAttribute('controls', 'true');
-        if (!rec.visible) {
-          // class hidden
-        }
-        video.addEventListener('canplay', (event) => {console.log(`popout canplay ${rec.id}`)});
-        let url = this.popout.document.createElement('source');
-        url.setAttribute('src', rec.urls[0]);
-        url.setAttribute('type', 'video/mp4');
-        video.appendChild(url);
-        parent.appendChild(video);
+        this.addPopoutVideo(rec);
       }
     }
+*/
     this.checkPopoutMediaVisible();
   }
   checkPopoutMediaVisible() {
     if (!this.popout)
       return;
+
     for (let rec of this.recordings) {
       let video = this.popout.document.getElementById(rec.id);
       if (!!video) {
-        video.className = rec.visible ? '' : 'hidden';
+        //video.className = rec.visible ? '' : 'hidden';
+        // make / remove - only one visible
+        if (!rec.visible) {
+          try {
+            // https://stackoverflow.com/questions/28105950/html5-video-stalled-event
+            // clear src and load??
+            (video as HTMLVideoElement).pause();
+            let srcs = video.getElementsByTagName('source');
+            for (let si=0; si<srcs.length; si++) {
+              let src = srcs.item(si);
+              src.setAttribute('src', '');
+            }
+            if (srcs.length===0) {
+              console.log('could not find source element in video (to stop)');
+            }
+            (video as HTMLVideoElement).load();
+          }
+          catch (err) {
+            console.log('Error removing video: '+err.message, err);
+          }
+          video.remove();
+        }
+      } else if (rec.visible) {
+        // create
+        this.addPopoutVideo(rec);
       }
     }
   }
