@@ -6,6 +6,8 @@ University of Nottingham Culture and Heritage RPA.
 
 See [docs/designnotes.md](docs/designnotes.md)
 
+Note: branch linkapps is WIP to add a synchronized muzivisual app view.
+
 ## Install / set up
 
 If using [Vagrant](https://www.vagrantup.com/), 
