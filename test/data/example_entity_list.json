@@ -228,7 +228,12 @@
           "frbroo:R25F_performed": "Performed_work/Climb"
         }
       ],
-      "prov:qualifiedAssociation": [],
+      "prov:qualifiedAssociation": [
+        {
+          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
+          "prov:hadRole": ""
+        }
+      ],
       "prov:startedAtTime": "2017-06-08T16:05:00Z",
       "prov:used_r": [],
       "rdfs:comment": "The world premiere performance of Climb!, 8th June 2017.",
@@ -262,7 +267,12 @@
           "frbroo:R25F_performed": "Performed_work/Climb"
         }
       ],
-      "prov:qualifiedAssociation": [],
+      "prov:qualifiedAssociation": [
+        {
+          "crm:P12i_was_present_at": "Person/Maria_Kallionpaa",
+          "prov:hadRole": ""
+        }
+      ],
       "prov:startedAtTime": "2017-06-08T14:12:00Z",
       "prov:used_r": [],
       "rdfs:comment": "The dress rehearsal of Climb! just before the Premiere performance, 8th June 2017.",

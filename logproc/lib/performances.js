@@ -37,6 +37,7 @@ module.exports.makeAnnalistStagePerformances = function( stages, performanceId, 
 		variables.stageid = stage.id;
 		variables.stagetitle = stageTitles[stage.id];
 		variables.datetime = stage.datetime;
+		variables.meld_session = stage.meld_session;
 		utils.replaceVariables(value, variables);
 		// codes triggered within stage
 		value[SUB_EVENT] = [];

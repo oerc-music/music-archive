@@ -9,10 +9,16 @@ module.exports.read = function( path ) {
 	var lines = data.split('\n');
 	console.log('read '+lines.length+' lines');
 	var currentPerformance = null;
+	var meld_session = null;
 	for (var l in lines) {
 		var line = lines[l];
 		try {
 			var entry = JSON.parse(line);
+			// event: "input","info":{"inputUrl":"post:meld.load","params":{..."meldcollection":"http://127.0.0.1:5000/collection/TTyEu7wQJPHUJYHpGV7tRj"...}
+			if (('input'==entry.event && entry.info && 'post:meld.load'==entry.info.inputUrl)) {
+				meld_session = entry.info.params.meldcollection;
+				// should be before vStart...
+			}
 			// event: action.triggered
 			// see also time, datetime
 			// note typo :-)
@@ -33,7 +39,7 @@ module.exports.read = function( path ) {
 							var performance = { startTime: entry.time, startDatetime: entry.datetime, id: perfid, stages: [], notes: [], codes: [], emits: []  };
 							currentPerformance = performance;
 							performances[perfid] = performance;
-							performance.stages.push({id: parts[4], time: entry.time, datetime: entry.datetime, codes: []});
+							performance.stages.push({id: parts[4], time: entry.time, datetime: entry.datetime, codes: [], meld_session:meld_session});
 							performance.emits.push({name:'vStart', time:entry.time, data: action.url.substring('emit:vStart:mobileapp:'.length)});
 						}
 						else {
@@ -73,7 +79,7 @@ module.exports.read = function( path ) {
 								if (ix<0) {
 									console.log('Found invalid vStageChange at line '+(l+1)+': '+action.url);
 								} else {
-									performance.stages.push({id: parts[4].substring(ix+2), time: entry.time, datetime: entry.datetime, codes: []});
+									performance.stages.push({id: parts[4].substring(ix+2), time: entry.time, datetime: entry.datetime, codes: [], meld_session:meld_session});
 								}
 							} else {
 								console.log('Warning: performance '+perfid+' not found (vStageChange) at '+entry.datetime);
