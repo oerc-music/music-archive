@@ -14,6 +14,7 @@
 	"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_{{performanceid}}_{{stageid}}/",
 	"coll:system_id": "",
 	"coll:uploaded_image_r": [],
+	"coll:meld_session:":"{{meld_session}}",
 	"crm:P7_took_place_at": "",
 	"entity:seeAlso_r": [],
 	"frbroo:R25F_performed_r": [

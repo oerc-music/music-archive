@@ -96,6 +96,9 @@ fragment `Part_of_Work`s (see below)
 the music-performance-manager config and used in mobile app URLs
 and musicode system logs).
 
+- `meld_session`, the MELD session (formerly collection) URL
+associated with a performance of a part.
+
 There is one extension to `Recording`, for:
 
 - `prov:startedAtTime`, i.e. dateTime of recording start
