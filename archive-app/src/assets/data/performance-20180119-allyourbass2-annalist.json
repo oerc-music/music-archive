@@ -1,0 +1,723 @@
+{
+	"@context": [
+		{
+			"@base": "/annalist/c/annalist_performance_archive/d/"
+		},
+		"/annalist/c/annalist_performance_archive/d/coll_context.jsonld"
+	],
+	"@id": "/annalist/c/annalist_performance_archive/l/Default_list_all/",
+	"annal:entity_list": [
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_1/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_1",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_1/",
+			"coll:musicode_id": "BC_SP",
+			"coll:musicode_type": "approach",
+			"prov:startedAtTime": "2018-01-19T18:33:16.333Z",
+			"rdfs:comment": "Performed code on approach to a challenge (\"BC_SP\")",
+			"rdfs:label": "BC_SP"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_2/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_2",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_2/",
+			"coll:musicode_id": "BC_Ending2",
+			"coll:musicode_type": "choice",
+			"prov:startedAtTime": "2018-01-19T18:33:33.498Z",
+			"rdfs:comment": "Performed choice code (\"BC_Ending2\")",
+			"rdfs:label": "BC_Ending2"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_basecamp/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_basecamp",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_basecamp/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/5r3iKaF64mhxWvfUoA8rYM",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_basecamp"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:32:41.013Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Basecamp in Climb! at All Your Bass (2)",
+			"rdfs:label": "Basecamp",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_1"
+				},
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_2"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_1b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_1b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_1b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/kGq78cb7CLHTKpQy7F3Zo4",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_1b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:33:47.425Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb The Stones in Climb! at All Your Bass (2)",
+			"rdfs:label": "The Stones",
+			"event:sub_event": []
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_3/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_3",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_3/",
+			"coll:musicode_id": "1c_1",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:34:33.262Z",
+			"rdfs:comment": "Performed code to start disklavier (\"1c_1\")",
+			"rdfs:label": "1c_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_4/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_4",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_4/",
+			"coll:musicode_id": "1c_2",
+			"coll:musicode_type": "challenge",
+			"prov:startedAtTime": "2018-01-19T18:35:03.263Z",
+			"rdfs:comment": "Performed challenge code successfully (\"1c_2\")",
+			"rdfs:label": "1c_2"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_1c/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_1c",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_1c/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/LNaPRF4chbvS4VtWQqa5H2",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_1c"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:34:28.436Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Echo in Climb! at All Your Bass (2)",
+			"rdfs:label": "Echo",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_3"
+				},
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_4"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_5/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_5",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_5/",
+			"coll:musicode_id": "p3a_1",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:35:25.686Z",
+			"rdfs:comment": "Performed code to start disklavier (\"p3a_1\")",
+			"rdfs:label": "p3a_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_p3a/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_p3a",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_p3a/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/6eAL8WDgf2GbDryg9SaEiB",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p3a"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:35:20.435Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 3 in Climb! at All Your Bass (2)",
+			"rdfs:label": "Path 3",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_5"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_6/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_6",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_6/",
+			"coll:musicode_id": "2c_1",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:37:35.776Z",
+			"rdfs:comment": "Performed code to start disklavier (\"2c_1\")",
+			"rdfs:label": "2c_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_2c/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_2c",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_2c/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/9YBRHmpBR8qEsUjU88Khwa",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_2c"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:37:26.449Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb The Herd of Cows in Climb! at All Your Bass (2)",
+			"rdfs:label": "The Herd of Cows",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_6"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_7/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_7",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_7/",
+			"coll:musicode_id": "2b_1",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:39:55.846Z",
+			"rdfs:comment": "Performed code to start disklavier (\"2b_1\")",
+			"rdfs:label": "2b_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_8/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_8",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_8/",
+			"coll:musicode_id": "2b_2",
+			"coll:musicode_type": "challenge",
+			"prov:startedAtTime": "2018-01-19T18:41:00.649Z",
+			"rdfs:comment": "Performed challenge code successfully (\"2b_2\")",
+			"rdfs:label": "2b_2"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_2b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_2b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_2b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/HNMyi393UEw7EX3AEX7dDL",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_2b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:39:28.485Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb A Tree Trunk on the Path in Climb! at All Your Bass (2)",
+			"rdfs:label": "A Tree Trunk on the Path",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_7"
+				},
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_8"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_p2b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_p2b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_p2b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/oWbz2BjFbVqf6sjyKgbvAF",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p2b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:42:03.455Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 2 in Climb! at All Your Bass (2)",
+			"rdfs:label": "Path 2",
+			"event:sub_event": []
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_9/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_9",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_9/",
+			"coll:musicode_id": "3b_1",
+			"coll:musicode_type": "challenge",
+			"prov:startedAtTime": "2018-01-19T18:43:47.358Z",
+			"rdfs:comment": "Performed challenge code successfully (\"3b_1\")",
+			"rdfs:label": "3b_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_3b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_3b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_3b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/QauKaNiEmKWAys2hPMikBn",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_3b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:43:16.448Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb A Scary Whispering Forest in Climb! at All Your Bass (2)",
+			"rdfs:label": "A Scary Whispering Forest",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_9"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_p2c/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_p2c",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_p2c/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/AWveFVhL72Tqtki6cRtPWZ",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_p2c"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:45:02.444Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Path 2 in Climb! at All Your Bass (2)",
+			"rdfs:label": "Path 2",
+			"event:sub_event": []
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_10/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_10",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_10/",
+			"coll:musicode_id": "4b_1",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:46:28.089Z",
+			"rdfs:comment": "Performed code to start disklavier (\"4b_1\")",
+			"rdfs:label": "4b_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_4b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_4b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_4b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/5XWfzEacvjvqQV2LtaHszh",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_4b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:46:06.446Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb A Hallucination in Climb! at All Your Bass (2)",
+			"rdfs:label": "A Hallucination",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_10"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_11/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_11",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_11/",
+			"coll:musicode_id": "5b_1",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:47:50.684Z",
+			"rdfs:comment": "Performed code to start disklavier (\"5b_1\")",
+			"rdfs:label": "5b_1"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_12/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_12",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_12/",
+			"coll:musicode_id": "5b_2",
+			"coll:musicode_type": "challenge",
+			"prov:startedAtTime": "2018-01-19T18:48:04.346Z",
+			"rdfs:comment": "Performed challenge code successfully (\"5b_2\")",
+			"rdfs:label": "5b_2"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_5b/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_5b",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_5b/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/vyco5xUZYnFfftxw7sdVv4",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_5b"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:47:42.478Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Birds Attack in Climb! at All Your Bass (2)",
+			"rdfs:label": "Birds Attack",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_11"
+				},
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_12"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_13/",
+			"@type": [
+				"crm:E5_Event",
+				"prov:Activity",
+				"annal:EntityData"
+			],
+			"annal:id": "Trigger_20180119-allyourbass2_13",
+			"annal:type": "crm:E5_Event",
+			"annal:type_id": "Event",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Trigger_20180119-allyourbass2_13/",
+			"coll:musicode_id": "summit",
+			"coll:musicode_type": "trigger",
+			"prov:startedAtTime": "2018-01-19T18:49:24.554Z",
+			"rdfs:comment": "Performed code to start disklavier (\"summit\")",
+			"rdfs:label": "summit"
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_summit/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "Perform_Climb_20180119-allyourbass2_summit",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/Perform_Climb_20180119-allyourbass2_summit/",
+			"coll:system_id": "",
+			"coll:uploaded_image_r": [],
+			"coll:meld_session:": "http://127.0.0.1:5000/sessions/njQbbCuBa9V7avabcokEr9",
+			"crm:P7_took_place_at": "",
+			"entity:seeAlso_r": [],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Part_of_Work/Climb_summit"
+				}
+			],
+			"prov:qualifiedAssociation": [],
+			"prov:startedAtTime": "2018-01-19T18:49:10.449Z",
+			"prov:used_r": [],
+			"rdfs:comment": "Performance of Climb Summit in Climb! at All Your Bass (2)",
+			"rdfs:label": "Summit",
+			"event:sub_event": [
+				{
+					"event:sub_event": "Event/Trigger_20180119-allyourbass2_13"
+				}
+			]
+		},
+		{
+			"@id": "/annalist/c/annalist_performance_archive/d/Performance/20180119-allyourbass2/",
+			"@type": [
+				"frbroo:F31_Performance",
+				"prov:Activity",
+				"crm:E5_Event",
+				"crm:E7_Activity",
+				"mo:Performance",
+				"annal:EntityData"
+			],
+			"annal:id": "20180119-allyourbass2",
+			"annal:type": "frbroo:F31_Performance",
+			"annal:type_id": "Performance",
+			"annal:url": "/annalist/c/annalist_performance_archive/d/Performance/20180119-allyourbass2/",
+			"coll:system_id": "20180119-allyourbass2",
+			"coll:uploaded_image_r": [],
+			"entity:seeAlso_r": [],
+			"event:sub_event": [
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_basecamp"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_1b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_1c"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_p3a"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_2c"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_2b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_p2b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_3b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_p2c"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_4b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_5b"
+				},
+				{
+					"event:sub_event": "Performance/Perform_Climb_20180119-allyourbass2_summit"
+				}
+			],
+			"frbroo:R25F_performed_r": [
+				{
+					"frbroo:R25F_performed": "Performed_work/Climb"
+				}
+			],
+			"prov:qualifiedAssociation": [
+				{
+					"crm:P12i_was_present_at": "Person/20180119-allyourbass2-performer-1",
+					"prov:hadRole": ""
+				}
+			],
+			"prov:startedAtTime": "2018-01-19T18:32:41.013Z",
+			"prov:used_r": [],
+			"rdfs:comment": null,
+			"rdfs:label": "Climb! at All Your Bass (2)"
+		}
+	]
+}
