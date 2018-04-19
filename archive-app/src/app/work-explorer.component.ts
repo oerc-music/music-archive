@@ -163,7 +163,9 @@ export class WorkExplorerComponent implements OnInit, OnDestroy {
     private location: Location,
     private renderer: Renderer2,
     private ngZone: NgZone
-  ) {}
+  ) {
+		meldWindow = window.open('', 'window', null);	
+	}
 
   ngOnInit(): void {
     this.route.queryParams
@@ -429,6 +431,8 @@ export class WorkExplorerComponent implements OnInit, OnDestroy {
 		}
 	}
 	clickMapPart(part) {
+		console.log("------", this);
+		meldWindow.postMessage(part, "*");
 		console.log('clickMapPart('+part.id+')');
 		if (part.available) {
 			this.clickPartPlay(null, part);
