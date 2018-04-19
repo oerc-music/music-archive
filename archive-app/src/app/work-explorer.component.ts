@@ -164,7 +164,7 @@ export class WorkExplorerComponent implements OnInit, OnDestroy {
     private renderer: Renderer2,
     private ngZone: NgZone
   ) {
-		meldWindow = window.open('', 'window', null);	
+		meldWindow = window.open('http://localhost:8080/archive', 'window', null);	
 	}
 
   ngOnInit(): void {
@@ -365,7 +365,8 @@ export class WorkExplorerComponent implements OnInit, OnDestroy {
   clickAllPerformancesCheckbox(event) {
     this.clickPerformanceCheckbox(event,null);
   }
-	clickPerformanceCheckbox(event,perf) {
+  clickPerformanceCheckbox(event,perf) {
+	meldWindow.postMessage({type: "performance", payload:perf.id}, "*");
     if (perf!==null) {
       console.log('select performance '+perf.id);
       this.allPerformancesSelected = false;
@@ -431,8 +432,7 @@ export class WorkExplorerComponent implements OnInit, OnDestroy {
 		}
 	}
 	clickMapPart(part) {
-		console.log("------", this);
-		meldWindow.postMessage(part, "*");
+		meldWindow.postMessage({type: "fragment", payload:part.id}, "*");
 		console.log('clickMapPart('+part.id+')');
 		if (part.available) {
 			this.clickPartPlay(null, part);
