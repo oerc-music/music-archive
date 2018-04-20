@@ -7,6 +7,8 @@ import { Renderer2 } from '@angular/core';
 import { Entity } from './entity';
 import { RecordsService }  from './records.service';
 
+declare var meldWindow: any
+
 class ScreenEntity extends Entity {
 	selected:boolean = false;
 	available:boolean = false;
