@@ -368,11 +368,12 @@ export class WorkExplorerComponent implements OnInit, OnDestroy {
     this.clickPerformanceCheckbox(event,null);
   }
   clickPerformanceCheckbox(event,perf) {
-	meldWindow.postMessage({type: "performance", payload:perf.id}, "*");
     if (perf!==null) {
+  	  meldWindow.postMessage({type: "performance", payload:perf.id}, "*");
       console.log('select performance '+perf.id);
       this.allPerformancesSelected = false;
     } else {
+  	  meldWindow.postMessage({type: "performance", payload:""}, "*");
       console.log('select all performances');
       this.allPerformancesSelected = true;
     }
